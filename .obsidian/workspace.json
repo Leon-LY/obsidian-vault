@@ -8,13 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "913e99f0924c6528",
+            "id": "842bab3f149921a1",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "markdown",
+              "state": {
+                "file": "CLAUDE.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CLAUDE"
             }
           }
         ]
@@ -203,7 +207,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 947.5
+    "width": 1083.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -227,31 +231,41 @@
   },
   "active": "4b74b69dd2213ad3",
   "lastOpenFiles": [
+    "wiki/projects/在线预约咨询网站.md",
+    "2026-06-10.md",
+    "CLAUDE.md",
+    "CLAUDE.md.tmp.26732.5961a2cf8662",
+    "wiki/business/项目索引.md",
+    "wiki/business/个人网站修改方案.md",
+    "wiki/business/接私活指南.md",
+    "wiki/learn/Obsidian插件推荐.md",
+    "wiki/learn/Obsidian第二大脑.md",
+    "wiki/learn/ClaudeCode学习指南.md",
+    "wiki/learn/全栈开发学习路线.md",
+    "wiki/work/招投标流程要点.md",
+    "wiki/work/装卸通.md",
+    "wiki/work/爱山东APP.md",
+    "wiki/work/信创.md",
+    "wiki/work/城市大脑.md",
+    "wiki/work/数字政府.md",
+    "wiki/work/智慧城市.md",
+    "wiki/business",
+    "wiki/learn",
+    "wiki/work",
+    "wiki/entities/荣成大数据中心.md",
+    "wiki/index.md.tmp.26732.fe31542b596a",
+    "wiki/projects",
+    "wiki/log.md",
+    "wiki/concepts/项目索引.md",
+    "wiki/concepts/装卸通.md",
+    "wiki/concepts/项目索引.md.tmp.26732.a2cc64a77c52",
+    "wiki/concepts/个人网站修改方案.md",
+    "wiki/concepts/接私活指南.md.tmp.84300.c3608b5d1336",
+    "wiki/concepts/接私活指南.md",
     "wiki/concepts/ClaudeCode学习指南.md",
     "wiki/concepts/Obsidian插件推荐.md",
     "wiki/concepts/Obsidian第二大脑.md",
-    "CLAUDE.md",
     "wiki/log.md.tmp.84300.c2bc525c7a96",
-    "wiki/concepts/全栈开发学习路线.md",
-    "wiki/index.md",
-    "wiki/log.md",
-    "wiki/concepts/爱山东APP.md",
-    "wiki/log.md.tmp.84300.9758b45ac813",
-    "wiki/entities/荣成大数据中心.md.tmp.84300.e4d7bd2690fd",
-    "wiki/entities/善思明科技.md",
-    "wiki/entities/善思明科技.md.tmp.84300.43416707151a",
-    "wiki/concepts/装卸通.md",
-    "wiki/concepts/信创.md",
-    "wiki/concepts/城市大脑.md",
-    "raw/_readable/装卸通甲方需求.txt",
-    "raw/_readable/装卸通信息化监管系统建设方案-善思明.txt",
-    "raw/_readable/集成化应急管理指挥系统国产化改造.txt",
-    "raw/_readable/other_装卸通甲方需求.docx",
-    "raw/_readable/other_荣成市装卸通信息化监管系统建设方案-善思明.docx",
-    "raw/_readable/城市大脑升级改造方案.txt",
-    "wiki/concepts/数字政府.md",
-    "wiki/entities/中国广电山东网络有限公司.md",
-    "wiki/concepts/招投标流程要点.md",
-    "wiki/concepts/智慧城市.md"
+    "wiki/log.md.tmp.84300.9758b45ac813"
   ]
 }
