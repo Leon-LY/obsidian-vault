@@ -212,6 +212,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "notehelper:tongbuzhushou": false,
+      "zk-prefixer:创建时间戳笔记": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -232,6 +234,7 @@
   },
   "active": "4b74b69dd2213ad3",
   "lastOpenFiles": [
+    "CLAUDE.md.tmp.26732.2f24b43fa528",
     "CLAUDE.md.tmp.26732.94edefee88b5",
     "wiki/learn/Obsidian第二大脑.md",
     "CLAUDE.md",
@@ -266,7 +269,6 @@
     "wiki/concepts/接私活指南.md",
     "wiki/concepts/ClaudeCode学习指南.md",
     "wiki/concepts/Obsidian插件推荐.md",
-    "wiki/log.md.tmp.84300.c2bc525c7a96",
-    "wiki/log.md.tmp.84300.9758b45ac813"
+    "wiki/log.md.tmp.84300.c2bc525c7a96"
   ]
 }
