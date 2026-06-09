@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "wiki/learn/全栈开发学习路线.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CLAUDE"
+              "title": "全栈开发学习路线"
             }
           }
         ]
@@ -94,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "wiki/learn/全栈开发学习路线.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "全栈开发学习路线 的反向链接列表"
             }
           },
           {
@@ -231,15 +232,15 @@
   },
   "active": "4b74b69dd2213ad3",
   "lastOpenFiles": [
+    "wiki/learn/Obsidian第二大脑.md",
+    "CLAUDE.md",
     "wiki/projects/在线预约咨询网站.md",
     "2026-06-10.md",
-    "CLAUDE.md",
     "CLAUDE.md.tmp.26732.5961a2cf8662",
     "wiki/business/项目索引.md",
     "wiki/business/个人网站修改方案.md",
     "wiki/business/接私活指南.md",
     "wiki/learn/Obsidian插件推荐.md",
-    "wiki/learn/Obsidian第二大脑.md",
     "wiki/learn/ClaudeCode学习指南.md",
     "wiki/learn/全栈开发学习路线.md",
     "wiki/work/招投标流程要点.md",

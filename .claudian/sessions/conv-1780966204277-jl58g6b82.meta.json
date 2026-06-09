@@ -4,19 +4,19 @@
   "title": "Ingest codebase for analysis",
   "titleGenerationStatus": "success",
   "createdAt": 1780966204278,
-  "updatedAt": 1781047659093,
-  "lastResponseAt": 1781047659093,
+  "updatedAt": 1781047750632,
+  "lastResponseAt": 1781047750632,
   "sessionId": "a2971ea7-35b8-42cc-b97c-3e37cc557b4c",
   "providerState": {
     "providerSessionId": "a2971ea7-35b8-42cc-b97c-3e37cc557b4c"
   },
   "usage": {
     "model": "haiku",
-    "inputTokens": 256,
+    "inputTokens": 301,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 306176,
+    "cacheReadInputTokens": 313216,
     "contextWindow": 200000,
-    "contextTokens": 306432,
+    "contextTokens": 313517,
     "percentage": 100,
     "contextWindowIsAuthoritative": true
   }

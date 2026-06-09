@@ -1,0 +1,15 @@
+# Obsidian
+.obsidian/workspace.json
+.obsidian/graph.json
+
+# AI tools
+.smart-env/
+.claudian/
+.qoder/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Node
+node_modules/
