@@ -1,0 +1,257 @@
+{
+  "main": {
+    "id": "5d8f42348679d9c2",
+    "type": "split",
+    "children": [
+      {
+        "id": "e9ea62da51d9399b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "913e99f0924c6528",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a44ef22f1531e534",
+    "type": "split",
+    "children": [
+      {
+        "id": "d18710b9b9077b5d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d58160fdc09cf6fb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "653f53e7fc7676a5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "2a63a128112223ec",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f7737cbc6b41015a",
+    "type": "split",
+    "children": [
+      {
+        "id": "566ed9d0e41af977",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b1782fe1697acb92",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "cf8369a754b40f61",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "d504eca171eb991e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "21fd1a36da48a36b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "f1884db2f31eb761",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          },
+          {
+            "id": "4b74b69dd2213ad3",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
+          },
+          {
+            "id": "d0dcdc3290137cd9",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "1ce50aedc20ab6ca",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Connections"
+            }
+          },
+          {
+            "id": "2b2ad9b50282375b",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 947.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "obsidian42-brat:BRAT": false,
+      "realclaudian:Open Claudian": false,
+      "obsidian-kanban:Create new board": false,
+      "templater-obsidian:Templater": false,
+      "omnisearch:Omnisearch": false,
+      "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Toggle Footer Connections": false,
+      "smart-connections:Smart Connections: Open random connection": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "4b74b69dd2213ad3",
+  "lastOpenFiles": [
+    "wiki/concepts/ClaudeCode学习指南.md",
+    "wiki/concepts/Obsidian插件推荐.md",
+    "wiki/concepts/Obsidian第二大脑.md",
+    "CLAUDE.md",
+    "wiki/log.md.tmp.84300.c2bc525c7a96",
+    "wiki/concepts/全栈开发学习路线.md",
+    "wiki/index.md",
+    "wiki/log.md",
+    "wiki/concepts/爱山东APP.md",
+    "wiki/log.md.tmp.84300.9758b45ac813",
+    "wiki/entities/荣成大数据中心.md.tmp.84300.e4d7bd2690fd",
+    "wiki/entities/善思明科技.md",
+    "wiki/entities/善思明科技.md.tmp.84300.43416707151a",
+    "wiki/concepts/装卸通.md",
+    "wiki/concepts/信创.md",
+    "wiki/concepts/城市大脑.md",
+    "raw/_readable/装卸通甲方需求.txt",
+    "raw/_readable/装卸通信息化监管系统建设方案-善思明.txt",
+    "raw/_readable/集成化应急管理指挥系统国产化改造.txt",
+    "raw/_readable/other_装卸通甲方需求.docx",
+    "raw/_readable/other_荣成市装卸通信息化监管系统建设方案-善思明.docx",
+    "raw/_readable/城市大脑升级改造方案.txt",
+    "wiki/concepts/数字政府.md",
+    "wiki/entities/中国广电山东网络有限公司.md",
+    "wiki/concepts/招投标流程要点.md",
+    "wiki/concepts/智慧城市.md"
+  ]
+}

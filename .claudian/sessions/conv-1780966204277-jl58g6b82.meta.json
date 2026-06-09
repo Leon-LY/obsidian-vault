@@ -1,0 +1,23 @@
+{
+  "id": "conv-1780966204277-jl58g6b82",
+  "providerId": "claude",
+  "title": "Ingest codebase for analysis",
+  "titleGenerationStatus": "success",
+  "createdAt": 1780966204278,
+  "updatedAt": 1780973353748,
+  "lastResponseAt": 1780973353748,
+  "sessionId": "a2971ea7-35b8-42cc-b97c-3e37cc557b4c",
+  "providerState": {
+    "providerSessionId": "a2971ea7-35b8-42cc-b97c-3e37cc557b4c"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 317,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 176512,
+    "contextWindow": 200000,
+    "contextTokens": 176829,
+    "percentage": 88,
+    "contextWindowIsAuthoritative": true
+  }
+}
