@@ -1,6 +1,9 @@
 # 操作日志
 
-## 2026-06-10 | restructure | wiki 分类重组 + 跨会话记忆
+## 2026-06-10 | config | 记录用户偏好：引用链接优先使用中文/国内来源
+- 更新 CLAUDE.md 增加「硬性约束」章节
+- 更新 MEMORY.md 用户档案增加对外偏好
+- 触发：用户主动提出，永久记住
 - 新建 `.claude/MEMORY.md`（跨会话记忆索引：知识库状态 + 活跃项目 + 决策记录）
 - 更新 CLAUDE.md 工作方式，增加第 0 条（会话启动读 MEMORY.md）和第 6 条（持续维护记忆）
 - 分类重组同前：concepts/ → work/learn/business/
