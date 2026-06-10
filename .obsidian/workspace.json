@@ -217,7 +217,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 419.5
+    "width": 642.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -243,8 +243,9 @@
       "colorful-folders:Toggle stealth mode": false
     }
   },
-  "active": "84071d63698b5c89",
+  "active": "4b74b69dd2213ad3",
   "lastOpenFiles": [
+    "首页.md.tmp.61316.e9054fab2a2c",
     "知识库/项目/公司/城市大脑.md",
     "首页.md",
     "知识库/项目/公司/荣成应急管理系统.md",
@@ -289,7 +290,6 @@
     "笔记同步助手.md",
     "知识库/项目/私活/在线预约咨询网站.md",
     "知识库/项目/私活/Studio后台管理系统.md",
-    "知识库/项目/私活/个人作品集网站.md",
-    "知识库/项目/私活/远见FarSight.md"
+    "知识库/项目/私活/个人作品集网站.md"
   ]
 }
