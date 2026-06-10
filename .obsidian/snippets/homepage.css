@@ -162,6 +162,17 @@
   background-image: none !important;
 }
 
+/* 关键：覆盖 Royal Velvet 的 thead 渐变 */
+.knowledge-home thead,
+.knowledge-home thead.table-view-thead,
+.knowledge-home .table-view-table thead,
+.knowledge-home .table-view-table > thead,
+.knowledge-home .dataview.table-view-table thead {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
 .knowledge-home .dataview.table-view-table tbody td {
   font-size: 0.88em !important;
   color: var(--text-normal) !important;
