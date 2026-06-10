@@ -202,6 +202,18 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "05bd4fcba5bcde11",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "wiki/learn/全栈开发学习路线.md"
+              },
+              "icon": "lucide-info",
+              "title": "全栈开发学习路线的笔记属性"
+            }
           }
         ],
         "currentTab": 5
@@ -234,6 +246,25 @@
   },
   "active": "4b74b69dd2213ad3",
   "lastOpenFiles": [
+    "笔记同步助手/2026-06-10/QoderWork Design 上线，设计即代码，不输 Claude Design.md",
+    "笔记同步助手/2026-06-10/_已处理_QoderWork Design 上线，设计即代码，不输 Claude Design.md",
+    "wiki/learn/QoderWork.md",
+    "CLAUDE.md.tmp.59720.b6523900a71e",
+    "wiki/learn/全栈开发学习路线.md",
+    "笔记同步助手/images/f011997add2b69e8bd3f8ea9867822d0_MD5.png",
+    "笔记同步助手/images/70910b3a46508950324cecb5b94bbe8f_MD5.png",
+    "笔记同步助手/images/3de734b525874b7b526ad4a02839ef3a_MD5.png",
+    "笔记同步助手/images/01842d20b6b89c1355b3dbf5b79140df_MD5.png",
+    "笔记同步助手/images/17c456525f3fb52979d4ec24abe98e19_MD5.png",
+    "笔记同步助手/images/fd8405fd88c580e772b76c58e7578107_MD5.png",
+    "笔记同步助手/images/ee30be3d938965456aa50c7befecceb1_MD5.png",
+    "笔记同步助手/images/df829f47b53e77585342df578c9f4636_MD5.png",
+    "笔记同步助手/images/a840b652ba2857d53fde7c60cb37ec36_MD5.png",
+    "笔记同步助手/images/e7f942f13ce74b7f791ed3d306356891_MD5.png",
+    "笔记同步助手/images",
+    "笔记同步助手/2026-06-10/同步助手_2026-06-10.md",
+    "笔记同步助手/2026-06-10",
+    "笔记同步助手",
     "CLAUDE.md.tmp.26732.2f24b43fa528",
     "CLAUDE.md.tmp.26732.94edefee88b5",
     "wiki/learn/Obsidian第二大脑.md",
@@ -246,7 +277,6 @@
     "wiki/business/接私活指南.md",
     "wiki/learn/Obsidian插件推荐.md",
     "wiki/learn/ClaudeCode学习指南.md",
-    "wiki/learn/全栈开发学习路线.md",
     "wiki/work/招投标流程要点.md",
     "wiki/work/装卸通.md",
     "wiki/work/爱山东APP.md",
@@ -258,17 +288,9 @@
     "wiki/learn",
     "wiki/work",
     "wiki/entities/荣成大数据中心.md",
-    "wiki/index.md.tmp.26732.fe31542b596a",
-    "wiki/projects",
     "wiki/log.md",
     "wiki/concepts/项目索引.md",
     "wiki/concepts/装卸通.md",
-    "wiki/concepts/项目索引.md.tmp.26732.a2cc64a77c52",
-    "wiki/concepts/个人网站修改方案.md",
-    "wiki/concepts/接私活指南.md.tmp.84300.c3608b5d1336",
-    "wiki/concepts/接私活指南.md",
-    "wiki/concepts/ClaudeCode学习指南.md",
-    "wiki/concepts/Obsidian插件推荐.md",
-    "wiki/log.md.tmp.84300.c2bc525c7a96"
+    "wiki/concepts/个人网站修改方案.md"
   ]
 }

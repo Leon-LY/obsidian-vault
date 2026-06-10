@@ -16,6 +16,7 @@
 
 - [[全栈开发学习路线]] — React+Next.js+Node.js 一年学习路线图
 - [[ClaudeCode学习指南]] — Claude Code 官方文档与社区精华索引
+- [[QoderWork]] — 阿里 AI 设计工作台，自然语言生成前端工程代码
 - [[Obsidian第二大脑]] — 基于 Markdown 的知识管理体系与资源索引
 - [[Obsidian插件推荐]] — 精选插件清单，按场景分类，含作用说明
 
