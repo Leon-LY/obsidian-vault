@@ -1,7 +1,7 @@
 ---
 title: "爱山东APP"
-type: concept
-tags: [领域/数字政府, 领域/政务信息化, 领域/移动政务]
+type: project
+tags: [领域/数字政府, 项目/已验收, 对象/荣成]
 status: draft
 created: 2026-06-09
 related:
