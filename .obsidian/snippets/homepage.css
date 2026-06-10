@@ -1,0 +1,276 @@
+/* ============================================
+   Obsidian 首页样式 — 专为首页.md 设计
+   通过 cssclasses: homepage 隔离，不影响其他笔记
+   兼容：Primary 主题 / moonstone 浅色模式
+   ============================================ */
+
+/* ---- 基础布局 ---- */
+.homepage {
+  --home-accent: #54402b;
+  --home-accent-light: rgba(84, 64, 43, 0.08);
+  --home-accent-mid: rgba(84, 64, 43, 0.25);
+}
+
+/* 页面宽度放宽 */
+.homepage .markdown-preview-view {
+  padding: 32px 48px !important;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.homepage .markdown-preview-section {
+  max-width: 100% !important;
+}
+
+/* 隐藏默认 H1 */
+.homepage .inline-title {
+  display: none;
+}
+
+/* ========== 顶部问候条 ========== */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--home-accent-light);
+}
+
+.home-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.home-greeting {
+  font-size: 1.7em;
+  font-weight: 700;
+  color: var(--text-normal);
+  line-height: 1.3;
+  margin: 0 !important;
+}
+
+.home-greeting .dataview.result-group {
+  display: inline;
+}
+
+.home-subtitle {
+  font-size: 0.85em;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.home-subtitle .status-badge {
+  display: inline-block;
+  background: #22c55e;
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.home-header-right {
+  text-align: right;
+  font-size: 0.82em;
+  color: var(--text-faint);
+  line-height: 1.6;
+}
+
+.home-header-right strong {
+  font-size: 1.1em;
+  color: var(--text-muted);
+}
+
+/* ========== 统计卡片行 ========== */
+.home-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.home-stat-card {
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 12px;
+  padding: 14px 12px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+}
+
+.home-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-color: var(--home-accent-mid);
+}
+
+.home-stat-number {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--home-accent);
+  line-height: 1.2;
+}
+
+.home-stat-label {
+  font-size: 0.76em;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+/* ========== 快捷入口 Callout ========== */
+.homepage .callout[data-callout="note"] {
+  background: var(--home-accent-light);
+  border: 1px solid var(--home-accent-light);
+  border-left: 3px solid var(--home-accent);
+  border-radius: 10px;
+  margin-bottom: 28px;
+}
+
+.homepage .callout[data-callout="note"] .callout-title {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--home-accent);
+}
+
+.homepage .callout[data-callout="note"] .callout-content {
+  font-size: 0.88em;
+}
+
+.homepage .callout[data-callout="note"] .callout-content a,
+.homepage .callout[data-callout="note"] .callout-content .internal-link {
+  background: var(--background-primary);
+  padding: 3px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--home-accent);
+  text-decoration: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.homepage .callout[data-callout="note"] .callout-content a:hover,
+.homepage .callout[data-callout="note"] .callout-content .internal-link:hover {
+  background: var(--home-accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ========== 知识地图 Section 卡片 ========== */
+.homepage h2 {
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--text-normal);
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-left: 4px solid var(--home-accent);
+  border-radius: 10px 10px 0 0;
+  padding: 12px 20px;
+  margin: 20px 0 0 0 !important;
+  letter-spacing: 0.3px;
+}
+
+/* 链接行（h2 后面的段落） */
+.homepage h2 + p {
+  background: var(--background-primary);
+  border-left: 4px solid var(--home-accent);
+  border-right: 1px solid var(--background-modifier-border);
+  padding: 10px 20px;
+  margin: 0 !important;
+  font-size: 0.88em;
+  line-height: 2;
+}
+
+.homepage h2 + p a,
+.homepage h2 + p .internal-link {
+  background: var(--home-accent-light);
+  color: var(--home-accent);
+  padding: 3px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.homepage h2 + p a:hover,
+.homepage h2 + p .internal-link:hover {
+  background: var(--home-accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 描述文字（blockquote 跟在 h2 + p 后面） */
+.homepage h2 + p + blockquote {
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-top: none;
+  border-left: 4px solid var(--home-accent);
+  border-radius: 0 0 10px 10px;
+  padding: 8px 20px;
+  margin: 0 0 4px 0 !important;
+  font-size: 0.82em;
+  color: var(--text-faint);
+}
+
+.homepage h2 + p + blockquote p {
+  margin: 0;
+}
+
+/* ========== 分隔线 ========== */
+.homepage hr {
+  margin: 28px 0 20px;
+  border-color: var(--background-modifier-border);
+  opacity: 0.5;
+}
+
+/* ========== 最近更新 Callout ========== */
+.homepage .callout[data-callout="summary"] {
+  border-radius: 10px;
+  border-left: 3px solid var(--home-accent);
+}
+
+.homepage .callout[data-callout="summary"] .callout-title {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.homepage .callout[data-callout="summary"] .callout-content {
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+/* ========== 页脚 ========== */
+.homepage p:last-of-type {
+  text-align: center;
+  font-size: 0.76em;
+  color: var(--text-faint);
+  padding: 16px 0 8px;
+  border-top: 1px solid var(--background-modifier-border);
+  margin-top: 20px;
+}
+
+/* ========== 响应式 ========== */
+@media (max-width: 768px) {
+  .homepage .markdown-preview-view {
+    padding: 16px 18px !important;
+  }
+
+  .home-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .home-header-right {
+    text-align: left;
+  }
+
+  .home-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "5d8f42348679d9c2",
+    "id": "5324373015726ba8",
     "type": "split",
     "children": [
       {
-        "id": "e9ea62da51d9399b",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "842bab3f149921a1",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/learn/全栈开发学习路线.md",
+                "file": "首页.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "全栈开发学习路线"
+              "title": "首页"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 279
   },
   "right": {
     "id": "f7737cbc6b41015a",
@@ -94,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wiki/learn/全栈开发学习路线.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "全栈开发学习路线 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -208,11 +207,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "wiki/learn/全栈开发学习路线.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "全栈开发学习路线的笔记属性"
+              "title": "笔记属性"
             }
           }
         ],
@@ -220,10 +217,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 1083.5
+    "width": 480
   },
   "left-ribbon": {
     "hiddenItems": {
+      "homepage:Open homepage": false,
       "notehelper:tongbuzhushou": false,
       "zk-prefixer:创建时间戳笔记": false,
       "switcher:打开快速切换": false,
@@ -241,40 +239,49 @@
       "smart-connections:Smart Connections: Open connections view": false,
       "smart-connections:Toggle Footer Connections": false,
       "smart-connections:Smart Connections: Open random connection": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "colorful-folders:Toggle stealth mode": false
     }
   },
-  "active": "4b74b69dd2213ad3",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "笔记同步助手/2026-06-10/QoderWork Design 上线，设计即代码，不输 Claude Design.md",
-    "笔记同步助手/2026-06-10/_已处理_QoderWork Design 上线，设计即代码，不输 Claude Design.md",
+    "首页.md",
+    "首页.md.tmp.59720.1cc07cadcea3",
+    "首页.md.tmp.59720.61b1a466af52",
+    "首页.md.tmp.59720.ed3dadd0695e",
+    "首页.md.tmp.59720.b04869a02a38",
+    "首页.md.tmp.59720.f7745f22f415",
+    "笔记同步助手/2026-06-10/_已处理_Obsidian首页改造成个人知识工作台.md",
+    "wiki/learn/Obsidian首页设计.md",
+    "wiki/learn/Obsidian首页设计.md.tmp.59720.8cc3229e22bd",
+    "笔记同步助手/images/63a75c92ff479d103591eb78bd5a2251_MD5.jpg",
+    "笔记同步助手/images/693247ac095eb4ef05803b40559590d6_MD5.jpg",
+    "笔记同步助手/images/f03438761613cdaca336d588bf6e1abd_MD5.jpg",
+    "笔记同步助手/images/e28b3b7b80155e6904f061c4029fdbd5_MD5.jpg",
+    "笔记同步助手/images/cb62ceaf849e1ed7dd748f54295c8013_MD5.jpg",
+    "笔记同步助手/images/7762bf0a45b99ecc9f295147dcd1a2e3_MD5.jpg",
+    "笔记同步助手/images/2fe1c34c84967ad8e7438261c7189fb1_MD5.jpg",
+    "笔记同步助手/images/f5c3c1a605fd65695eff99262e012702_MD5.jpg",
+    "笔记同步助手/images/a69e454494921612c3b6b5f2a65cac54_MD5.jpg",
+    "笔记同步助手/images/ca79b75bc915bc8a778b348ad1f9fdee_MD5.jpg",
+    "笔记同步助手/2026-06-10/Obsidian首页改造成个人知识工作台.md",
+    "首页.md.tmp.59720.cffa93d285da",
+    "wiki/index.md",
     "wiki/learn/QoderWork.md",
-    "CLAUDE.md.tmp.59720.b6523900a71e",
     "wiki/learn/全栈开发学习路线.md",
-    "笔记同步助手/images/f011997add2b69e8bd3f8ea9867822d0_MD5.png",
-    "笔记同步助手/images/70910b3a46508950324cecb5b94bbe8f_MD5.png",
-    "笔记同步助手/images/3de734b525874b7b526ad4a02839ef3a_MD5.png",
-    "笔记同步助手/images/01842d20b6b89c1355b3dbf5b79140df_MD5.png",
-    "笔记同步助手/images/17c456525f3fb52979d4ec24abe98e19_MD5.png",
-    "笔记同步助手/images/fd8405fd88c580e772b76c58e7578107_MD5.png",
-    "笔记同步助手/images/ee30be3d938965456aa50c7befecceb1_MD5.png",
-    "笔记同步助手/images/df829f47b53e77585342df578c9f4636_MD5.png",
-    "笔记同步助手/images/a840b652ba2857d53fde7c60cb37ec36_MD5.png",
-    "笔记同步助手/images/e7f942f13ce74b7f791ed3d306356891_MD5.png",
+    "wiki/business/接私活指南.md",
+    "wiki/business/个人网站修改方案.md",
+    "笔记同步助手/2026-06-10/_已处理_QoderWork Design 上线，设计即代码，不输 Claude Design.md",
+    "笔记同步助手/2026-06-10/QoderWork Design 上线，设计即代码，不输 Claude Design.md",
+    "CLAUDE.md.tmp.59720.b6523900a71e",
     "笔记同步助手/images",
     "笔记同步助手/2026-06-10/同步助手_2026-06-10.md",
     "笔记同步助手/2026-06-10",
-    "笔记同步助手",
-    "CLAUDE.md.tmp.26732.2f24b43fa528",
-    "CLAUDE.md.tmp.26732.94edefee88b5",
     "wiki/learn/Obsidian第二大脑.md",
     "CLAUDE.md",
     "wiki/projects/在线预约咨询网站.md",
     "2026-06-10.md",
-    "CLAUDE.md.tmp.26732.5961a2cf8662",
     "wiki/business/项目索引.md",
-    "wiki/business/个人网站修改方案.md",
-    "wiki/business/接私活指南.md",
     "wiki/learn/Obsidian插件推荐.md",
     "wiki/learn/ClaudeCode学习指南.md",
     "wiki/work/招投标流程要点.md",
@@ -282,15 +289,6 @@
     "wiki/work/爱山东APP.md",
     "wiki/work/信创.md",
     "wiki/work/城市大脑.md",
-    "wiki/work/数字政府.md",
-    "wiki/work/智慧城市.md",
-    "wiki/business",
-    "wiki/learn",
-    "wiki/work",
-    "wiki/entities/荣成大数据中心.md",
-    "wiki/log.md",
-    "wiki/concepts/项目索引.md",
-    "wiki/concepts/装卸通.md",
-    "wiki/concepts/个人网站修改方案.md"
+    "wiki/work/数字政府.md"
   ]
 }

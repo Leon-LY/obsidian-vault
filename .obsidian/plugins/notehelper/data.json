@@ -3,7 +3,7 @@
   "dateSavedFormat": "yyyy-MM-dd HH:mm:ss",
   "apiKey": "o56E76xmscQQ0iSeWmuvNRa8sScU",
   "filter": "ALL",
-  "syncAt": "2026-06-10T07:42:00.953+08:00",
+  "syncAt": "2026-06-10T10:05:31.309+08:00",
   "customQuery": "in:all",
   "template": "{{{content}}}",
   "highlightOrder": "LOCATION",
@@ -18,7 +18,7 @@
   "messageSortOrder": "desc",
   "messageFolder": "",
   "frequency": 1800,
-  "intervalId": 0,
+  "intervalId": 699,
   "frontMatterVariables": [],
   "frontMatterTemplate": "author: {{{author}}}\nsource: {{{siteName}}}\nurl: {{{originalUrl}}}\nsaved: {{{dateSaved}}}\ntags: [笔记同步助手{{#labels}}, {{{name}}}{{/labels}}]",
   "syncOnStart": true,
@@ -50,7 +50,7 @@
   "diaryLinkPrefix": "- ",
   "diaryLinkMaxLength": 0,
   "deviceSyncCursors": {
-    "desktop-mq7a5yhy-8n8j": "2026-06-10T07:42:00.953+08:00"
+    "desktop-mq7a5yhy-8n8j": "2026-06-10T10:05:31.309+08:00"
   },
   "initialSyncCompleted": true,
   "deviceAutoSync": {
