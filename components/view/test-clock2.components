@@ -1,0 +1,12 @@
+{
+  "components": [
+    {
+      "id": "test-clock-1",
+      "type": "clock",
+      "createAt": "2026-06-11T05:00:00.000Z",
+      "updateAt": "2026-06-11T05:00:00.000Z"
+    }
+  ],
+  "rootComponentId": "test-clock-1",
+  "version": 3.1
+}

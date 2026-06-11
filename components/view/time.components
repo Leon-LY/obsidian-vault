@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "4ab9617d-769f-453d-8a22-aec47d79ecb9",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": false,
+      "createAt": "2026-06-11T01:49:36.491Z",
+      "updateAt": "2026-06-11T01:49:36.491Z",
+      "components": [
+        {
+          "componentId": "93811e27-82f3-418c-92b5-14a198a9e2c6"
+        }
+      ],
+      "layoutType": "tab",
+      "locked": false,
+      "layoutOptions": {}
+    },
+    {
+      "id": "93811e27-82f3-418c-92b5-14a198a9e2c6",
+      "type": "time",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": false,
+      "createAt": "2026-06-11T01:56:26.725Z",
+      "updateAt": "2026-06-11T01:56:26.725Z",
+      "showLunar": false,
+      "hideDateInfo": false,
+      "hideSeconds": false,
+      "hideProgress": false,
+      "semanticTime": false
+    }
+  ],
+  "rootComponentId": "4ab9617d-769f-453d-8a22-aec47d79ecb9",
+  "version": 3.1
+}

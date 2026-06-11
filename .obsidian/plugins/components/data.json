@@ -1,9 +1,9 @@
 {
   "createComponentSilent": false,
-  "receiveBetaVersion": false,
+  "receiveBetaVersion": true,
   "folder": "components/view",
   "scriptFolder": "components/script",
-  "enableDebug": false,
+  "enableDebug": true,
   "debugLogOutputFolder": "components/logs",
   "aiBaseFolder": "components/ai",
   "homepage": {

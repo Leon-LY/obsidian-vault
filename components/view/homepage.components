@@ -1,0 +1,34 @@
+{
+  "components": [
+    {
+      "id": "test-embed",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "components": [
+        {
+          "componentId": "embed-clock"
+        }
+      ],
+      "layoutType": "column",
+      "createAt": "2026-06-11T06:00:00.000Z",
+      "updateAt": "2026-06-11T06:00:00.000Z"
+    },
+    {
+      "id": "embed-clock",
+      "type": "clock",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2026-06-11T06:00:00.000Z",
+      "updateAt": "2026-06-11T06:00:00.000Z"
+    }
+  ],
+  "rootComponentId": "test-embed",
+  "version": 3.1
+}

@@ -1,0 +1,48 @@
+{
+  "components": [
+    {
+      "id": "quick-test",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "components": [
+        {
+          "componentId": "tc1"
+        },
+        {
+          "componentId": "ts1"
+        }
+      ],
+      "layoutType": "column",
+      "createAt": "2026-06-11T05:00:00.000Z",
+      "updateAt": "2026-06-11T05:00:00.000Z"
+    },
+    {
+      "id": "tc1",
+      "type": "clock",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2026-06-11T05:00:00.000Z",
+      "updateAt": "2026-06-11T05:00:00.000Z"
+    },
+    {
+      "id": "ts1",
+      "type": "stat",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2026-06-11T05:00:00.000Z",
+      "updateAt": "2026-06-11T05:00:00.000Z"
+    }
+  ],
+  "rootComponentId": "quick-test",
+  "version": 3.1
+}

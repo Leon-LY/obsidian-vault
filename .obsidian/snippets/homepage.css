@@ -1,66 +1,33 @@
 /* ============================================
-   Obsidian 首页 — 深空仪表盘 v17
+   Components 首页 v18
    隔离：cssclasses: knowledge-home
-   设计：大标题 · 可点击标签 · 大表格 · 干净表头
-   适配 Royal Velvet
+   组件：Components 插件（卡片+按钮+markdown）
+   原生：Dataview 最近更新 + DeepSeek 小窗
    ============================================ */
 
 .knowledge-home {
   background:
-    radial-gradient(ellipse 60% 35% at 50% -5%, rgba(84, 64, 43, 0.05) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 30% at 85% 85%, rgba(59, 130, 246, 0.015) 0%, transparent 50%) !important;
-  padding: 20px 32px 32px !important;
+    radial-gradient(ellipse 60% 35% at 50% -5%, rgba(84, 64, 43, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 85% 85%, rgba(59, 130, 246, 0.01) 0%, transparent 50%) !important;
   max-width: 100% !important;
-  margin: 0 !important;
 }
 
 .knowledge-home .inline-title { display: none !important; }
 
-/* ========== HERO ========== */
-.knowledge-home h1 {
-  font-size: 1.5em !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.2px !important;
-  margin: 0 0 2px 0 !important;
+/* ========== Components 嵌入（去掉边框标题） ========== */
+.knowledge-home .markdown-embed[src*="homepage.components"] {
+  border: none !important;
   padding: 0 !important;
-  border: none !important;
+}
+.knowledge-home .markdown-embed[src*="homepage.components"] .markdown-embed-title {
+  display: none !important;
 }
 
-.knowledge-home h1 + p {
-  font-size: 0.78em !important;
-  color: var(--text-muted) !important;
-  margin: 0 0 10px 0 !important;
-}
-
-.knowledge-home h1 + p .internal-link {
-  color: var(--text-muted) !important;
-  text-decoration: none !important;
-  padding: 2px 10px !important;
-  border: 1px solid rgba(255,255,255,0.08) !important;
-  border-radius: 5px !important;
-  font-size: 0.85em !important;
-  transition: all 0.15s !important;
-}
-
-.knowledge-home h1 + p .internal-link:hover {
-  border-color: var(--interactive-accent) !important;
-  color: var(--text-normal) !important;
-  background: rgba(84, 64, 43, 0.12) !important;
-}
-
-/* ========== 分隔线 ========== */
-.knowledge-home hr {
-  margin: 12px 0 !important;
-  border: none !important;
-  height: 1px !important;
-  background: rgba(255,255,255,0.06) !important;
-}
-
-/* ========== DeepSeek 小窗口（嵌入组件） ========== */
+/* ========== DeepSeek 小窗 ========== */
 .knowledge-home .markdown-embed[src*="DeepSeekWidget"] {
   border: none !important;
   padding: 0 !important;
-  margin: 4px 0 10px 0 !important;
+  margin: 8px 0 !important;
 }
 .knowledge-home .markdown-embed[src*="DeepSeekWidget"] .markdown-embed-title {
   display: none !important;
@@ -83,89 +50,15 @@
   color: #60a5fa !important;
 }
 
-/* ========== 章节标题（大一点） ========== */
-.knowledge-home h2 {
-  font-size: 0.92em !important;
+/* ========== Dataview 最近更新 ========== */
+.knowledge-home h3 {
+  font-size: 0.9em !important;
   font-weight: 600 !important;
-  color: var(--text-normal) !important;
-  -webkit-text-fill-color: var(--text-normal) !important;
-  margin: 0 0 8px 0 !important;
-  padding: 0 !important;
+  margin: 12px 0 6px 0 !important;
   border: none !important;
   background: none !important;
 }
 
-/* ========== 三列卡片 ========== */
-.knowledge-home table th { display: none !important; }
-
-.knowledge-home table {
-  border-collapse: separate !important;
-  border-spacing: 8px !important;
-  width: calc(100% + 16px) !important;
-  margin: 0 -8px !important;
-}
-
-.knowledge-home table td {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border: 1px solid rgba(255, 255, 255, 0.07) !important;
-  border-left: 3px solid rgba(84, 64, 43, 0.35) !important;
-  border-radius: 8px !important;
-  padding: 14px 16px 12px 16px !important;
-  vertical-align: top !important;
-  transition: all 0.15s ease !important;
-}
-
-.knowledge-home table td:hover {
-  border-color: rgba(255, 255, 255, 0.12) !important;
-  border-left-color: rgba(84, 64, 43, 0.6) !important;
-  background: rgba(255, 255, 255, 0.06) !important;
-}
-
-.knowledge-home table td strong {
-  display: block !important;
-  font-size: 0.85em !important;
-  font-weight: 600 !important;
-  color: var(--text-normal) !important;
-  margin-bottom: 8px !important;
-}
-
-/* 标签文字用普通颜色，可点击链接 */
-.knowledge-home table td em {
-  font-style: normal !important;
-  display: block !important;
-  margin-bottom: 6px !important;
-  line-height: 1.8 !important;
-  color: rgba(255, 255, 255, 0.55) !important;
-  font-size: 0.82em !important;
-}
-
-/* 标签中的可点击链接 */
-.knowledge-home table td .internal-link {
-  font-size: 0.82em !important;
-  color: rgba(255, 255, 255, 0.6) !important;
-  text-decoration: none !important;
-  padding: 1px 4px !important;
-  border-radius: 3px !important;
-  line-height: 1.9 !important;
-}
-
-.knowledge-home table td .internal-link:hover {
-  color: var(--text-normal) !important;
-  background: rgba(84, 64, 43, 0.15) !important;
-}
-
-/* 查看全部链接 — 与标签区分开 */
-.knowledge-home table td br + .internal-link {
-  display: block !important;
-  margin-top: 10px !important;
-  padding-top: 8px !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-  font-size: 0.76em !important;
-  color: rgba(255, 255, 255, 0.25) !important;
-  letter-spacing: 0.3px !important;
-}
-
-/* ========== Dataview TABLE（大字体 + 无背景表头） ========== */
 .knowledge-home .dataview.table-view-table {
   width: 100% !important;
   border-collapse: separate !important;
@@ -174,101 +67,45 @@
   border-radius: 8px !important;
   overflow: hidden !important;
 }
-
 .knowledge-home .dataview.table-view-table thead th {
   display: table-cell !important;
-  font-size: 0.82em !important;
+  font-size: 0.78em !important;
   font-weight: 600 !important;
   color: var(--text-normal) !important;
   -webkit-text-fill-color: var(--text-normal) !important;
   letter-spacing: 0.5px !important;
-  padding: 10px 16px !important;
+  padding: 8px 14px !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
   background: transparent !important;
   background-color: transparent !important;
   background-image: none !important;
 }
-
-/* 关键：覆盖 Royal Velvet 的 thead 渐变 */
 .knowledge-home thead,
-.knowledge-home thead.table-view-thead,
 .knowledge-home .table-view-table thead,
-.knowledge-home .table-view-table > thead,
 .knowledge-home .dataview.table-view-table thead {
   background: transparent !important;
   background-color: transparent !important;
   background-image: none !important;
 }
-
 .knowledge-home .dataview.table-view-table tbody td {
-  font-size: 0.88em !important;
+  font-size: 0.84em !important;
   color: var(--text-normal) !important;
-  padding: 8px 16px !important;
+  padding: 7px 14px !important;
   border: none !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important;
   background: transparent !important;
 }
-
 .knowledge-home .dataview.table-view-table tbody td .internal-link {
   color: var(--text-normal) !important;
   text-decoration: none !important;
   font-weight: 500 !important;
 }
-
 .knowledge-home .dataview.table-view-table tbody td .internal-link:hover {
   color: var(--interactive-accent) !important;
 }
-
 .knowledge-home .dataview.table-view-table tbody tr:hover {
   background: rgba(255, 255, 255, 0.03) !important;
 }
-
 .knowledge-home .dataview.table-view-table tbody tr:last-child td {
   border-bottom: none !important;
-}
-
-/* ========== 页脚 ========== */
-.knowledge-home hr:last-of-type {
-  margin: 18px 0 6px !important;
-}
-
-.knowledge-home hr:last-of-type + p {
-  text-align: center !important;
-  margin: 0 !important;
-}
-
-.knowledge-home hr:last-of-type + p .internal-link {
-  display: inline-block !important;
-  padding: 2px 10px !important;
-  margin: 2px !important;
-  border: 1px solid rgba(255,255,255,0.05) !important;
-  border-radius: 5px !important;
-  color: var(--text-muted) !important;
-  font-size: 0.72em !important;
-  text-decoration: none !important;
-}
-
-.knowledge-home hr:last-of-type + p .internal-link:hover {
-  border-color: var(--interactive-accent) !important;
-  color: var(--text-normal) !important;
-  background: rgba(84, 64, 43, 0.1) !important;
-}
-
-/* ========== 响应式 ========== */
-@media (max-width: 700px) {
-  .knowledge-home { padding: 14px 18px 24px !important; }
-  .knowledge-home table td { padding: 10px 12px 10px 12px !important; }
-}
-
-@media (max-width: 480px) {
-  .knowledge-home table,
-  .knowledge-home table tbody,
-  .knowledge-home table tr,
-  .knowledge-home table td {
-    display: block !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  .knowledge-home table td { margin-bottom: 6px !important; }
-  .knowledge-home h1 { font-size: 1.2em !important; }
 }
