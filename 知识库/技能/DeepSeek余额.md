@@ -4,7 +4,7 @@ type: concept
 tags: [技能/AI工具]
 status: draft
 created: 2026-06-10
-updated: 2026-06-10
+updated: 2026-06-11
 ---
 
 # 🤖 DeepSeek 使用情况
@@ -22,15 +22,15 @@ updated: 2026-06-10
     <tr>
       <td style="text-align:center; padding:6px 10px; border:none; background:none;">
         <span style="font-size:0.65em; color:rgba(255,255,255,0.35);">余额</span><br>
-        <strong style="font-size:1.3em; color:#e2e8f0;">¥106.60</strong>
+        <strong style="font-size:1.3em; color:#e2e8f0;">¥103.99</strong>
       </td>
       <td style="text-align:center; padding:6px 10px; border:none; background:none;">
         <span style="font-size:0.65em; color:rgba(255,255,255,0.35);">今日消耗</span><br>
-        <strong style="font-size:1.1em; color:#f59e0b;">¥0.40</strong>
+        <strong style="font-size:1.1em; color:#f59e0b;">¥2.61</strong>
       </td>
       <td style="text-align:center; padding:6px 10px; border:none; background:none;">
         <span style="font-size:0.65em; color:rgba(255,255,255,0.35);">≈ Tokens</span><br>
-        <strong style="font-size:1.1em; color:#e2e8f0;">200.0K</strong>
+        <strong style="font-size:1.1em; color:#e2e8f0;">1.3M</strong>
       </td>
     </tr>
   </table>
@@ -51,7 +51,7 @@ updated: 2026-06-10
     "></div>
   </div>
   <p style="font-size:0.6em; color:rgba(255,255,255,0.22); text-align:right; margin:0;">
-    可用 · 总用量 0.0% · 2026-06-10 22:08:54
+    可用 · 总用量 0.0% · 2026-06-11 08:48:54
   </p>
 </div>
 
@@ -60,6 +60,7 @@ updated: 2026-06-10
 | 日期 | 余额 | 消耗 | ≈ Tokens |
 |------|------|------|----------|
 | 2026-06-10 | ¥106.60 | -¥0.40 | 200.0K |
+| 2026-06-11 | ¥103.99 | -¥2.61 | 1.3M |
 
 
 ## 查看方式

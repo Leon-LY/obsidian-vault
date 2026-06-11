@@ -1,6 +1,7 @@
 {
   "pluginList": [
-    "YishenTu/claudian"
+    "YishenTu/claudian",
+    "obsidian-components/obsidian-components-release"
   ],
   "pluginSubListFrozenVersion": [
     {
