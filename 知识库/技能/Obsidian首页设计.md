@@ -95,5 +95,7 @@ Components 插件可以让 Obsidian 实现类似 Notion 的页面体验：
 ## 关联笔记
 
 - [[Obsidian第二大脑]] — 知识管理体系的总纲
+- [[Obsidian Components插件]] — Components 详细实操指南（六步上手）
+- [[Obsidian主题美化]] — 主题与界面美化定制
 - [[Obsidian插件推荐]] — Dataview / Components 等首页必备插件
 - [[首页]] — 本 vault 当前的首页实现

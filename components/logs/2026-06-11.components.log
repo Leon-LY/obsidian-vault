@@ -252,3 +252,141 @@
 2026-06-11 09:59:12.525 [debug] FileIndexService: indexing file 笔记同步助手/2026-06-11/Obsidian 主题界面美化全攻略.md   
 2026-06-11 09:59:12.526 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/2026-06-11/Obsidian 主题界面美化全攻略.md   
 2026-06-11 09:59:12.566 [debug] FileIndexService: saving index for file 笔记同步助手/2026-06-11/Obsidian 主题界面美化全攻略.md  [object Object] 
+2026-06-11 09:59:13.264 [debug] FileIndexService: indexing file 笔记同步助手/images/ae5138cccd3974bdf35957a718367596_MD5.jpg   
+2026-06-11 09:59:13.264 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/ae5138cccd3974bdf35957a718367596_MD5.jpg   
+2026-06-11 09:59:13.265 [debug] FileIndexService: saving index for file 笔记同步助手/images/ae5138cccd3974bdf35957a718367596_MD5.jpg  [object Object] 
+2026-06-11 09:59:14.396 [debug] FileIndexService: indexing file 笔记同步助手/images/5cefe09ab7971ae5f1e413fa34d28d8a_MD5.jpg   
+2026-06-11 09:59:14.397 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/5cefe09ab7971ae5f1e413fa34d28d8a_MD5.jpg   
+2026-06-11 09:59:14.397 [debug] FileIndexService: saving index for file 笔记同步助手/images/5cefe09ab7971ae5f1e413fa34d28d8a_MD5.jpg  [object Object] 
+2026-06-11 09:59:15.351 [debug] FileIndexService: indexing file 笔记同步助手/images/ab312f48586bde11b3dfac90d276d6ff_MD5.jpg   
+2026-06-11 09:59:15.352 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/ab312f48586bde11b3dfac90d276d6ff_MD5.jpg   
+2026-06-11 09:59:15.352 [debug] FileIndexService: saving index for file 笔记同步助手/images/ab312f48586bde11b3dfac90d276d6ff_MD5.jpg  [object Object] 
+2026-06-11 09:59:16.179 [debug] FileIndexService: indexing file 笔记同步助手/images/9e920f4a2d1fb19f5f61e2ec5ecb2626_MD5.jpg   
+2026-06-11 09:59:16.179 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/9e920f4a2d1fb19f5f61e2ec5ecb2626_MD5.jpg   
+2026-06-11 09:59:16.179 [debug] FileIndexService: saving index for file 笔记同步助手/images/9e920f4a2d1fb19f5f61e2ec5ecb2626_MD5.jpg  [object Object] 
+2026-06-11 09:59:16.884 [debug] FileIndexService: indexing file 笔记同步助手/images/5ce1fa9bfe4f980100bbba1b96b52c04_MD5.jpg   
+2026-06-11 09:59:16.884 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/5ce1fa9bfe4f980100bbba1b96b52c04_MD5.jpg   
+2026-06-11 09:59:16.884 [debug] FileIndexService: saving index for file 笔记同步助手/images/5ce1fa9bfe4f980100bbba1b96b52c04_MD5.jpg  [object Object] 
+2026-06-11 09:59:17.690 [debug] FileIndexService: indexing file 笔记同步助手/images/c2b6c2f9cd2fc9fec991ca28d8a63f70_MD5.jpg   
+2026-06-11 09:59:17.690 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/c2b6c2f9cd2fc9fec991ca28d8a63f70_MD5.jpg   
+2026-06-11 09:59:17.690 [debug] FileIndexService: saving index for file 笔记同步助手/images/c2b6c2f9cd2fc9fec991ca28d8a63f70_MD5.jpg  [object Object] 
+2026-06-11 09:59:18.689 [debug] FileIndexService: indexing file 笔记同步助手/images/19db814f93bf9273ca908296455ad2d9_MD5.jpg   
+2026-06-11 09:59:18.689 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/19db814f93bf9273ca908296455ad2d9_MD5.jpg   
+2026-06-11 09:59:18.689 [debug] FileIndexService: saving index for file 笔记同步助手/images/19db814f93bf9273ca908296455ad2d9_MD5.jpg  [object Object] 
+2026-06-11 09:59:19.284 [debug] FileIndexService: indexing file 笔记同步助手/images/c50ad4fc1d3e16e31278eca33cec9d37_MD5.jpg   
+2026-06-11 09:59:19.285 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/c50ad4fc1d3e16e31278eca33cec9d37_MD5.jpg   
+2026-06-11 09:59:19.285 [debug] FileIndexService: saving index for file 笔记同步助手/images/c50ad4fc1d3e16e31278eca33cec9d37_MD5.jpg  [object Object] 
+2026-06-11 09:59:20.317 [debug] FileIndexService: indexing file 笔记同步助手/images/dcef7b2199717ab6e6058e06cdb7fd57_MD5.jpg   
+2026-06-11 09:59:20.318 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/dcef7b2199717ab6e6058e06cdb7fd57_MD5.jpg   
+2026-06-11 09:59:20.318 [debug] FileIndexService: saving index for file 笔记同步助手/images/dcef7b2199717ab6e6058e06cdb7fd57_MD5.jpg  [object Object] 
+2026-06-11 09:59:21.348 [debug] FileIndexService: indexing file 笔记同步助手/images/7dd034b0bb69f2e4a9f83f3348a0d3b1_MD5.jpg   
+2026-06-11 09:59:21.349 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/7dd034b0bb69f2e4a9f83f3348a0d3b1_MD5.jpg   
+2026-06-11 09:59:21.349 [debug] FileIndexService: saving index for file 笔记同步助手/images/7dd034b0bb69f2e4a9f83f3348a0d3b1_MD5.jpg  [object Object] 
+2026-06-11 09:59:22.319 [debug] FileIndexService: indexing file 笔记同步助手/images/64f1fc326a50a5103433176effbfd0d7_MD5.jpg   
+2026-06-11 09:59:22.319 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/64f1fc326a50a5103433176effbfd0d7_MD5.jpg   
+2026-06-11 09:59:22.319 [debug] FileIndexService: saving index for file 笔记同步助手/images/64f1fc326a50a5103433176effbfd0d7_MD5.jpg  [object Object] 
+2026-06-11 09:59:23.031 [debug] FileIndexService: indexing file 笔记同步助手/images/3168c30f03f8ec735d96b55ee69bd0cd_MD5.jpg   
+2026-06-11 09:59:23.031 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/3168c30f03f8ec735d96b55ee69bd0cd_MD5.jpg   
+2026-06-11 09:59:23.031 [debug] FileIndexService: saving index for file 笔记同步助手/images/3168c30f03f8ec735d96b55ee69bd0cd_MD5.jpg  [object Object] 
+2026-06-11 09:59:32.351 [debug] FileIndexService: indexing file 笔记同步助手/images/41f7b4058022a8bc6c911e984d0cf69c_MD5.jpg   
+2026-06-11 09:59:32.352 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/41f7b4058022a8bc6c911e984d0cf69c_MD5.jpg   
+2026-06-11 09:59:32.352 [debug] FileIndexService: saving index for file 笔记同步助手/images/41f7b4058022a8bc6c911e984d0cf69c_MD5.jpg  [object Object] 
+2026-06-11 09:59:46.592 [debug] FileIndexService: indexing file 笔记同步助手/images/2909aadd82c678f3d724fcd3c1a3ce15_MD5.jpg   
+2026-06-11 09:59:46.593 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/2909aadd82c678f3d724fcd3c1a3ce15_MD5.jpg   
+2026-06-11 09:59:46.593 [debug] FileIndexService: saving index for file 笔记同步助手/images/2909aadd82c678f3d724fcd3c1a3ce15_MD5.jpg  [object Object] 
+2026-06-11 09:59:47.205 [debug] FileIndexService: indexing file 笔记同步助手/images/1fc99bb978f20412fd1a045c7d9b6d81_MD5.jpg   
+2026-06-11 09:59:47.206 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/1fc99bb978f20412fd1a045c7d9b6d81_MD5.jpg   
+2026-06-11 09:59:47.206 [debug] FileIndexService: saving index for file 笔记同步助手/images/1fc99bb978f20412fd1a045c7d9b6d81_MD5.jpg  [object Object] 
+2026-06-11 09:59:48.390 [debug] FileIndexService: indexing file 笔记同步助手/images/44fa2b819c65da9939d99cc9daf509e7_MD5.jpg   
+2026-06-11 09:59:48.390 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/44fa2b819c65da9939d99cc9daf509e7_MD5.jpg   
+2026-06-11 09:59:48.390 [debug] FileIndexService: saving index for file 笔记同步助手/images/44fa2b819c65da9939d99cc9daf509e7_MD5.jpg  [object Object] 
+2026-06-11 09:59:49.295 [debug] FileIndexService: indexing file 笔记同步助手/images/5c2d388df56c600ffa663558e2753f59_MD5.jpg   
+2026-06-11 09:59:49.295 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/5c2d388df56c600ffa663558e2753f59_MD5.jpg   
+2026-06-11 09:59:49.295 [debug] FileIndexService: saving index for file 笔记同步助手/images/5c2d388df56c600ffa663558e2753f59_MD5.jpg  [object Object] 
+2026-06-11 09:59:50.371 [debug] FileIndexService: indexing file 笔记同步助手/images/fdc253fc88c11e5bc1b6a656c0f8c494_MD5.jpg   
+2026-06-11 09:59:50.371 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/images/fdc253fc88c11e5bc1b6a656c0f8c494_MD5.jpg   
+2026-06-11 09:59:50.371 [debug] FileIndexService: saving index for file 笔记同步助手/images/fdc253fc88c11e5bc1b6a656c0f8c494_MD5.jpg  [object Object] 
+2026-06-11 09:59:50.418 [debug] FileIndexService: indexing file 笔记同步助手/2026-06-11/Obsidian 主题界面美化全攻略.md   
+2026-06-11 09:59:50.418 [debug] FileIndexService: shouldIndex=true for file 笔记同步助手/2026-06-11/Obsidian 主题界面美化全攻略.md   
+2026-06-11 09:59:50.430 [debug] FileIndexService: saving index for file 笔记同步助手/2026-06-11/Obsidian 主题界面美化全攻略.md  [object Object] 
+2026-06-11 10:00:19.116 [info] BackLinkHook: loaded — 106 backlink targets   
+2026-06-11 10:00:19.137 [error] Error: Minified React error #409; visit https://reactjs.org/docs/error-decoder.html?invariant=409 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.   
+2026-06-11 10:01:00.753 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:01:00.861 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:01:33.138 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:01:33.243 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:01:36.747 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:01:36.848 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:01:40.037 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:01:40.143 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:01:44.665 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:01:44.771 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:03:23.778 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:03:23.883 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:03:31.839 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:03:31.946 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:03:32.586 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:03:32.687 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:03:34.026 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:03:34.134 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:03:42.144 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:03:42.250 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:03:42.410 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:03:42.510 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:03:45.189 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:03:45.293 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:03:45.964 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:03:46.069 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:03:48.339 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:03:48.444 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:03:49.083 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:03:49.189 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:03:50.836 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:03:50.939 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:03:51.594 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:03:51.694 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:03:54.802 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:03:54.907 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:03:55.112 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:03:55.217 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:04:09.032 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:04:09.133 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:04:34.232 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:04:34.337 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:04:41.596 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:04:41.712 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:04:41.858 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:04:41.960 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:04:42.177 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:04:42.287 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:04:43.055 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:04:43.172 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:04:47.359 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/time.components 
+2026-06-11 10:04:47.460 [debug] Removed modifying flag for:  components/view/time.components 
+2026-06-11 10:05:09.220 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/home-test.components 
+2026-06-11 10:05:09.320 [debug] Removed modifying flag for:  components/view/home-test.components 
+2026-06-11 10:05:12.644 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/home-test.components 
+2026-06-11 10:05:12.761 [debug] Removed modifying flag for:  components/view/home-test.components 
+2026-06-11 10:05:20.698 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/home-test.components 
+2026-06-11 10:05:20.804 [debug] Removed modifying flag for:  components/view/home-test.components 
+2026-06-11 10:05:24.803 [debug] Components Repository Manager: Self-initiated modification, skipping reload:  components/view/home-test.components 
+2026-06-11 10:05:24.907 [debug] Removed modifying flag for:  components/view/home-test.components 
+2026-06-11 10:06:05.133 [debug] Cleared repository for deleted file:  components/view/time.components 
+2026-06-11 10:06:08.253 [debug] Cleared repository for deleted file:  components/view/home-test.components 
+2026-06-11 10:06:08.253 [debug] BackLinkHook: removed deleted file components/view/home-test.components   
+2026-06-11 10:06:08.347 [debug] Cleared repository for deleted file:  components/view/homepage.components 
+2026-06-11 10:06:08.539 [debug] Cleared repository for deleted file:  components/view/homepage-backup.components 
+2026-06-11 10:06:08.577 [debug] Cleared repository for deleted file:  components/view/test-clock2.components 
+2026-06-11 10:06:08.638 [debug] Cleared repository for deleted file:  components/view/test-stat.components 
+2026-06-11 10:15:28.149 [debug] BackLinkHook: resolved 笔记同步助手/2026-06-11/Obsidian Components 插件：私人学习笔记.md — 4 outbound links   
+2026-06-11 10:39:32.164 [debug] BackLinkHook: resolved 知识库/技能/Obsidian主题美化.md — 3 outbound links   
+2026-06-11 10:39:57.034 [debug] BackLinkHook: resolved 知识库/技能/Obsidian Components插件.md — 4 outbound links   
+2026-06-11 10:40:07.348 [debug] BackLinkHook: resolved 知识库/目录.md — 33 outbound links   
+2026-06-11 10:40:21.798 [debug] BackLinkHook: resolved 知识库/变更记录.md — 33 outbound links   
+2026-06-11 10:40:26.683 [debug] BackLinkHook: resolved 知识库/技能/Obsidian首页设计.md — 5 outbound links   
+2026-06-11 10:40:31.792 [debug] BackLinkHook: resolved 笔记同步助手/2026-06-11/_已处理_Obsidian 主题界面美化全攻略.md — 18 outbound links   
+2026-06-11 10:40:31.849 [debug] BackLinkHook: resolved 笔记同步助手/2026-06-11/_已处理_Obsidian Components 插件：私人学习笔记.md — 4 outbound links   
+2026-06-11 10:40:31.879 [debug] BackLinkHook: removed deleted file 笔记同步助手/2026-06-11/Obsidian 主题界面美化全攻略.md   
+2026-06-11 10:40:31.944 [debug] BackLinkHook: removed deleted file 笔记同步助手/2026-06-11/Obsidian Components 插件：私人学习笔记.md   
+2026-06-11 14:54:48.340 [info] BackLinkHook: loaded — 111 backlink targets   
+2026-06-11 14:54:53.864 [error] check new version failed  Error: Request failed, status 403 
