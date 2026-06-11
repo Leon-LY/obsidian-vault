@@ -1,0 +1,18 @@
+{
+  "createComponentSilent": false,
+  "receiveBetaVersion": false,
+  "folder": "components/view",
+  "scriptFolder": "components/script",
+  "enableDebug": false,
+  "debugLogOutputFolder": "components/logs",
+  "aiBaseFolder": "components/ai",
+  "homepage": {
+    "path": "首页.md",
+    "mobilePath": null,
+    "showOnStartup": true,
+    "showOnEmpty": true,
+    "showOnNewEmptyTab": false
+  },
+  "aiProviders": [],
+  "aiDefaultModels": {}
+}

@@ -221,6 +221,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "components:AI 对话（新标签页）": false,
       "homepage:Open homepage": false,
       "notehelper:tongbuzhushou": false,
       "zk-prefixer:创建时间戳笔记": false,
@@ -243,8 +244,11 @@
       "colorful-folders:Toggle stealth mode": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "d58160fdc09cf6fb",
   "lastOpenFiles": [
+    "components/view/home-test.components",
+    "components/view",
+    "components",
     "首页.md",
     "笔记同步助手/2026-06-10/_已处理_Obsidian 主页改造指南：利用 Components 插件实现 Notion 风格.md",
     "知识库/技能/DeepSeek余额.md",
@@ -282,14 +286,11 @@
     "首页.md.tmp.61316.b24630cd1e3d",
     "首页.md.tmp.61316.8185513af81d",
     "知识库/技能/DeepSeek使用统计.md",
-    "首页.md.tmp.61316.91b5a6c61fe9",
-    "首页.md.tmp.61316.0a0faffa32be",
     "CLAUDE.md",
     "笔记同步助手/README.md",
     "产出/README.md",
     "收件箱/README.md",
     "原始素材/README.md",
-    "收件箱.md",
-    "笔记同步助手.md"
+    "收件箱.md"
   ]
 }

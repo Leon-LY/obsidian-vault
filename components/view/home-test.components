@@ -1,0 +1,49 @@
+{
+  "components": [
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2026-06-11T01:07:19.000Z",
+      "updateAt": "2026-06-11T01:07:19.000Z",
+      "components": [
+        {
+          "componentId": "b2c3d4e5-f6a7-8901-bcde-f12345678901"
+        },
+        {
+          "componentId": "c3d4e5f6-a7b8-9012-cdef-123456789012"
+        }
+      ],
+      "layoutType": "column"
+    },
+    {
+      "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "type": "text",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2026-06-11T01:07:20.000Z",
+      "updateAt": "2026-06-11T01:07:20.000Z",
+      "textValue": "### 🚀 Components 插件已就绪！\n\n如果你看到这句话，说明渲染正常。"
+    },
+    {
+      "id": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+      "type": "clock",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2026-06-11T01:07:20.000Z",
+      "updateAt": "2026-06-11T01:07:20.000Z"
+    }
+  ],
+  "rootComponentId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "version": 3.1
+}
