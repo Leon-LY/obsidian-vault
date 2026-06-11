@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0d32c02964f33d7a",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "84071d63698b5c89",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "知识库/项目/公司/城市大脑.md",
-                "mode": "preview",
+                "file": "首页.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "城市大脑"
+              "title": "首页"
             }
           }
         ]
@@ -243,11 +243,19 @@
       "colorful-folders:Toggle stealth mode": false
     }
   },
-  "active": "4b74b69dd2213ad3",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "首页.md.tmp.61316.e9054fab2a2c",
-    "知识库/项目/公司/城市大脑.md",
     "首页.md",
+    "笔记同步助手/2026-06-10/_已处理_Obsidian 主页改造指南：利用 Components 插件实现 Notion 风格.md",
+    "知识库/技能/DeepSeek余额.md",
+    "DeepSeekWidget.md",
+    "知识库/项目/公司/城市大脑.md",
+    "笔记同步助手/images/9f7cfbcdd9353deb47b4f696aaccf801_MD5.jpg",
+    "笔记同步助手/images/ddde1842a7b916691a244e76febc358a_MD5.jpg",
+    "笔记同步助手/images/05086bd06c38658e3d72d404e0834039_MD5.jpg",
+    "笔记同步助手/images/59e6e286e64c809a26b35ec8899b5ede_MD5.jpg",
+    "笔记同步助手/2026-06-10/Obsidian 主页改造指南：利用 Components 插件实现 Notion 风格.md",
+    "首页.md.tmp.61316.e9054fab2a2c",
     "知识库/项目/公司/荣成应急管理系统.md",
     "笔记同步助手/2026-06-10/_已处理_让 Claude Code 趁你睡觉就把活干完的命令 - 学习笔记.md",
     "笔记同步助手/2026-06-10/_已处理_全面掌握 Claude Design：可交互可编辑PPT学习笔记.md",
@@ -267,11 +275,7 @@
     "笔记同步助手/images/5f51b20edf832133646982b31f730cae_MD5.jpg",
     "知识库/项目/公司/爱山东APP.md.tmp.61316.6266f7f8752b",
     "笔记同步助手/images/608a9818ad3b4f9f64315b264ee6bcd8_MD5.jpg",
-    "笔记同步助手/images/a14f4289dc3ee916447a6ab9e488f763_MD5.jpg",
     "知识库/项目/公司/爱山东APP.md",
-    "笔记同步助手/images/3d8a800d5272d955cad2b5f454574c04_MD5.jpg",
-    "笔记同步助手/images/4ef33d360ee9a5a2c8eb6708ffac61ba_MD5.jpg",
-    "笔记同步助手/images/272460aa86de405a659fdce86b144483_MD5.jpg",
     "知识库/项目/公司/荣成应急管理系统.md.tmp.61316.7132d3ae1a65",
     "知识库/项目/公司/智慧荣成数据可视化.md",
     "知识库/变更记录.md.tmp.61316.2520dd3f5ced",
@@ -281,15 +285,11 @@
     "首页.md.tmp.61316.91b5a6c61fe9",
     "首页.md.tmp.61316.0a0faffa32be",
     "CLAUDE.md",
-    "首页.md.tmp.61316.f9eef62cc1eb",
     "笔记同步助手/README.md",
     "产出/README.md",
     "收件箱/README.md",
     "原始素材/README.md",
     "收件箱.md",
-    "笔记同步助手.md",
-    "知识库/项目/私活/在线预约咨询网站.md",
-    "知识库/项目/私活/Studio后台管理系统.md",
-    "知识库/项目/私活/个人作品集网站.md"
+    "笔记同步助手.md"
   ]
 }

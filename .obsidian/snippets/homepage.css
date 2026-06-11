@@ -56,6 +56,33 @@
   background: rgba(255,255,255,0.06) !important;
 }
 
+/* ========== DeepSeek 小窗口（嵌入组件） ========== */
+.knowledge-home .markdown-embed[src*="DeepSeekWidget"] {
+  border: none !important;
+  padding: 0 !important;
+  margin: 4px 0 10px 0 !important;
+}
+.knowledge-home .markdown-embed[src*="DeepSeekWidget"] .markdown-embed-title {
+  display: none !important;
+}
+.knowledge-home .markdown-embed[src*="DeepSeekWidget"] blockquote {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-left: 3px solid #60a5fa !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  margin: 0 !important;
+  font-size: 0.82em !important;
+}
+.knowledge-home .markdown-embed[src*="DeepSeekWidget"] blockquote .internal-link {
+  color: rgba(255,255,255,0.35) !important;
+  font-size: 0.85em !important;
+  text-decoration: none !important;
+}
+.knowledge-home .markdown-embed[src*="DeepSeekWidget"] blockquote .internal-link:hover {
+  color: #60a5fa !important;
+}
+
 /* ========== 章节标题（大一点） ========== */
 .knowledge-home h2 {
   font-size: 0.92em !important;
