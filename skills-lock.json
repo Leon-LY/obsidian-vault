@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "skills": {
+    "css-hover-effects": {
+      "source": "dabaibian/css-skills",
+      "sourceType": "github",
+      "skillPath": "skills/css-hover-effects/SKILL.md",
+      "computedHash": "ecb36ead4281f6bd06cd35dd0c137debb385d020bc23039cf3d5c44362b78c45"
+    },
+    "css-micro-fx": {
+      "source": "dabaibian/css-skills",
+      "sourceType": "github",
+      "skillPath": "skills/css-micro-fx/SKILL.md",
+      "computedHash": "f22853003c7e7f796cb95637c721a1e6c6bee3dc2bc443889bb6b97c67178829"
+    },
+    "drizzle-best-practices": {
+      "source": "honra-io/drizzle-best-practices",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "646cfd3db3dbb28211f87112f53db3f5bfa8aea824e1d5214bcb0e09f16cb1bc"
+    },
+    "motion-design": {
+      "source": "LottieFiles/motion-design-skill",
+      "sourceType": "github",
+      "skillPath": "skills/motion-design/SKILL.md",
+      "computedHash": "4f16f46c81f25a2a25b7a4720b7ea001e65f384b31b5b7f4b455fef87fbc9016"
+    },
+    "neon-postgres": {
+      "source": "neondatabase/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/neon-postgres/SKILL.md",
+      "computedHash": "998294d9102bfdcd25a246f8fc2323148f5dae9b82a04c6baf2a3de388b95608"
+    },
+    "text-to-lottie": {
+      "source": "diffusionstudio/lottie",
+      "sourceType": "github",
+      "skillPath": "skills/text-to-lottie/SKILL.md",
+      "computedHash": "38d8a23aefea89e297221b2330b56a9794195bbd69d239cfef3d3ce03b5e8132"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "computedHash": "d8e7d3afe37dcc8a97b99ffb5afdb4d0919ae0092ea8b68f44eb201f035e33ac"
+    }
+  }
+}

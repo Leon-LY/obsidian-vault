@@ -1,5 +1,0 @@
-=== Chapter 8 body subsections (between P2077 and P2122) ===
-P2082: 8.1 功能定位
-P2084: 8.2 应用场景
-P2092: 8.3 技术方案
-P2108: 8.4 解说词生成机制

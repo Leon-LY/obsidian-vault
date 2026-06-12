@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a5276"/></marker>
+    <filter id="sh"><feDropShadow dx="1" dy="1" stdDeviation="1.5" flood-opacity="0.12"/></filter>
+    <linearGradient id="gdb" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a5276"/><stop offset="100%" stop-color="#2980b9"/></linearGradient>
+    <linearGradient id="gmb" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#2471a3"/><stop offset="100%" stop-color="#2e86c1"/></linearGradient>
+    <linearGradient id="gte" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1abc9c"/><stop offset="100%" stop-color="#16a085"/></linearGradient>
+    <linearGradient id="gdk" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#2c3e50"/><stop offset="100%" stop-color="#1a252f"/></linearGradient>
+    <linearGradient id="gor" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#f39c12"/><stop offset="100%" stop-color="#e67e22"/></linearGradient>
+    <linearGradient id="grd" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#e74c3c"/><stop offset="100%" stop-color="#c0392b"/></linearGradient>
+    <linearGradient id="ggr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#27ae60"/><stop offset="100%" stop-color="#229954"/></linearGradient>
+    <linearGradient id="gpr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#8e44ad"/><stop offset="100%" stop-color="#6c3483"/></linearGradient>
+  </defs>
+  <rect width="1200" height="260" fill="#f4f6f9" rx="8"/>
+  <text x="600" y="40" font-family="'Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#1a5276" text-anchor="middle">数据安全管控体系</text>
+  <rect x="30" y="70" width="1140" height="120" rx="10" fill="#fdedec" stroke="#e74c3c" stroke-width="1.2"/>
+<text x="42" y="88" font-family="'Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#e74c3c">安全措施</text>
+<rect x="45.0" y="91.0" width="210" height="78" rx="8" fill="url(#grd)" filter="url(#sh)"/>
+<text x="150" y="122" font-family="'Microsoft YaHei',sans-serif" font-size="12" font-weight="600" fill="white" text-anchor="middle">最小必要原则</text>
+<text x="150" y="146" font-family="'Microsoft YaHei',sans-serif" font-size="9" fill="#bdc3c7" text-anchor="middle">仅开放必需字段</text>
+<rect x="270.0" y="91.0" width="210" height="78" rx="8" fill="url(#grd)" filter="url(#sh)"/>
+<text x="375" y="122" font-family="'Microsoft YaHei',sans-serif" font-size="12" font-weight="600" fill="white" text-anchor="middle">脱敏展示</text>
+<text x="375" y="146" font-family="'Microsoft YaHei',sans-serif" font-size="9" fill="#bdc3c7" text-anchor="middle">手机138****1234</text>
+<rect x="495.0" y="91.0" width="210" height="78" rx="8" fill="url(#grd)" filter="url(#sh)"/>
+<text x="600" y="122" font-family="'Microsoft YaHei',sans-serif" font-size="12" font-weight="600" fill="white" text-anchor="middle">全链路审计</text>
+<text x="600" y="146" font-family="'Microsoft YaHei',sans-serif" font-size="9" fill="#bdc3c7" text-anchor="middle">>=180天日志</text>
+<rect x="720.0" y="91.0" width="210" height="78" rx="8" fill="url(#grd)" filter="url(#sh)"/>
+<text x="825" y="122" font-family="'Microsoft YaHei',sans-serif" font-size="12" font-weight="600" fill="white" text-anchor="middle">分级权限</text>
+<text x="825" y="146" font-family="'Microsoft YaHei',sans-serif" font-size="9" fill="#bdc3c7" text-anchor="middle">四级角色控制</text>
+<rect x="945.0" y="91.0" width="210" height="78" rx="8" fill="url(#grd)" filter="url(#sh)"/>
+<text x="1050" y="122" font-family="'Microsoft YaHei',sans-serif" font-size="12" font-weight="600" fill="white" text-anchor="middle">数据不落地</text>
+<text x="1050" y="146" font-family="'Microsoft YaHei',sans-serif" font-size="9" fill="#bdc3c7" text-anchor="middle">按需查询 不持久化</text>
+
+  <text x="600" y="260-20" font-family="'Microsoft YaHei',sans-serif" font-size="9" fill="#95a5a6" text-anchor="middle">数字荣成治理提升项目</text>
+</svg>
