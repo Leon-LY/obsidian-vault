@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>并蒂星球 - 品牌视觉系统</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+  :root {
+    --blue: #4299E1; --pink: #F56565; --bg: #FFFBF5;
+    --white: #FFFFFF; --text: #2D3748; --text2: #A0AEC0;
+    --mint: #48BB78; --orange: #ED8936;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans SC', -apple-system, sans-serif; background: #F2F0EC; color: var(--text); padding: 60px 40px; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .section-title { font-size: 26px; font-weight: 600; margin-bottom: 32px; padding-bottom: 14px; border-bottom: 2px solid #E2E8F0; }
+
+  .brand-hero { text-align: center; padding: 80px 40px; background: var(--bg); border-radius: 32px; margin-bottom: 60px; }
+  .brand-hero .name { font-family: 'Noto Serif SC', serif; font-size: 72px; font-weight: 700; letter-spacing: 8px; margin-bottom: 16px; }
+  .brand-hero .slogan { font-size: 22px; color: var(--text2); letter-spacing: 12px; font-weight: 300; }
+
+  .logo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 60px; }
+  .logo-card { background: var(--bg); border-radius: 24px; padding: 50px 40px; text-align: center; position: relative; }
+  .logo-card h3 { font-size: 15px; font-weight: 500; color: var(--text2); margin-bottom: 36px; letter-spacing: 2px; text-transform: uppercase; }
+  .badge { position: absolute; top: 18px; right: 22px; font-size: 11px; color: var(--text2); background: var(--white); padding: 4px 12px; border-radius: 20px; }
+
+  .logo-a { position: relative; width: 240px; height: 260px; margin: 0 auto; }
+  .logo-a .el { width: 120px; height: 210px; border-radius: 50%; position: absolute; top: 25px; }
+  .logo-a .el.blue { background: var(--blue); left: 12px; box-shadow: 0 0 60px rgba(66,153,225,0.12); }
+  .logo-a .el.pink { background: var(--pink); right: 12px; box-shadow: 0 0 60px rgba(245,101,101,0.12); }
+  .logo-a .hl { position: absolute; width: 20px; height: 50px; background: rgba(255,255,255,0.22); border-radius: 10px; top: 90px; }
+  .logo-a .hl.l { left: 58px; } .logo-a .hl.r { right: 58px; }
+  .logo-a .dv { position: absolute; width: 2px; height: 150px; background: var(--bg); left: 50%; top: 55px; transform: translateX(-50%); z-index: 2; }
+
+  .logo-b { display: flex; flex-direction: column; align-items: center; }
+  .logo-b .stem { width: 6px; height: 70px; background: linear-gradient(to bottom, #A8CFA0, #8CB882); border-radius: 3px; margin-top: -4px; }
+  .logo-b .blooms { display: flex; gap: 30px; position: relative; }
+  .logo-b .bloom { position: relative; width: 120px; height: 130px; }
+  .logo-b .ptl { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+  .logo-b .ptl::before { content: ''; position: absolute; width: 38px; height: 90px; border-radius: 19px; top: 50%; left: 50%; transform-origin: center bottom; }
+  .logo-b .bloom.blue .ptl::before { background: var(--blue); opacity: 0.88; }
+  .logo-b .bloom.pink .ptl::before { background: var(--pink); opacity: 0.88; }
+  .logo-b .ptl:nth-child(1)::before { transform: translate(-50%,-100%) rotate(0deg); }
+  .logo-b .ptl:nth-child(2)::before { transform: translate(-50%,-100%) rotate(51deg); }
+  .logo-b .ptl:nth-child(3)::before { transform: translate(-50%,-100%) rotate(102deg); }
+  .logo-b .ptl:nth-child(4)::before { transform: translate(-50%,-100%) rotate(154deg); }
+  .logo-b .ptl:nth-child(5)::before { transform: translate(-50%,-100%) rotate(206deg); }
+  .logo-b .ptl:nth-child(6)::before { transform: translate(-50%,-100%) rotate(258deg); }
+  .logo-b .ptl:nth-child(7)::before { transform: translate(-50%,-100%) rotate(309deg); }
+  .logo-b .core { position: absolute; width: 24px; height: 24px; background: #C8E6B8; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%,-55%); z-index: 10; }
+
+  .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 60px; }
+  .color-chip { border-radius: 16px; overflow: hidden; background: var(--white); text-align: center; }
+  .color-swatch { height: 120px; }
+  .color-info { padding: 14px 10px; }
+  .color-info .cname { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+  .color-info .chex { font-size: 12px; color: var(--text2); font-family: 'SF Mono', monospace; }
+
+  .icon-showcase { display: flex; gap: 48px; align-items: center; justify-content: center; margin-bottom: 60px; }
+  .icon-box { text-align: center; }
+  .icon-box canvas { border-radius: 28px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+  .icon-box .ilabel { font-size: 13px; color: var(--text2); margin-top: 12px; display: block; }
+
+  .splash-preview { background: var(--bg); border-radius: 24px; padding: 70px 40px; text-align: center; margin-bottom: 60px; position: relative; overflow: hidden; }
+  .splash-preview::before { content: ''; position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(66,153,225,0.05) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .splash-preview .stitle { font-family: 'Noto Serif SC', serif; font-size: 48px; font-weight: 700; letter-spacing: 6px; margin: 16px 0 10px; position: relative; z-index: 1; }
+  .splash-preview .ssub { font-size: 18px; color: var(--text2); letter-spacing: 10px; position: relative; z-index: 1; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="brand-hero">
+    <div class="name">并蒂星球</div>
+    <div class="slogan">并蒂而生，同步成长</div>
+    <p style="font-size:15px;color:var(--text2);margin-top:20px;">中国首款双胞胎育儿伴侣 · 从出生到6岁 · 看见每一个人</p>
+  </div>
+
+  <h2 class="section-title">Logo 方案</h2>
+  <div class="logo-grid">
+    <div class="logo-card">
+      <span class="badge">方案 A</span>
+      <h3>极简几何 · App Icon</h3>
+      <div class="logo-a">
+        <div class="el blue"></div><div class="el pink"></div>
+        <div class="hl l"></div><div class="hl r"></div><div class="dv"></div>
+      </div>
+    </div>
+    <div class="logo-card">
+      <span class="badge">方案 B</span>
+      <h3>并蒂花 · 品牌标识</h3>
+      <div class="logo-b">
+        <div class="blooms">
+          <div class="bloom blue">
+            <div class="ptl"></div><div class="ptl"></div><div class="ptl"></div>
+            <div class="ptl"></div><div class="ptl"></div><div class="ptl"></div>
+            <div class="ptl"></div><div class="core"></div>
+          </div>
+          <div class="bloom pink">
+            <div class="ptl"></div><div class="ptl"></div><div class="ptl"></div>
+            <div class="ptl"></div><div class="ptl"></div><div class="ptl"></div>
+            <div class="ptl"></div><div class="core"></div>
+          </div>
+        </div>
+        <div class="stem"></div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">品牌色板</h2>
+  <div class="palette-grid">
+    <div class="color-chip"><div class="color-swatch" style="background:#4299E1"></div><div class="color-info"><div class="cname">天蓝 · 大宝</div><div class="chex">#4299E1</div></div></div>
+    <div class="color-chip"><div class="color-swatch" style="background:#F56565"></div><div class="color-info"><div class="cname">柔粉 · 二宝</div><div class="chex">#F56565</div></div></div>
+    <div class="color-chip"><div class="color-swatch" style="background:#FFFBF5"></div><div class="color-info"><div class="cname">暖白 · 背景</div><div class="chex">#FFFBF5</div></div></div>
+    <div class="color-chip"><div class="color-swatch" style="background:#48BB78"></div><div class="color-info"><div class="cname">薄荷绿 · 强调</div><div class="chex">#48BB78</div></div></div>
+    <div class="color-chip"><div class="color-swatch" style="background:#ED8936"></div><div class="color-info"><div class="cname">暖橘 · 警告</div><div class="chex">#ED8936</div></div></div>
+  </div>
+
+  <h2 class="section-title">小程序图标</h2>
+  <div class="icon-showcase">
+    <div class="icon-box"><canvas id="i144" width="144" height="144"></canvas><span class="ilabel">144 × 144 px</span></div>
+    <div class="icon-box"><canvas id="i288" width="288" height="288"></canvas><span class="ilabel">288 × 288 px</span></div>
+  </div>
+
+  <h2 class="section-title">启动页</h2>
+  <div class="splash-preview">
+    <div style="transform:scale(1.3);margin-bottom:10px;position:relative;z-index:1;">
+      <div class="logo-a" style="margin:0 auto;">
+        <div class="el blue"></div><div class="el pink"></div>
+        <div class="hl l"></div><div class="hl r"></div><div class="dv"></div>
+      </div>
+    </div>
+    <div class="stitle">并蒂星球</div>
+    <div class="ssub">并蒂而生，同步成长</div>
+  </div>
+</div>
+<script>
+function drawIcon(canvasId, size) {
+  const c = document.getElementById(canvasId), ctx = c.getContext('2d');
+  const cx = size/2, cy = size/2, s = size/320;
+  ctx.fillStyle = '#FFFBF5';
+  ctx.beginPath(); ctx.roundRect(0, 0, size, size, size*0.18); ctx.fill();
+  ctx.strokeStyle = 'rgba(66,153,225,0.12)'; ctx.lineWidth = size*0.006;
+  ctx.beginPath(); ctx.arc(cx, cy, size*0.36, 0, Math.PI*2); ctx.stroke();
+  const ew = 48*s, eh = 86*s, gap = 18*s;
+  ctx.fillStyle = '#4299E1'; ctx.beginPath(); ctx.ellipse(cx-gap, cy, ew, eh, 0, 0, Math.PI*2); ctx.fill();
+  ctx.fillStyle = 'rgba(255,255,255,0.18)'; ctx.beginPath(); ctx.ellipse(cx-gap-6*s, cy-18*s, 9*s, 22*s, 0, 0, Math.PI*2); ctx.fill();
+  ctx.fillStyle = '#F56565'; ctx.beginPath(); ctx.ellipse(cx+gap, cy, ew, eh, 0, 0, Math.PI*2); ctx.fill();
+  ctx.fillStyle = 'rgba(255,255,255,0.18)'; ctx.beginPath(); ctx.ellipse(cx+gap+6*s, cy-18*s, 9*s, 22*s, 0, 0, Math.PI*2); ctx.fill();
+  ctx.strokeStyle = '#FFFBF5'; ctx.lineWidth = 1.4*s; ctx.beginPath();
+  ctx.moveTo(cx, cy-eh+14*s); ctx.lineTo(cx, cy+eh-14*s); ctx.stroke();
+}
+drawIcon('i144', 144); drawIcon('i288', 288);
+</script>
+</body>
+</html>

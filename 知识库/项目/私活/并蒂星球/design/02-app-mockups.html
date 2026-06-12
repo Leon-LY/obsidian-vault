@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>并蒂星球 · 小程序原型</title>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+  :root { --blue:#4299E1; --pink:#F56565; --bg:#FFFBF5; --white:#FFF; --text:#2D3748; --text2:#A0AEC0; --mint:#48BB78; --orange:#ED8936; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif; background: #F2F0EC; padding: 40px 20px; color: var(--text); }
+  h1 { text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 8px; letter-spacing: 4px; }
+  h1 + p { text-align: center; font-size: 15px; color: var(--text2); margin-bottom: 48px; }
+  .phones { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; padding: 24px; }
+  .phone-wrapper { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .phone-label { font-size: 14px; color: var(--text2); font-style: italic; letter-spacing: 1px; }
+  .iphone { width: 390px; height: 844px; background: var(--white); border-radius: 52px; overflow: hidden; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.12), inset 0 0 0 3px #1a1a1a; }
+  .iphone::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 124px; height: 36px; background: #1a1a1a; border-radius: 0 0 20px 20px; z-index: 10; }
+  .iphone .screen { height: 100%; padding-top: 48px; overflow-y: auto; background: var(--bg); }
+  .iphone .screen::-webkit-scrollbar { display: none; }
+  .iphone .bar { height: 44px; background: var(--bg); display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; color: var(--text); position: sticky; top: 0; z-index: 5; border-bottom: 1px solid rgba(0,0,0,0.04); }
+  .iphone .tabbar { height: 72px; background: var(--white); display: flex; border-top: 1px solid #F0F0F0; position: sticky; bottom: 0; padding: 6px 0 env(safe-area-inset-bottom); }
+  .iphone .tabbar .tab { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; font-size:11px; color:var(--text2); }
+  .iphone .tabbar .tab.active { color: var(--blue); }
+  .iphone .tabbar .tab .tbicon { font-size: 22px; }
+</style>
+</head>
+<body>
+<h1>并蒂星球</h1>
+<p>核心页面原型 · iPhone 15 Pro 比例</p>
+
+<div class="phones">
+  <!-- 首页 -->
+  <div class="phone-wrapper">
+    <span class="phone-label">首页 · 完整版</span>
+    <div class="iphone">
+      <div class="screen" id="screen-home"></div>
+    </div>
+  </div>
+
+  <!-- 生长曲线 -->
+  <div class="phone-wrapper">
+    <span class="phone-label">对比生长曲线</span>
+    <div class="iphone">
+      <div class="screen" id="screen-growth"></div>
+    </div>
+  </div>
+
+  <!-- 双轨记录 -->
+  <div class="phone-wrapper">
+    <span class="phone-label">极简双轨记录</span>
+    <div class="iphone">
+      <div class="screen" id="screen-record"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/babel">
+const { useState } = React;
+const ReactDOM = window.ReactDOM;
+
+const colors = { blue: '#4299E1', pink: '#F56565', bg: '#FFFBF5', white: '#FFFFFF', text: '#2D3748', text2: '#A0AEC0', mint: '#48BB78', orange: '#ED8936' };
+
+// --- Home Screen ---
+function HomeScreen() {
+  const features = [
+    { icon: '📈', name: '对比生长曲线', desc: 'WHO 标准 + 双宝实测对比', color: colors.blue },
+    { icon: '🍼', name: '极简双轨记录', desc: '1点开始 · 2点结束 · 两个一起记', color: colors.pink },
+    { icon: '🌱', name: '萌芽日记', desc: '记录双胞胎互动瞬间', color: colors.mint },
+    { icon: '💪', name: '今天我做了什么', desc: '看见每一位家人的付出', color: colors.orange },
+    { icon: '🛡️', name: '守护中心', desc: '电量表 + 一人时光守护', color: colors.blue },
+    { icon: '🏫', name: '入园助手', desc: '分班决策 · 双生耦合度', color: colors.mint },
+  ];
+
+  return (
+    <div style={{padding: '16px 16px 100px'}}>
+      <div style={{textAlign:'center',padding:'12px 0 8px'}}>
+        <div style={{fontSize:28}}>🌺🌺</div>
+        <div style={{fontSize:22,fontWeight:700,letterSpacing:3}}>并蒂星球</div>
+        <div style={{fontSize:12,color:colors.text2,letterSpacing:4,marginTop:2}}>并蒂而生，同步成长</div>
+        <div style={{fontSize:10,color:colors.text2,marginTop:6}}>颜色按出生顺序 · 不按性别 · 适用所有双胞胎家庭</div>
+      </div>
+
+      <div style={{display:'flex',gap:10,marginTop:16,marginBottom:20}}>
+        <div style={{flex:1,background:colors.white,borderRadius:14,padding:14,position:'relative',overflow:'hidden'}}>
+          <div style={{position:'absolute',left:0,top:8,bottom:8,width:4,borderRadius:2,background:colors.blue}}></div>
+          <div style={{paddingLeft:8}}>
+            <div style={{display:'flex',alignItems:'center',gap:8}}>
+              <span style={{fontSize:24}}>👦</span>
+              <div><div style={{fontSize:15,fontWeight:600}}>安宁</div><div style={{fontSize:11,color:colors.text2}}>李牧川 · 4岁</div></div>
+            </div>
+            <div style={{fontSize:12,color:colors.text2,marginTop:8}}>🍼 32分钟前 · 喂奶</div>
+            <div style={{fontSize:12,color:colors.text2}}>😴 2小时前 · 午睡45分钟</div>
+          </div>
+        </div>
+        <div style={{flex:1,background:colors.white,borderRadius:14,padding:14,position:'relative',overflow:'hidden'}}>
+          <div style={{position:'absolute',left:0,top:8,bottom:8,width:4,borderRadius:2,background:colors.pink}}></div>
+          <div style={{paddingLeft:8}}>
+            <div style={{display:'flex',alignItems:'center',gap:8}}>
+              <span style={{fontSize:24}}>👧</span>
+              <div><div style={{fontSize:15,fontWeight:600}}>安然</div><div style={{fontSize:11,color:colors.text2}}>李牧岑 · 4岁</div></div>
+            </div>
+            <div style={{fontSize:12,color:colors.text2,marginTop:8}}>🧷 1小时前 · 换尿布</div>
+            <div style={{fontSize:12,color:colors.text2}}>😊 清醒中</div>
+          </div>
+        </div>
+      </div>
+
+      <div style={{fontSize:13,fontWeight:600,marginBottom:10}}>核心功能</div>
+      {features.map((f, i) => (
+        <div key={i} style={{display:'flex',alignItems:'center',gap:12,padding:'14px 16px',background:colors.white,borderRadius:12,marginBottom:8,boxShadow:'0 1px 3px rgba(0,0,0,0.03)'}}>
+          <span style={{fontSize:24}}>{f.icon}</span>
+          <div style={{flex:1}}>
+            <div style={{fontSize:14,fontWeight:600}}>{f.name}</div>
+            <div style={{fontSize:11,color:colors.text2}}>{f.desc}</div>
+          </div>
+          <span style={{fontSize:18,color:'#CBD5E0'}}>›</span>
+        </div>
+      ))}
+      <div style={{textAlign:'center',padding:'20px 0',fontSize:12,color:colors.text2}}>并蒂星球 · 中国首款双胞胎育儿伴侣</div>
+    </div>
+  );
+}
+
+// --- Growth Screen ---
+function GrowthScreen() {
+  const [tab, setTab] = useState('weight');
+
+  return (
+    <div style={{padding: '16px 16px 100px'}}>
+      <div style={{fontSize:20,fontWeight:700,textAlign:'center',marginBottom:4}}>对比生长曲线</div>
+      <div style={{fontSize:12,color:colors.text2,textAlign:'center',marginBottom:16}}>WHO 国际标准 · 并蒂对比</div>
+
+      <div style={{display:'flex',gap:8,marginBottom:16}}>
+        {['weight','height'].map(t => (
+          <div key={t} onClick={() => setTab(t)}
+            style={{flex:1,textAlign:'center',padding:'10px 0',borderRadius:10,fontSize:14,fontWeight:tab===t?600:400,
+              background:tab===t?colors.text:colors.white,color:tab===t?colors.white:colors.text2,border:tab===t?'none':'1px solid #E2E8F0',cursor:'pointer'}}>
+            {t === 'weight' ? '体重 (kg)' : '身高 (cm)'}
+          </div>
+        ))}
+      </div>
+
+      <div style={{background:colors.white,borderRadius:16,padding:12,marginBottom:16}}>
+        <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:8}}>
+          <div style={{display:'flex',gap:16}}>
+            <div style={{display:'flex',alignItems:'center',gap:6}}><div style={{width:10,height:10,borderRadius:'50%',background:colors.blue}}></div><span style={{fontSize:12,fontWeight:600}}>安宁</span></div>
+            <div style={{display:'flex',alignItems:'center',gap:6}}><div style={{width:10,height:10,borderRadius:'50%',background:colors.pink}}></div><span style={{fontSize:12,fontWeight:600}}>安然</span></div>
+          </div>
+          <div style={{padding:'4px 10px',borderRadius:20,background:tab==='weight'?'#F0FFF4':'#FFFAF0',fontSize:11,fontWeight:600,color:tab==='weight'?'#38A169':'#DD6B20'}}>差异 2.3%</div>
+        </div>
+        <div style={{height:160,background:'#F8FAFC',borderRadius:10,display:'flex',alignItems:'center',justifyContent:'center',position:'relative',overflow:'hidden'}}>
+          <svg width="340" height="160" viewBox="0 0 340 160">
+            <line x1="40" y1="130" x2="330" y2="130" stroke="#E2E8F0" strokeWidth="1"/>
+            <line x1="40" y1="80" x2="330" y2="80" stroke="#EDF2F7" strokeWidth="1" strokeDasharray="4"/>
+            <line x1="40" y1="30" x2="330" y2="30" stroke="#EDF2F7" strokeWidth="1" strokeDasharray="4"/>
+            <polyline points="50,120 110,105 170,95 230,85 290,75 320,70" fill="none" stroke={colors.blue} strokeWidth="2.5"/>
+            <polyline points="50,125 110,115 170,100 230,90 290,78 320,73" fill="none" stroke={colors.pink} strokeWidth="2.5"/>
+            <circle cx="320" cy="70" r="3" fill={colors.blue}/>
+            <circle cx="320" cy="73" r="3" fill={colors.pink}/>
+          </svg>
+        </div>
+        <div style={{display:'flex',alignItems:'flex-start',gap:6,paddingTop:8,borderTop:'1px solid #EDF2F7',marginTop:8}}>
+          <span style={{fontSize:11,flexShrink:0}}>⚠️</span>
+          <span style={{fontSize:9,color:colors.text2,lineHeight:1.4}}>颜色仅为统计标记，不代表医学诊断。曲线基于 WHO 儿童生长标准（2006），仅供参考。</span>
+        </div>
+      </div>
+
+      <div style={{display:'flex',gap:10}}>
+        <div style={{flex:1,background:colors.white,borderRadius:14,padding:14,position:'relative',overflow:'hidden'}}>
+          <div style={{position:'absolute',left:0,top:8,bottom:8,width:3,borderRadius:2,background:colors.blue}}></div>
+          <div style={{paddingLeft:8}}><div style={{fontSize:14,fontWeight:600}}>李牧川 · 安宁</div><div style={{fontSize:11,color:colors.text2}}>👦 男孩</div>
+            <div style={{marginTop:10}}><span style={{fontSize:26,fontWeight:700}}>16.8</span><span style={{fontSize:12,color:colors.text2}}> kg</span></div>
+            <div style={{fontSize:12,color:colors.mint,fontWeight:600}}>百分位 68%</div>
+          </div>
+        </div>
+        <div style={{flex:1,background:colors.white,borderRadius:14,padding:14,position:'relative',overflow:'hidden'}}>
+          <div style={{position:'absolute',left:0,top:8,bottom:8,width:3,borderRadius:2,background:colors.pink}}></div>
+          <div style={{paddingLeft:8}}><div style={{fontSize:14,fontWeight:600}}>李牧岑 · 安然</div><div style={{fontSize:11,color:colors.text2}}>👧 女孩</div>
+            <div style={{marginTop:10}}><span style={{fontSize:26,fontWeight:700}}>14.2</span><span style={{fontSize:12,color:colors.text2}}> kg</span></div>
+            <div style={{fontSize:12,color:colors.mint,fontWeight:600}}>百分位 45%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// --- Record Screen ---
+function RecordScreen() {
+  return (
+    <div style={{padding: '16px 16px 100px'}}>
+      <div style={{display:'flex',gap:10,marginBottom:20}}>
+        <div style={{flex:1,background:colors.white,borderRadius:14,padding:12,position:'relative',overflow:'hidden'}}>
+          <div style={{position:'absolute',left:0,top:6,bottom:6,width:4,borderRadius:2,background:colors.blue}}></div>
+          <div style={{paddingLeft:8,display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+            <div>
+              <div style={{display:'flex',alignItems:'center',gap:6}}><span>👦</span><span style={{fontSize:14,fontWeight:600}}>安宁</span></div>
+              <div style={{fontSize:11,color:colors.text2,marginTop:3}}>🍼 32分钟前</div>
+            </div>
+          </div>
+        </div>
+        <div style={{flex:1,background:colors.white,borderRadius:14,padding:12,position:'relative',overflow:'hidden'}}>
+          <div style={{position:'absolute',left:0,top:6,bottom:6,width:4,borderRadius:2,background:colors.pink}}></div>
+          <div style={{paddingLeft:8,display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+            <div>
+              <div style={{display:'flex',alignItems:'center',gap:6}}><span>👧</span><span style={{fontSize:14,fontWeight:600}}>安然</span></div>
+              <div style={{fontSize:11,color:colors.text2,marginTop:3}}>暂无记录</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style={{fontSize:13,fontWeight:600,marginBottom:14}}>这次谁做了什么？</div>
+      <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:12}}>
+        {[
+          { emoji:'🍼',baby:'安宁',type:'喂奶',borderColor:colors.blue },
+          { emoji:'🍼',baby:'安然',type:'喂奶',borderColor:colors.pink },
+          { emoji:'😴',baby:'安宁',type:'睡觉',borderColor:'#F6AD55' },
+          { emoji:'😴',baby:'安然',type:'睡觉',borderColor:'#F6AD55' },
+          { emoji:'🧷',baby:'安宁',type:'换尿布',borderColor:colors.mint },
+          { emoji:'🧷',baby:'安然',type:'换尿布',borderColor:colors.mint },
+        ].map((a,i) => (
+          <div key={i} style={{textAlign:'center',padding:'28px 12px',background:colors.white,borderRadius:18,borderTop:`6px solid ${a.borderColor}`,cursor:'pointer'}}>
+            <div style={{fontSize:32}}>{a.emoji}</div>
+            <div style={{fontSize:14,fontWeight:600,marginTop:6}}>{a.baby}</div>
+            <div style={{fontSize:11,color:colors.text2}}>{a.type}</div>
+          </div>
+        ))}
+      </div>
+
+      <div style={{marginTop:24}}>
+        <div style={{fontSize:13,fontWeight:600,marginBottom:10}}>最近记录</div>
+        {[
+          {emoji:'🍼',baby:'安宁', detail:'喂奶 20分钟',time:'32分钟前',color:colors.blue},
+          {emoji:'🧷',baby:'安然', detail:'换尿布',time:'1小时前',color:colors.pink},
+          {emoji:'😴',baby:'安宁', detail:'午睡 45分钟',time:'2小时前',color:colors.blue},
+        ].map((l,i) => (
+          <div key={i} style={{display:'flex',alignItems:'center',gap:10,padding:'10px 14px',background:colors.white,borderRadius:10,marginBottom:6,borderLeft:`4px solid ${l.color}`}}>
+            <span style={{fontSize:18}}>{l.emoji}</span>
+            <div style={{flex:1}}><div style={{fontSize:13}}>{l.baby} · {l.detail}</div><div style={{fontSize:10,color:colors.text2}}>{l.time}</div></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// TabBar
+function TabBar() {
+  return (
+    <div className="tabbar">
+      {[{icon:'🏠',label:'首页',active:true},{icon:'📈',label:'曲线'},{icon:'🍼',label:'记录'},{icon:'👤',label:'我的'}].map((t,i) => (
+        <div key={i} className={'tab' + (t.active?' active':'')}>
+          <span className="tbicon">{t.icon}</span><span>{t.label}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// Render
+ReactDOM.createRoot(document.getElementById('screen-home')).render(<React.Fragment><div className="bar">并蒂星球</div><HomeScreen/><TabBar/></React.Fragment>);
+ReactDOM.createRoot(document.getElementById('screen-growth')).render(<React.Fragment><div className="bar">生长曲线</div><GrowthScreen/><TabBar/></React.Fragment>);
+ReactDOM.createRoot(document.getElementById('screen-record')).render(<React.Fragment><div className="bar">双轨记录</div><RecordScreen/><TabBar/></React.Fragment>);
+</script>
+</body>
+</html>

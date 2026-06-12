@@ -1,27 +1,36 @@
 ---
 name: twin-design
 description: |
-  Twin Planet (双生星球) UI/UX design system for the twins parenting mini-program (uni-app Vue3). 
+  Twin Planet (并蒂星球) UI/UX design system for the twins parenting mini-program (uni-app Vue3). 
   Use this skill whenever working on any frontend design, UI component, layout, color scheme, 
-  accessibility feature, or visual element for the 双生星球 project.
+  accessibility feature, or visual element for the 并蒂星球 project.
   Trigger on: twin design, twin UI, twin colors, twin branding, baby card layout, grandma 
   accessibility, pediatric safety, dark mode parenting app, WeChat mini-program UI.
 ---
 
-# 双生星球 · Twin Design
+# 并蒂星球 · Twin Design
 
 ## Color Scheme
 
-| Purpose | Name | Hex |
-|------|------|------|
-| Baby A (安宁) | Sky Blue | `#4299E1` |
-| Baby B (安然) | Soft Pink | `#F56565` |
-| Background | Warm White | `#FFFBF5` |
-| Card Background | Pure White | `#FFFFFF` |
-| Primary Text | Dark Gray | `#2D3748` |
-| Secondary Text | Medium Gray | `#A0AEC0` |
-| AI/Accent | Mint Green | `#48BB78` |
-| Warning | Warm Orange | `#ED8936` |
+> **V3 推翻蓝粉体系。** 同色系不同明度——两个宝宝的标识色是同一暖陶土色系的两个相邻色阶。
+> 大宝=深陶土 `#A45C40`，二宝=浅陶土 `#C7866A`。适用所有双胞胎组合，不给任何用户"蓝=男、粉=女"的性别暗示。
+> 颜色是每个宝宝的**身份标识**，不是性别标签。
+
+| Purpose | Name | Hex | 适用 |
+|------|------|------|------|
+| 出生顺序 1 (大宝) | 深陶土 | `#A45C40` | 任何性别 |
+| 出生顺序 2 (二宝) | 浅陶土 | `#C7866A` | 任何性别 |
+| Background | 暖奶油 | `#FAF7F2` | 全局 |
+| Card Background | 纯白 | `#FFFFFF` | 全局 |
+| Primary Text | 深褐 | `#2D2B28` | 全局 |
+| Secondary Text | 暖灰 | `#9C9892` | 全局 |
+| Accent/Health | 鼠尾草绿 | `#7BA882` | 全局 |
+| Warning | 暖杏 | `#D4956B` | 全局 |
+
+**设计约束**：
+- 颜色按出生顺序，不按性别。大宝=深阶，二宝=浅阶
+- 头像用宝宝名字首字 + 圆形色块，性别无需视觉标记
+- 所有 UI 组件的颜色从 `baby.color` 读取，不从性别推断
 
 ## Grandma Accessibility Standards
 
@@ -70,7 +79,7 @@ Every feature must comply with these 6 rules. Violating any one blocks release.
 
 ## Brand Identity
 
-- **Name**: 双生星球 (Twin Planet)
+- **Name**: 并蒂星球 (Twin Planet)
 - **Slogan**: 一个 App 管好两个娃
 - **Internal philosophy**: 看见每一个人 (See Every Person)
 - **Mascot**: A pair of little stars/planets (one blue, one pink)

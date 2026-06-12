@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>并蒂星球</title>
+<style>
+/* ═══════════════════════════════════════════════════════
+   impeccable · Nursery Nocturne  · 日间 / 夜间
+   日间：暖陶土 + 奶油白 — 清醒育儿时刻
+   夜间：深琥珀 + 暖炭 — 凌晨3点不刺眼
+   ═══════════════════════════════════════════════════════ */
+
+/* ── 日间 token ── */
+:root,[data-theme=light]{
+  --ink:#241E1A;
+  --ink2:#6B635B;
+  --ink3:#A09991;
+  --base:#F5EFE7;
+  --base-alt:#EEE6DB;
+  --surface:#FFFCF8;
+  --surface-hl:#FFF5ED;
+  --accent:#A45C40;
+  --accent-dim:#834831;
+  --accent-lt:#C7866A;
+  --accent-svg:#A45C40;
+  --accent2-svg:#C7866A;
+  --good:#5B8C6E;
+  --good-bg:#ECF5EF;
+  --warn:#C07840;
+  --warn-bg:#FFF5ED;
+  --soft-border:rgba(0,0,0,.06);
+  --shadow-card:0 1px 3px rgba(0,0,0,.04);
+  --icon-bg:#DFD5C8;
+  --sbar-color:var(--ink);
+  --chart-bg:var(--base-alt);
+  --chart-grid:rgba(0,0,0,.06);
+  --chart-grid-dash:rgba(0,0,0,.04);
+  --tab-inactive:#A09991;
+  --radius:16px;
+  --mode-icon:'☀️';
+}
+
+/* ── 夜间 token ──
+   设计原则：所有色相向琥珀/暖炭偏移。
+   不用冷蓝黑——用深烘焙咖啡 + 暖灰，
+   像婴儿房里一盏调暗的落地灯。 ── */
+[data-theme=dark]{
+  --ink:#E8E0D6;
+  --ink2:#A09890;
+  --ink3:#7A726A;
+  --base:#1E1915;
+  --base-alt:#241F1B;
+  --surface:#2A2420;
+  --surface-hl:#302925;
+  --accent:#D4A088;
+  --accent-dim:#B8806A;
+  --accent-lt:#E8C5B4;
+  --accent-svg:#D4A088;
+  --accent2-svg:#E8C5B4;
+  --good:#7DC08A;
+  --good-bg:#1E2E22;
+  --warn:#E0A878;
+  --warn-bg:#2E2418;
+  --soft-border:rgba(255,255,255,.08);
+  --shadow-card:0 1px 3px rgba(0,0,0,.15);
+  --icon-bg:#3A3028;
+  --sbar-color:var(--ink);
+  --chart-bg:#1E1A16;
+  --chart-grid:rgba(255,255,255,.08);
+  --chart-grid-dash:rgba(255,255,255,.05);
+  --tab-inactive:#6A625A;
+  --mode-icon:'🌙';
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:-apple-system,'PingFang SC','Helvetica Neue',sans-serif;
+  font-size:15px;line-height:1.5;color:var(--ink);
+  background:var(--base-alt);
+  display:flex;justify-content:center;align-items:center;
+  min-height:100vh;padding:16px;
+  -webkit-font-smoothing:antialiased;
+  transition:background .4s;
+}
+.phone{
+  width:375px;height:812px;background:#1A1816;border-radius:44px;
+  padding:10px;position:relative;overflow:hidden;
+  box-shadow:0 0 0 2px #2E2A26,0 0 0 4px #1A1816,0 20px 70px rgba(0,0,0,.3);
+}
+.phone-inner{
+  width:100%;height:100%;background:var(--base);border-radius:34px;
+  overflow:hidden;position:relative;display:flex;flex-direction:column;
+  transition:background .4s;
+}
+.notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:120px;height:30px;background:#1A1816;border-radius:16px;z-index:20}
+.sbar{position:absolute;top:0;left:0;right:0;height:40px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;z-index:19;pointer-events:none;font-size:14px;font-weight:600;color:var(--sbar-color)}
+/* mode toggle — only interactive element in status bar */
+.mode-toggle{pointer-events:auto;cursor:pointer;font-size:16px;background:none;border:none;padding:0;line-height:1;transition:transform .3s}
+.mode-toggle:active{transform:scale(.85)}
+
+/* ── Screen ── */
+.screen{flex:1;overflow-y:auto;padding-top:48px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.screen::-webkit-scrollbar{display:none}
+.page{display:none;padding:0 18px 84px;animation:in .25s ease-out}
+.page.on{display:block}
+@keyframes in{from{opacity:.6;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── Tabs ── */
+.tabs{display:flex;background:var(--surface);border-top:1px solid var(--soft-border);padding:4px 0 16px;transition:background .4s}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;font-size:11px;color:var(--tab-inactive);transition:all .2s;padding:4px 0}
+.tab.sel{color:var(--accent);font-weight:600}
+.tab svg{width:22px;height:22px}
+
+/* ── Type ── */
+h2.s{font-size:22px;font-weight:800;line-height:1.2;color:var(--ink);letter-spacing:-.01em}
+.label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);margin-bottom:4px}
+.big-number{font-size:52px;font-weight:300;line-height:1;letter-spacing:-.04em;color:var(--ink)}
+.big-number .unit{font-size:18px;font-weight:400;color:var(--ink2);margin-left:2px}
+.hint{font-size:12px;color:var(--ink2);line-height:1.5;margin-top:4px}
+.row{display:flex;gap:12px}
+.col{flex:1}
+.badge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.badge.positive{background:var(--good-bg);color:var(--good)}
+.badge.caution{background:var(--warn-bg);color:var(--warn)}
+
+/* ── Panels ── */
+.panel{background:var(--surface);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-card);transition:background .4s}
+.panel.glow{background:var(--surface-hl)}
+
+/* ── Record buttons ── */
+.rec-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:var(--radius);padding:18px 12px 14px;color:#fff;cursor:pointer;position:relative;overflow:hidden;min-height:90px}
+.rec-btn::after{content:'';position:absolute;inset:0;background:transparent;transition:background .2s}
+.rec-btn:active::after{background:rgba(255,255,255,.1)}
+.rec-btn.one{background:var(--accent)}
+.rec-btn.two{background:var(--accent-dim)}
+.rec-btn .who{font-size:13px;font-weight:500;opacity:.85}
+.rec-btn .name{font-size:26px;font-weight:300;letter-spacing:-.02em;margin:2px 0}
+.rec-btn .sub{font-size:11px;opacity:.65}
+
+/* ── Quick row ── */
+.quick-row{display:flex;gap:8px;margin-top:10px}
+.quick{flex:1;text-align:center;padding:12px 6px;background:var(--surface);border-radius:12px;font-size:12px;font-weight:500;cursor:pointer;box-shadow:var(--shadow-card);transition:all .15s}
+.quick:active{background:var(--base-alt)}
+
+/* ── Log ── */
+.log{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--soft-border)}
+.log:last-child{border-bottom:none}
+.log .marker{width:8px;height:8px;border-radius:4px;flex-shrink:0}
+.log .body{flex:1;min-width:0}
+.log .title{font-size:14px;font-weight:500}
+.log .time{font-size:11px;color:var(--ink2);margin-top:1px}
+
+/* ── CTA ── */
+.cta-bottom{position:sticky;bottom:0;padding:12px 0 8px;background:linear-gradient(to top,var(--base) 60%,transparent)}
+.cta-btn{display:block;width:100%;padding:16px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius);font-size:16px;font-weight:600;cursor:pointer;text-align:center;box-shadow:0 4px 16px rgba(164,92,64,.25)}
+</style>
+</head>
+<body>
+
+<div class="phone">
+  <div class="phone-inner" id="phone-inner" data-theme="light">
+    <div class="notch"></div>
+    <div class="sbar"><span>9:41</span><button class="mode-toggle" id="mode-btn" onclick="toggleMode()" aria-label="切换日间/夜间">☀️</button></div>
+
+    <div class="screen">
+
+      <!-- ===== HOME ===== -->
+      <div class="page on" id="home">
+        <div style="text-align:center;padding:12px 0 18px">
+          <div style="font-size:28px;font-weight:800;letter-spacing:-.02em">并蒂星球</div>
+          <div class="hint" style="text-align:center;margin-top:4px;letter-spacing:.1em;text-transform:uppercase;font-size:11px">Twin Planet</div>
+        </div>
+
+        <div class="row" style="margin-bottom:14px">
+          <div class="col panel">
+            <div class="label">大宝</div>
+            <div class="big-number">16.8<span class="unit">kg</span></div>
+            <div class="hint">上次测量 6月10日</div>
+          </div>
+          <div class="col panel">
+            <div class="label">二宝</div>
+            <div class="big-number">14.2<span class="unit">kg</span></div>
+            <div class="hint">上次测量 6月10日</div>
+          </div>
+        </div>
+
+        <div class="panel glow" style="margin-bottom:14px">
+          <div class="row" style="align-items:center">
+            <div class="col">
+              <div style="font-size:14px;font-weight:600">生长差异 2.6<span style="font-size:12px;font-weight:400;color:var(--ink2)"> kg</span></div>
+              <div class="hint">比上月缩小 0.3kg</div>
+            </div>
+            <span class="badge positive">正常范围</span>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div class="panel" style="cursor:pointer" onclick="go('growth')">
+            <div style="width:36px;height:36px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:10px">
+              <svg width="18" height="18" viewBox="0 0 20 20"><polyline points="2,15 6,9 11,11 17,4" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div style="font-size:15px;font-weight:700">生长曲线</div>
+            <div class="hint">WHO 标准 · 对比趋势</div>
+          </div>
+          <div class="panel" style="cursor:pointer" onclick="go('record')">
+            <div style="width:36px;height:36px;border-radius:10px;background:var(--accent-dim);display:flex;align-items:center;justify-content:center;margin-bottom:10px">
+              <svg width="18" height="18" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M10 6v4.5l3 1.5" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
+            </div>
+            <div style="font-size:15px;font-weight:700">双轨记录</div>
+            <div class="hint">一键记录两个宝宝</div>
+          </div>
+          <div class="panel">
+            <div style="width:36px;height:36px;border-radius:10px;background:var(--icon-bg);display:flex;align-items:center;justify-content:center;margin-bottom:10px;transition:background .4s">
+              <svg width="18" height="18" viewBox="0 0 20 20"><path d="M3 6h14M3 10h14M3 14h10" fill="none" stroke="var(--accent-svg)" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div style="font-size:15px;font-weight:700">萌芽日记</div>
+            <div class="hint">双胞胎互动瞬间</div>
+          </div>
+          <div class="panel" style="cursor:pointer" onclick="go('guardian')">
+            <div style="width:36px;height:36px;border-radius:10px;background:var(--icon-bg);display:flex;align-items:center;justify-content:center;margin-bottom:10px;transition:background .4s">
+              <svg width="18" height="18" viewBox="0 0 20 20"><path d="M10 3l5.5 3.5v5c0 3.5-2 6.5-5.5 8-3.5-1.5-5.5-4.5-5.5-8v-5L10 3z" fill="none" stroke="var(--accent-svg)" stroke-width="1.5"/></svg>
+            </div>
+            <div style="font-size:15px;font-weight:700">守护中心</div>
+            <div class="hint">电量 · 一人时光</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== GROWTH ===== -->
+      <div class="page" id="growth">
+        <div style="text-align:center;padding:12px 0 4px">
+          <div class="label">并蒂对比</div>
+          <h2 class="s">生长曲线</h2>
+        </div>
+        <div class="panel" style="margin:16px 0">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+            <div style="display:flex;gap:14px;font-size:13px;font-weight:600">
+              <span style="color:var(--accent)">● 大宝</span>
+              <span style="color:var(--accent-lt)">● 二宝</span>
+            </div>
+            <span class="badge positive">差异 2.3%</span>
+          </div>
+          <svg viewBox="0 0 330 150" style="width:100%;display:block;border-radius:12px">
+            <rect width="330" height="150" fill="var(--chart-bg)" rx="12"/>
+            <line x1="36" y1="126" x2="324" y2="126" stroke="var(--chart-grid)" stroke-width="1"/>
+            <line x1="36" y1="94" x2="324" y2="94" stroke="var(--chart-grid-dash)" stroke-width="1" stroke-dasharray="4,5"/>
+            <line x1="36" y1="62" x2="324" y2="62" stroke="var(--chart-grid-dash)" stroke-width="1" stroke-dasharray="4,5"/>
+            <line x1="36" y1="30" x2="324" y2="30" stroke="var(--chart-grid-dash)" stroke-width="1" stroke-dasharray="4,5"/>
+            <polyline points="46,122 108,108 164,96 220,88 278,78 326,72" fill="none" stroke="var(--accent-svg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="46,126 108,115 164,103 220,93 276,81 326,75" fill="none" stroke="var(--accent2-svg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="326" cy="72" r="4" fill="var(--accent-svg)"/><circle cx="326" cy="75" r="4" fill="var(--accent2-svg)"/>
+          </svg>
+          <div class="hint" style="margin-top:8px;padding-top:10px;border-top:1px solid var(--soft-border);font-size:11px">
+            生长差异在正常范围。每个宝宝有自己的成长节奏，无需焦虑比较。
+          </div>
+        </div>
+        <div class="row" style="margin-bottom:14px">
+          <div class="col panel"><div class="label">大宝</div><div class="big-number" style="font-size:44px">16.8<span class="unit">kg</span></div><div style="font-size:13px;font-weight:600;color:var(--good)">68%</div><div class="hint">比上月 +0.4kg</div></div>
+          <div class="col panel"><div class="label">二宝</div><div class="big-number" style="font-size:44px">14.2<span class="unit">kg</span></div><div style="font-size:13px;font-weight:600;color:var(--good)">45%</div><div class="hint">比上月 +0.3kg</div></div>
+        </div>
+      </div>
+
+      <!-- ===== RECORD ===== -->
+      <div class="page" id="record">
+        <div style="text-align:center;padding:12px 0 4px">
+          <div class="label">两次点击完成</div>
+          <h2 class="s">双轨记录</h2>
+        </div>
+        <div class="row" style="margin:16px 0 12px">
+          <div class="col panel" style="text-align:center;padding:14px 12px"><div class="label">大宝</div><div style="font-size:13px;font-weight:500">🍼 32分钟前</div></div>
+          <div class="col panel" style="text-align:center;padding:14px 12px"><div class="label">二宝</div><div style="font-size:13px;font-weight:500">暂无记录</div></div>
+        </div>
+        <div class="row" style="margin-bottom:10px">
+          <div class="col rec-btn one"><div class="who">点击记录</div><div class="name">大宝</div><div class="sub">喂养 · 睡眠 · 尿布</div></div>
+          <div class="col rec-btn two"><div class="who">点击记录</div><div class="name">二宝</div><div class="sub">喂养 · 睡眠 · 尿布</div></div>
+        </div>
+        <div class="quick-row">
+          <div class="quick">🍼 喂奶</div><div class="quick">😴 睡觉</div><div class="quick">🧷 尿布</div><div class="quick">📝 快记</div>
+        </div>
+        <div style="margin-top:20px"><div class="label" style="margin-bottom:8px">最近记录</div>
+          <div class="panel" style="padding:0 14px">
+            <div class="log"><div class="marker" style="background:var(--accent)"></div><div class="body"><div class="title">大宝 · 喂奶 · 20分钟</div><div class="time">32分钟前</div></div></div>
+            <div class="log"><div class="marker" style="background:var(--accent-lt)"></div><div class="body"><div class="title">二宝 · 换尿布</div><div class="time">1小时前</div></div></div>
+            <div class="log"><div class="marker" style="background:var(--accent)"></div><div class="body"><div class="title">大宝 · 午睡 · 45分钟</div><div class="time">2小时前</div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== GUARDIAN ===== -->
+      <div class="page" id="guardian">
+        <div style="text-align:center;padding:12px 0 4px">
+          <div class="label">看见每一个人</div>
+          <h2 class="s">守护中心</h2>
+        </div>
+        <div class="panel glow" style="text-align:center;margin:16px 0 14px">
+          <div style="font-size:15px;font-weight:700;margin-bottom:4px">一人时光</div>
+          <div class="hint" style="margin-bottom:16px">确保每个宝宝都有专属陪伴</div>
+          <div class="row" style="margin-bottom:16px">
+            <div class="col"><div class="big-number" style="font-size:44px;color:var(--accent)">45</div><div class="hint" style="font-size:13px">分钟 · 大宝 · 今天</div></div>
+            <div class="col"><div class="big-number" style="font-size:44px;color:var(--accent-dim)">32</div><div class="hint" style="font-size:13px">分钟 · 二宝 · 今天</div></div>
+          </div>
+          <button class="cta-btn" style="position:static;width:100%">开始陪伴计时</button>
+        </div>
+        <div class="row">
+          <div class="col panel" style="text-align:center"><div class="label">妈妈电量</div><div class="big-number" style="font-size:44px;color:var(--warn)">4</div><div class="hint">需要充电</div></div>
+          <div class="col panel" style="text-align:center"><div class="label">爸爸电量</div><div class="big-number" style="font-size:44px;color:var(--good)">7</div><div class="hint">电量充足</div></div>
+        </div>
+      </div>
+
+    </div><!-- .screen -->
+
+    <div class="tabs">
+      <div class="tab sel" onclick="go('home')"><svg viewBox="0 0 22 22"><path d="M3 10l8-7 8 7v10H3V10z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>首页</span></div>
+      <div class="tab" onclick="go('growth')"><svg viewBox="0 0 22 22"><polyline points="3 20 9 12 14 16 20 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>生长</span></div>
+      <div class="tab" onclick="go('record')"><svg viewBox="0 0 22 22"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M11 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>记录</span></div>
+      <div class="tab" onclick="go('guardian')"><svg viewBox="0 0 22 22"><path d="M11 3l7 4v6c0 5-3 9-7 11-4-2-7-6-7-11V7l7-4z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>守护</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const phone = document.getElementById('phone-inner');
+const btn = document.getElementById('mode-btn');
+const MODE_KEY = 'tp_theme';
+
+/* ── Determine initial theme ── */
+function autoTheme(){
+  const saved = localStorage.getItem(MODE_KEY);
+  if(saved === 'dark' || saved === 'light') return saved;
+  const h = new Date().getHours();
+  return (h >= 22 || h < 6) ? 'dark' : 'light';
+}
+
+function applyTheme(t){
+  phone.setAttribute('data-theme', t);
+  btn.textContent = t === 'dark' ? '🌙' : '☀️';
+  localStorage.setItem(MODE_KEY, t);
+}
+
+/* Flip */
+function toggleMode(){
+  const cur = phone.getAttribute('data-theme');
+  applyTheme(cur === 'dark' ? 'light' : 'dark');
+}
+window.toggleMode = toggleMode;
+
+/* Tab switching */
+function go(id){
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  document.querySelectorAll('.tab').forEach((t, i) => {
+    t.classList.toggle('sel', ['home','growth','record','guardian'][i] === id);
+  });
+  document.querySelector('.screen').scrollTop = 0;
+}
+window.go = go;
+
+/* ── Boot ── */
+applyTheme(autoTheme());
+
+/* Re-check every 5 min for time window changes */
+setInterval(() => { if(!localStorage.getItem(MODE_KEY)) applyTheme(autoTheme()); }, 300000);
+</script>
+</body>
+</html>

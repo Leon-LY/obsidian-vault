@@ -1,15 +1,15 @@
 ---
 name: twin-data
 description: |
-  Twin Planet (双生星球) data layer reference — WHO growth standards, database schema, API format, 
+  Twin Planet (并蒂星球) data layer reference — WHO growth standards, database schema, API format, 
   and all data-related constants for the twins parenting mini-program.
   Use this skill whenever working on database design, API endpoints, growth curve calculations, 
-  WHO LMS parameters, SQL queries, data validation, or data visualization for the 双生星球 project.
+  WHO LMS parameters, SQL queries, data validation, or data visualization for the 并蒂星球 project.
   Trigger on: twin database, twin schema, WHO growth, baby growth curve, z-score calculation, 
   twin API, baby records table, feeding data, sleep data, growth percentile.
 ---
 
-# 双生星球 · Twin Data
+# 并蒂星球 · Twin Data
 
 ## WHO LMS Growth Standards
 

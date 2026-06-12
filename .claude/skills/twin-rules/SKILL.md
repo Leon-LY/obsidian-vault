@@ -1,20 +1,22 @@
 ---
 name: twin-rules
 description: |
-  Twin Planet (双生星球) project management rules — schedule, phases, sprints, deliverables, 
+  Twin Planet (并蒂星球) project management rules — schedule, phases, sprints, deliverables, 
   acceptance criteria, burnout protection, and stop-decision points for the twins parenting mini-program.
   Use this skill whenever working on project planning, task breakdown, sprint planning, milestone 
-  tracking, or any decision about what to build and when for the 双生星球 project.
+  tracking, or any decision about what to build and when for the 并蒂星球 project.
   Trigger on: twin schedule, twin sprint, twin phase, twin milestone, twin roadmap, twin planning,
   twin acceptance criteria, twin stop decision, burnout protection, what to build next.
 ---
 
-# 双生星球 · Twin Rules
+# 并蒂星球 · Twin Rules
 
 ## Project Overview
 
 - **Goal**: 12-week MVP → WeChat Mini Program for twin parenting
 - **Developer**: Leon (solo full-stack, also a twin dad of 4-year-old 龙凤胎)
+- **Code**: `E:/ly/project/twin-planet` (GitHub: [Leon-LY/twin-planet](https://github.com/Leon-LY/twin-planet))
+- **AppID**: `wxee2ef767a77058db`
 - **Tech**: uni-app (Vue3) + 腾讯云 CloudBase + DeepSeek
 - **Total MVP Features**: 22 (P0:4 + P1:13 + P2:5)
 - **Estimated Effort**: ~86 person-days (P0+P1), P2 deferred to Phase 2
@@ -146,9 +148,9 @@ Phase 3: Month 7+   → Native App + IoT + B2B
 
 ## Project Documentation
 
-All project docs live in: `知识库/项目/私活/双生星球/`
+All project docs live in: `知识库/项目/私活/并蒂星球/`
 
 Key files:
-- `双生星球-项目建设方案.md` — V3.2 build plan (this document's source)
-- `双生星球-十角色终局论证.md` — Final 10-role cross-argumentation
-- `双生星球-Phase0-执行手册.md` — Phase 0 execution handbook
+- `并蒂星球-项目建设方案.md` — V3.2 build plan (this document's source)
+- `并蒂星球-十角色终局论证.md` — Final 10-role cross-argumentation
+- `并蒂星球-Phase0-执行手册.md` — Phase 0 execution handbook

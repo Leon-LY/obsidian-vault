@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>并蒂星球</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --a1:#A45C40; --a2:#C7866A; --bg:#F9F6F0; --card:#FFFFFF;
+  --t1:#2A2724; --t2:#8E8B86; --ac:#7BA882; --warn:#D4956B;
+  --radius:18px;
+  --shadow:0 1px 2px rgba(0,0,0,.03),0 2px 8px rgba(0,0,0,.02);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:-apple-system,'PingFang SC','Helvetica Neue',sans-serif;
+  background:#ECEAE4;display:flex;justify-content:center;align-items:center;
+  min-height:100vh;padding:20px;
+}
+.serif{font-family:'Noto Serif SC',Georgia,serif}
+/* Phone frame */
+.phone{
+  width:393px;height:852px;background:#000;border-radius:54px;padding:12px;
+  box-shadow:0 0 0 3px #1A1A1A,0 0 0 5px #333,0 30px 80px rgba(0,0,0,.25);
+  position:relative;overflow:hidden;
+}
+.phone-inner{
+  width:100%;height:100%;background:var(--bg);border-radius:42px;
+  overflow:hidden;position:relative;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+}
+.island{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:126px;height:34px;background:#000;border-radius:20px;z-index:100}
+.status-bar{position:absolute;top:0;left:0;right:0;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:99;pointer-events:none;font-size:16px;font-weight:600;color:var(--t1)}
+.screen{height:100%;padding-top:54px;overflow-y:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.screen::-webkit-scrollbar{display:none}
+
+/* Tab bar */
+.tabs{display:flex;background:var(--card);border-top:1px solid rgba(0,0,0,.04);position:sticky;bottom:0;padding:6px 0 env(safe-area-inset-bottom,20px)}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;transition:all .25s;padding:4px 0}
+.tab .tab-icon{width:24px;height:24px;display:flex;align-items:center;justify-content:center}
+.tab .tab-icon svg{width:22px;height:22px}
+.tab span{font-size:10px;font-weight:500}
+.tab{opacity:.4;color:var(--t2)}
+.tab.active{opacity:1;color:var(--a1)}
+
+/* Content area */
+.page{display:none;padding:0 22px;animation:fadeIn .3s ease}
+.page.active{display:block}
+@keyframes fadeIn{from{opacity:.5;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+
+/* Shared */
+.card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.badge{display:inline-block;padding:4px 12px;border-radius:12px;font-size:11px;font-weight:600}
+.badge.good{background:#EEF4ED;color:var(--ac)}
+.badge.warn{background:#FCF5EF;color:var(--warn)}
+h2.section-title{font-size:16px;font-weight:700;color:var(--t1);margin:24px 0 12px}
+.num{font-size:40px;font-weight:200;letter-spacing:-.03em;line-height:1;color:var(--t1)}
+.num small{font-size:14px;color:var(--t2);font-weight:400;margin-left:2px}
+.caption{font-size:11px;color:var(--t2);margin-top:4px}
+
+/* Chart */
+.chart-wrap{position:relative;width:100%;height:0;padding-bottom:50%;margin:8px 0}
+.chart-wrap svg{position:absolute;top:0;left:0;width:100%;height:100%}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 32px;border-radius:24px;font-size:15px;font-weight:600;border:none;cursor:pointer;transition:all .2s}
+.btn.primary{background:var(--a1);color:#fff;box-shadow:0 4px 16px rgba(164,92,64,.25)}
+.btn.primary:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--a1)}
+.record-hero{display:flex;gap:10px;margin:16px 0}
+.record-hero>div{flex:1;border-radius:var(--radius);padding:32px 16px;text-align:center;color:#fff;cursor:pointer;transition:all .2s}
+.record-hero>div:active{transform:scale(.97)}
+.record-hero .r-a{background:var(--a1);box-shadow:0 8px 24px rgba(164,92,64,.3)}
+.record-hero .r-b{background:var(--a2);box-shadow:0 8px 24px rgba(199,134,106,.3)}
+.record-hero .r-label{font-size:12px;opacity:.8;margin-bottom:4px}
+.record-hero .r-name{font-family:'Noto Serif SC',serif;font-size:18px;font-weight:700;margin:4px 0}
+.record-hero .r-hint{font-size:11px;opacity:.65}
+</style>
+</head>
+<body>
+
+<div class="phone">
+  <div class="phone-inner">
+    <div class="island"></div>
+    <div class="status-bar"><span>9:41</span><span>●●●●○</span></div>
+    <div class="screen">
+
+      <!-- ====== HOME ====== -->
+      <div class="page active" id="home">
+        <div style="padding:16px 0 0;text-align:center">
+          <div class="serif" style="font-size:30px;font-weight:700;color:var(--t1);letter-spacing:4px">并蒂星球</div>
+          <div style="font-size:12px;color:var(--t2);letter-spacing:6px;margin-top:6px">并蒂而生 · 同步成长</div>
+        </div>
+
+        <div style="display:flex;gap:10px;margin:20px 0" class="stagger">
+          <div class="card" style="flex:1;padding:18px 16px">
+            <div style="font-size:11px;color:var(--t2);text-transform:uppercase;letter-spacing:1px">大宝</div>
+            <div style="margin:8px 0"><span class="num">16.8</span><small style="font-size:13px">kg</small></div>
+          </div>
+          <div class="card" style="flex:1;padding:18px 16px">
+            <div style="font-size:11px;color:var(--t2);text-transform:uppercase;letter-spacing:1px">二宝</div>
+            <div style="margin:8px 0"><span class="num">14.2</span><small style="font-size:13px">kg</small></div>
+          </div>
+        </div>
+
+        <div class="card" style="display:flex;align-items:center;gap:12px;padding:16px 18px;margin-bottom:16px">
+          <div style="width:40px;height:40px;border-radius:50%;background:#F2EFE7;display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--a1);flex-shrink:0">↔</div>
+          <div style="flex:1"><div style="font-size:13px;font-weight:600">生长差异 2.6kg</div><div class="caption">每个宝宝有自己的节奏</div></div>
+          <span class="badge good">正常</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div class="card" style="padding:20px 16px;cursor:pointer" onclick="switchTab('growth')">
+            <div style="width:32px;height:32px;border-radius:10px;background:#F2EFE7;display:flex;align-items:center;justify-content:center;margin-bottom:10px">
+              <svg width="16" height="16" viewBox="0 0 16 16"><polyline points="1,13 5,8 9,10 14,3" fill="none" stroke="#A45C40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="serif" style="font-size:15px;font-weight:700">生长曲线</div>
+            <div class="caption">WHO 标准 · 双宝对比</div>
+          </div>
+          <div class="card" style="padding:20px 16px;cursor:pointer" onclick="switchTab('record')">
+            <div style="width:32px;height:32px;border-radius:10px;background:#F2EFE7;display:flex;align-items:center;justify-content:center;margin-bottom:10px">
+              <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="#A45C40" stroke-width="1.5"/><path d="M8 5v3l2 1.5" fill="none" stroke="#A45C40" stroke-width="1.5"/></svg>
+            </div>
+            <div class="serif" style="font-size:15px;font-weight:700">双轨记录</div>
+            <div class="caption">一键记录两个宝宝</div>
+          </div>
+          <div class="card" style="padding:20px 16px">
+            <div style="width:32px;height:32px;border-radius:10px;background:#F2EFE7;display:flex;align-items:center;justify-content:center;margin-bottom:10px">
+              <svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h8" fill="none" stroke="#A45C40" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="serif" style="font-size:15px;font-weight:700">萌芽日记</div>
+            <div class="caption">双胞胎互动瞬间</div>
+          </div>
+          <div class="card" style="padding:20px 16px;cursor:pointer" onclick="switchTab('guardian')">
+            <div style="width:32px;height:32px;border-radius:10px;background:#F2EFE7;display:flex;align-items:center;justify-content:center;margin-bottom:10px">
+              <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 1l6 3.5v5c0 4-2.5 7.5-6 9.5-3.5-2-6-5.5-6-9.5v-5L8 1z" fill="none" stroke="#A45C40" stroke-width="1.5"/></svg>
+            </div>
+            <div class="serif" style="font-size:15px;font-weight:700">守护中心</div>
+            <div class="caption">电量 · 一人时光</div>
+          </div>
+        </div>
+        <div style="height:12px"></div>
+      </div>
+
+      <!-- ====== GROWTH ====== -->
+      <div class="page" id="growth">
+        <div style="padding:16px 0 0;text-align:center">
+          <div class="serif" style="font-size:22px;font-weight:700;color:var(--t1);letter-spacing:2px">生长曲线</div>
+          <div class="caption" style="margin-top:4px">WHO 国际标准</div>
+        </div>
+        <div class="card" style="padding:18px;margin:16px 0">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <div style="display:flex;gap:14px">
+              <span style="font-size:12px;font-weight:600;color:var(--a1)">● 大宝</span>
+              <span style="font-size:12px;font-weight:600;color:var(--a2)">● 二宝</span>
+            </div>
+            <span class="badge good">差异 2.3%</span>
+          </div>
+          <svg viewBox="0 0 340 160" style="width:100%;display:block;border-radius:12px;background:#FBFAF7">
+            <defs><linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#A45C40" stop-opacity="0.06"/><stop offset="100%" stop-color="#A45C40" stop-opacity="0"/></linearGradient></defs>
+            <rect width="340" height="160" fill="#FBFAF7" rx="12"/>
+            <line x1="38" y1="136" x2="332" y2="136" stroke="#EDE8DE" stroke-width="1"/>
+            <line x1="38" y1="100" x2="332" y2="100" stroke="#F2EFE6" stroke-width="1" stroke-dasharray="3,5"/>
+            <line x1="38" y1="64" x2="332" y2="64" stroke="#F2EFE6" stroke-width="1" stroke-dasharray="3,5"/>
+            <line x1="38" y1="28" x2="332" y2="28" stroke="#F2EFE6" stroke-width="1" stroke-dasharray="3,5"/>
+            <polyline points="48,128 108,112 164,100 220,92 278,82 332,74" fill="none" stroke="#A45C40" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="48,132 108,120 164,107 220,97 276,85 332,77" fill="none" stroke="#C7866A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="332" cy="74" r="5" fill="#A45C40"/><circle cx="332" cy="77" r="5" fill="#C7866A"/>
+          </svg>
+          <div style="display:flex;gap:6px;padding-top:12px;margin-top:10px;border-top:1px solid #F0EDE5">
+            <span style="font-size:11px;flex-shrink:0">ⓘ</span>
+            <span style="font-size:10px;color:var(--t2);line-height:1.5">生长差异在正常范围。每个宝宝有自己的成长节奏。</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px">
+          <div class="card" style="flex:1;padding:18px 16px">
+            <div style="font-size:11px;color:var(--t2);letter-spacing:1px;text-transform:uppercase">大宝</div>
+            <div style="margin:8px 0"><span class="num">16.8</span><small style="font-size:13px">kg</small></div>
+            <div style="font-size:13px;font-weight:600;color:var(--ac)">68%</div><div class="caption">正常范围</div>
+          </div>
+          <div class="card" style="flex:1;padding:18px 16px">
+            <div style="font-size:11px;color:var(--t2);letter-spacing:1px;text-transform:uppercase">二宝</div>
+            <div style="margin:8px 0"><span class="num">14.2</span><small style="font-size:13px">kg</small></div>
+            <div style="font-size:13px;font-weight:600;color:var(--ac)">45%</div><div class="caption">正常范围</div>
+          </div>
+        </div>
+        <div style="height:12px"></div>
+      </div>
+
+      <!-- ====== RECORD ====== -->
+      <div class="page" id="record">
+        <div style="padding:16px 0 0;text-align:center">
+          <div class="serif" style="font-size:22px;font-weight:700;color:var(--t1);letter-spacing:2px">双轨记录</div>
+          <div class="caption" style="margin-top:4px">两次点击 · 单手完成</div>
+        </div>
+        <div class="record-hero">
+          <div class="r-a">
+            <div class="r-label">点击记录</div>
+            <div class="r-name">大宝</div>
+            <div class="r-hint">喂养 · 睡眠 · 尿布</div>
+          </div>
+          <div class="r-b">
+            <div class="r-label">点击记录</div>
+            <div class="r-name">二宝</div>
+            <div class="r-hint">喂养 · 睡眠 · 尿布</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px">
+          <div class="card" style="padding:14px 8px;text-align:center;font-size:12px;font-weight:500;cursor:pointer">🍼 喂奶</div>
+          <div class="card" style="padding:14px 8px;text-align:center;font-size:12px;font-weight:500;cursor:pointer">😴 睡觉</div>
+          <div class="card" style="padding:14px 8px;text-align:center;font-size:12px;font-weight:500;cursor:pointer">🧷 尿布</div>
+          <div class="card" style="padding:14px 8px;text-align:center;font-size:12px;font-weight:500;cursor:pointer">📝 快记</div>
+        </div>
+        <div class="serif" style="font-size:14px;font-weight:700;margin-bottom:10px;color:var(--t1)">最近记录</div>
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--card);border-radius:14px;margin-bottom:6px;box-shadow:var(--shadow)">
+          <div style="width:4px;height:30px;border-radius:2px;background:var(--a1);opacity:.5"></div>
+          <div style="flex:1"><div style="font-size:13px;font-weight:500">大宝 · 🍼 喂奶 · 20分钟</div><div class="caption" style="font-size:10px">32分钟前</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--card);border-radius:14px;margin-bottom:6px;box-shadow:var(--shadow)">
+          <div style="width:4px;height:30px;border-radius:2px;background:var(--a2);opacity:.5"></div>
+          <div style="flex:1"><div style="font-size:13px;font-weight:500">二宝 · 🧷 换尿布</div><div class="caption" style="font-size:10px">1小时前</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--card);border-radius:14px;margin-bottom:6px;box-shadow:var(--shadow)">
+          <div style="width:4px;height:30px;border-radius:2px;background:var(--a1);opacity:.5"></div>
+          <div style="flex:1"><div style="font-size:13px;font-weight:500">大宝 · 😴 午睡 · 45分钟</div><div class="caption" style="font-size:10px">2小时前</div></div>
+        </div>
+        <div style="height:12px"></div>
+      </div>
+
+      <!-- ====== GUARDIAN ====== -->
+      <div class="page" id="guardian">
+        <div style="padding:16px 0 0;text-align:center">
+          <div class="serif" style="font-size:22px;font-weight:700;color:var(--t1);letter-spacing:2px">守护中心</div>
+          <div class="caption" style="margin-top:4px">看见每一个人的状态</div>
+        </div>
+        <div class="card" style="margin:16px 0 12px;padding:24px;text-align:center">
+          <div class="serif" style="font-size:15px;font-weight:700;margin-bottom:4px">一人时光</div>
+          <div class="caption">确保每个宝宝都有专属陪伴</div>
+          <div style="display:flex;gap:20px;margin:20px 0">
+            <div style="flex:1"><div style="font-size:36px;font-weight:200;letter-spacing:-.03em;color:var(--a1);line-height:1">45<small style="font-size:12px;color:var(--t2)"> min</small></div><div class="caption">大宝 · 今天</div></div>
+            <div style="flex:1"><div style="font-size:36px;font-weight:200;letter-spacing:-.03em;color:var(--a2);line-height:1">32<small style="font-size:12px;color:var(--t2)"> min</small></div><div class="caption">二宝 · 今天</div></div>
+          </div>
+          <button class="btn primary" style="width:100%">开始陪伴计时</button>
+        </div>
+        <div style="display:flex;gap:10px">
+          <div class="card" style="flex:1;text-align:center;padding:22px 14px">
+            <div class="caption" style="margin-bottom:10px">妈妈</div>
+            <div class="serif" style="font-size:28px;font-weight:700;color:var(--a1)">4<s style="font-size:14px;color:var(--t2);font-weight:400">/10</s></div>
+            <div class="caption">需要充电</div>
+          </div>
+          <div class="card" style="flex:1;text-align:center;padding:22px 14px">
+            <div class="caption" style="margin-bottom:10px">爸爸</div>
+            <div class="serif" style="font-size:28px;font-weight:700;color:var(--a2)">7<s style="font-size:14px;color:var(--t2);font-weight:400">/10</s></div>
+            <div class="caption">电量充足</div>
+          </div>
+        </div>
+        <div style="height:12px"></div>
+      </div>
+
+    </div><!-- .screen -->
+
+    <!-- Tab bar -->
+    <div class="tabs">
+      <div class="tab active" data-tab="home" onclick="switchTab('home')">
+        <div class="tab-icon"><svg viewBox="0 0 22 22"><path d="M3 10l8-7 8 7v10H3V10z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <span>首页</span>
+      </div>
+      <div class="tab" data-tab="growth" onclick="switchTab('growth')">
+        <div class="tab-icon"><svg viewBox="0 0 22 22"><polyline points="3 20 9 12 14 16 20 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span>生长</span>
+      </div>
+      <div class="tab" data-tab="record" onclick="switchTab('record')">
+        <div class="tab-icon"><svg viewBox="0 0 22 22"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M11 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+        <span>记录</span>
+      </div>
+      <div class="tab" data-tab="guardian" onclick="switchTab('guardian')">
+        <div class="tab-icon"><svg viewBox="0 0 22 22"><path d="M11 3l7 4v6c0 5-3 9-7 11-4-2-7-6-7-11V7l7-4z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+        <span>守护</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function switchTab(name){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(name).classList.add('active');
+  document.querySelectorAll('.tab').forEach(t=>{
+    t.classList.toggle('active',t.dataset.tab===name);
+  });
+  document.querySelector('.screen').scrollTop=0;
+}
+</script>
+</body>
+</html>

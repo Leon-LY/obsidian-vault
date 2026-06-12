@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1600">
+<title>并蒂星球 · V3</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --a1:#A45C40; --a2:#C7866A; --bg:#FAF7F2; --srf:#FFFFFF;
+  --t1:#2D2B28; --t2:#9C9892; --ac:#7BA882; --wn:#D4956B;
+  --sh:0 1px 2px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.03);
+  --sh2:0 2px 4px rgba(0,0,0,.06),0 8px 32px rgba(0,0,0,.04);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Helvetica Neue',sans-serif;background:#E8E6E1;padding:40px 24px;display:flex;justify-content:center}
+.serif{font-family:'Noto Serif SC',serif}
+.gallery{display:flex;gap:40px;flex-wrap:wrap;justify-content:center;align-items:flex-start}
+.phone-wrap{text-align:center}
+.phone-label{font-size:12px;font-weight:600;color:#9C9892;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.phone{width:393px;height:852px;background:#0D0D0D;border-radius:54px;padding:12px;box-shadow:0 0 0 2px #1C1C1C,0 30px 90px rgba(0,0,0,.22)}
+.phone-inner{width:100%;height:100%;background:var(--bg);border-radius:42px;overflow:hidden;position:relative}
+.island{position:absolute;top:9px;left:50%;margin-left:-63px;width:126px;height:34px;background:#0D0D0D;border-radius:20px;z-index:100}
+.sb{position:absolute;top:0;left:0;right:0;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 26px;z-index:99;pointer-events:none;font-size:16px;font-weight:600;color:var(--t1)}
+.screen{height:100%;overflow-y:auto;padding-top:54px;-ms-overflow-style:none;scrollbar-width:none}
+.screen::-webkit-scrollbar{display:none}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;opacity:.45;transition:opacity .2s;font-size:10px;color:var(--t2)}
+.tab.on{opacity:1;color:var(--a1)}
+.tab svg{width:22px;height:22px}
+.tabbot{display:flex;background:var(--srf);border-top:1px solid #F0EDE8;padding:8px 0 22px;position:sticky;bottom:0}
+.btn{display:inline-block;padding:14px 40px;border-radius:26px;background:var(--a1);color:#fff;font-size:16px;font-weight:600;cursor:pointer;border:none}
+.card{background:var(--srf);border-radius:22px;padding:22px;box-shadow:var(--sh)}
+.card2{background:var(--srf);border-radius:22px;padding:22px;box-shadow:var(--sh2)}
+</style>
+</head>
+<body>
+<div style="width:100%;text-align:center;margin-bottom:32px">
+  <div class="serif" style="font-size:30px;font-weight:700;color:var(--t1);letter-spacing:6px">并蒂星球</div>
+  <div style="font-size:13px;color:var(--t2);letter-spacing:8px;margin-top:4px">并蒂而生 · 同步成长</div>
+  <div style="font-size:11px;color:var(--t2);margin-top:2px;font-style:italic">颜色按出生顺序 · 同色系不同明度 · 不按性别</div>
+</div>
+<div class="gallery">
+
+<!-- HOME -->
+<div class="phone-wrap"><div class="phone-label">首页</div><div class="phone"><div class="phone-inner"><div class="island"></div><div class="sb"><span>9:41</span><span>●●●●○</span></div><div class="screen">
+<div style="background:linear-gradient(172deg,var(--a1)0%,var(--a2)55%,var(--bg)100%);padding:44px 24px 72px;text-align:center;color:#fff">
+<div class="serif" style="font-size:34px;font-weight:700;letter-spacing:6px;margin-bottom:6px">并蒂星球</div>
+<div style="font-size:14px;opacity:.75;letter-spacing:8px;margin-bottom:36px">并蒂而生 · 同步成长</div>
+<div style="display:flex;justify-content:center;gap:0;margin-bottom:44px"><div style="width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.22);backdrop-filter:blur(8px);margin-right:-10px"></div><div style="width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.32);backdrop-filter:blur(8px)"></div></div>
+<div style="display:flex;justify-content:center;gap:48px"><div><div style="font-size:44px;font-weight:200;letter-spacing:-2px;line-height:1">16.8</div><div style="font-size:12px;opacity:.6;margin-top:4px">大宝 · kg</div></div><div style="width:1px;background:rgba(255,255,255,.2)"></div><div><div style="font-size:44px;font-weight:200;letter-spacing:-2px;line-height:1">14.2</div><div style="font-size:12px;opacity:.6;margin-top:4px">二宝 · kg</div></div></div></div>
+<div style="margin-top:-32px;padding:0 22px;position:relative;z-index:2">
+<div class="card2" style="display:flex;align-items:center;gap:14px;padding:18px 22px;margin-bottom:14px"><div style="width:44px;height:44px;border-radius:50%;background:#F5F0E8;display:flex;align-items:center;justify-content:center;font-size:20px">↔</div><div style="flex:1"><div style="font-size:14px;font-weight:600">生长差异 2.6kg</div><div style="font-size:11px;color:var(--t2);margin-top:2px">正常范围 · 每个宝宝有自己的节奏</div></div><div style="font-size:26px;font-weight:600;color:var(--ac)">✓</div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<div class="card" style="padding:22px 18px"><div class="serif" style="font-size:16px;font-weight:600;margin-bottom:4px">生长曲线</div><div style="font-size:11px;color:var(--t2)">WHO标准 · 双宝对比</div></div>
+<div class="card" style="padding:22px 18px"><div class="serif" style="font-size:16px;font-weight:600;margin-bottom:4px">双轨记录</div><div style="font-size:11px;color:var(--t2)">一键记录两个宝宝</div></div>
+<div class="card" style="padding:22px 18px"><div class="serif" style="font-size:16px;font-weight:600;margin-bottom:4px">萌芽日记</div><div style="font-size:11px;color:var(--t2)">双胞胎互动瞬间</div></div>
+<div class="card" style="padding:22px 18px"><div class="serif" style="font-size:16px;font-weight:600;margin-bottom:4px">守护中心</div><div style="font-size:11px;color:var(--t2)">电量 · 一人时光</div></div></div><div style="height:12px"></div></div></div>
+<div class="tabbot"><div class="tab on"><svg viewBox="0 0 22 22"><path d="M3 10l8-7 8 7v10H3V10z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>首页</span></div><div class="tab"><svg viewBox="0 0 22 22"><polyline points="3 20 9 12 14 16 20 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>生长</span></div><div class="tab"><svg viewBox="0 0 22 22"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M11 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>记录</span></div><div class="tab"><svg viewBox="0 0 22 22"><path d="M11 3l7 4v6c0 5-3 9-7 11-4-2-7-6-7-11V7l7-4z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>守护</span></div></div></div></div></div>
+
+<!-- GROWTH -->
+<div class="phone-wrap"><div class="phone-label">生长曲线</div><div class="phone"><div class="phone-inner"><div class="island"></div><div class="sb"><span>9:41</span><span>●●●●○</span></div><div class="screen">
+<div style="background:linear-gradient(var(--a1),var(--a2));padding:28px 24px 52px;color:#fff"><div class="serif" style="font-size:26px;font-weight:600;text-align:center;letter-spacing:3px">生长曲线</div><div style="font-size:12px;opacity:.7;text-align:center;margin-top:4px">WHO 国际标准</div></div>
+<div style="margin-top:-28px;padding:0 22px;position:relative;z-index:2">
+<div class="card2" style="padding:22px">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px"><div style="display:flex;gap:16px"><span style="color:var(--a1);font-weight:600;font-size:13px">● 大宝</span><span style="color:var(--a2);font-weight:600;font-size:13px">● 二宝</span></div><div style="padding:4px 14px;border-radius:20px;background:#F2F7EF;font-size:11px;font-weight:600;color:var(--ac)">差异 2.3%</div></div>
+<svg viewBox="0 0 336 170" style="width:100%;border-radius:14px;background:#FBF9F5">
+<rect width="336" height="170" fill="#FBF9F5" rx="14"/>
+<line x1="34" y1="142" x2="328" y2="142" stroke="#EEEAE2" stroke-width="1"/>
+<line x1="34" y1="104" x2="328" y2="104" stroke="#F2EFEA" stroke-width="1" stroke-dasharray="5,5"/>
+<line x1="34" y1="66" x2="328" y2="66" stroke="#F2EFEA" stroke-width="1" stroke-dasharray="5,5"/>
+<line x1="34" y1="28" x2="328" y2="28" stroke="#F2EFEA" stroke-width="1" stroke-dasharray="5,5"/>
+<polyline points="44,133 106,116 162,103 218,94 278,83 332,76" fill="none" stroke="#A45C40" stroke-width="2.5" stroke-linecap="round"/>
+<polyline points="44,138 106,124 162,110 218,99 278,86 332,79" fill="none" stroke="#C7866A" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="332" cy="76" r="5" fill="#A45C40"/><circle cx="332" cy="79" r="5" fill="#C7866A"/>
+</svg>
+<div style="display:flex;gap:6px;padding-top:12px;margin-top:10px;border-top:1px solid #F0EDE8"><span style="font-size:11px">ⓘ</span><span style="font-size:10px;color:var(--t2);line-height:1.5">生长差异在正常范围。每个宝宝有自己的成长节奏，无需焦虑比较。</span></div></div>
+<div style="display:flex;gap:10px;margin-top:12px">
+<div class="card" style="flex:1;padding:18px 16px"><div class="serif" style="font-size:14px;font-weight:600;margin-bottom:10px">大宝</div><div style="font-size:34px;font-weight:200;letter-spacing:-2px;color:var(--t1)">16.8<span style="font-size:14px;color:var(--t2)"> kg</span></div><div style="font-size:13px;font-weight:600;color:var(--ac);margin-top:6px">68%</div><div style="font-size:10px;color:var(--t2);margin-top:2px">正常范围</div></div>
+<div class="card" style="flex:1;padding:18px 16px"><div class="serif" style="font-size:14px;font-weight:600;margin-bottom:10px">二宝</div><div style="font-size:34px;font-weight:200;letter-spacing:-2px;color:var(--t1)">14.2<span style="font-size:14px;color:var(--t2)"> kg</span></div><div style="font-size:13px;font-weight:600;color:var(--ac);margin-top:6px">45%</div><div style="font-size:10px;color:var(--t2);margin-top:2px">正常范围</div></div></div><div style="height:12px"></div></div></div>
+<div class="tabbot"><div class="tab"><svg viewBox="0 0 22 22"><path d="M3 10l8-7 8 7v10H3V10z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>首页</span></div><div class="tab on"><svg viewBox="0 0 22 22"><polyline points="3 20 9 12 14 16 20 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>生长</span></div><div class="tab"><svg viewBox="0 0 22 22"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M11 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>记录</span></div><div class="tab"><svg viewBox="0 0 22 22"><path d="M11 3l7 4v6c0 5-3 9-7 11-4-2-7-6-7-11V7l7-4z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>守护</span></div></div></div></div></div>
+
+<!-- RECORD -->
+<div class="phone-wrap"><div class="phone-label">双轨记录</div><div class="phone"><div class="phone-inner"><div class="island"></div><div class="sb"><span>9:41</span><span>●●●●○</span></div><div class="screen">
+<div style="padding:24px 22px 0"><div class="serif" style="font-size:26px;font-weight:600;text-align:center;letter-spacing:3px">双轨记录</div><div style="font-size:12px;color:var(--t2);text-align:center;margin-top:3px;margin-bottom:22px">两次点击 · 单手完成</div>
+<div style="display:flex;gap:12px;margin-bottom:22px">
+<div style="flex:1;background:var(--a1);border-radius:24px;padding:44px 16px;text-align:center;color:#fff;box-shadow:0 8px 28px rgba(164,92,64,.3)"><div style="font-size:13px;opacity:.8">点击记录</div><div class="serif" style="font-size:20px;font-weight:600;margin-top:8px">大宝</div><div style="font-size:12px;opacity:.7;margin-top:4px">喂养 · 睡眠 · 换尿布</div></div>
+<div style="flex:1;background:var(--a2);border-radius:24px;padding:44px 16px;text-align:center;color:#fff;box-shadow:0 8px 28px rgba(199,134,106,.3)"><div style="font-size:13px;opacity:.8">点击记录</div><div class="serif" style="font-size:20px;font-weight:600;margin-top:8px">二宝</div><div style="font-size:12px;opacity:.7;margin-top:4px">喂养 · 睡眠 · 换尿布</div></div></div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:24px"><div class="card" style="padding:14px 8px;text-align:center;font-size:13px">🍼 喂奶</div><div class="card" style="padding:14px 8px;text-align:center;font-size:13px">😴 睡觉</div><div class="card" style="padding:14px 8px;text-align:center;font-size:13px">🧷 尿布</div><div class="card" style="padding:14px 8px;text-align:center;font-size:13px">📝 快记</div></div>
+<div class="serif" style="font-size:14px;font-weight:600;margin-bottom:10px">最近记录</div>
+<div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--srf);border-radius:16px;margin-bottom:6px;box-shadow:var(--sh)"><div style="width:6px;height:32px;border-radius:3px;background:var(--a1);opacity:.5"></div><div style="flex:1"><div style="font-size:13px;font-weight:500">大宝 · 🍼 喂奶 · 20分钟</div><div style="font-size:11px;color:var(--t2);margin-top:1px">32分钟前</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--srf);border-radius:16px;margin-bottom:6px;box-shadow:var(--sh)"><div style="width:6px;height:32px;border-radius:3px;background:var(--a2);opacity:.5"></div><div style="flex:1"><div style="font-size:13px;font-weight:500">二宝 · 🧷 换尿布</div><div style="font-size:11px;color:var(--t2);margin-top:1px">1小时前</div></div></div>
+<div style="display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--srf);border-radius:16px;margin-bottom:6px;box-shadow:var(--sh)"><div style="width:6px;height:32px;border-radius:3px;background:var(--a1);opacity:.5"></div><div style="flex:1"><div style="font-size:13px;font-weight:500">大宝 · 😴 午睡 · 45分钟</div><div style="font-size:11px;color:var(--t2);margin-top:1px">2小时前</div></div></div><div style="height:12px"></div></div></div>
+<div class="tabbot"><div class="tab"><svg viewBox="0 0 22 22"><path d="M3 10l8-7 8 7v10H3V10z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>首页</span></div><div class="tab"><svg viewBox="0 0 22 22"><polyline points="3 20 9 12 14 16 20 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>生长</span></div><div class="tab on"><svg viewBox="0 0 22 22"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M11 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>记录</span></div><div class="tab"><svg viewBox="0 0 22 22"><path d="M11 3l7 4v6c0 5-3 9-7 11-4-2-7-6-7-11V7l7-4z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>守护</span></div></div></div></div></div>
+
+<!-- GUARDIAN -->
+<div class="phone-wrap"><div class="phone-label">守护中心</div><div class="phone"><div class="phone-inner"><div class="island"></div><div class="sb"><span>9:41</span><span>●●●●○</span></div><div class="screen">
+<div style="background:linear-gradient(var(--a1),var(--a2));padding:28px 24px 46px;color:#fff"><div class="serif" style="font-size:26px;font-weight:600;text-align:center;letter-spacing:3px">守护中心</div><div style="font-size:12px;opacity:.7;text-align:center;margin-top:4px">看见每一个人的状态</div></div>
+<div style="margin-top:-20px;padding:0 22px;position:relative;z-index:2">
+<div style="display:flex;gap:12px;margin-bottom:18px">
+<div class="card2" style="flex:1;text-align:center;padding:24px 16px"><div style="font-size:13px;font-weight:600;color:var(--t2);margin-bottom:14px">妈妈</div><div style="width:76px;height:76px;border-radius:50%;margin:0 auto 14px;background:conic-gradient(var(--a1)0deg,var(--a1)144deg,#F0EDE8 144deg);display:flex;align-items:center;justify-content:center"><div style="width:58px;height:58px;border-radius:50%;background:var(--srf);display:flex;align-items:center;justify-content:center"><span style="font-size:22px;font-weight:200;color:var(--a1);letter-spacing:-1px">4/10</span></div></div><div style="font-size:11px;color:var(--t2)">需要充电</div></div>
+<div class="card2" style="flex:1;text-align:center;padding:24px 16px"><div style="font-size:13px;font-weight:600;color:var(--t2);margin-bottom:14px">爸爸</div><div style="width:76px;height:76px;border-radius:50%;margin:0 auto 14px;background:conic-gradient(var(--a2)0deg,var(--a2)252deg,#F0EDE8 252deg);display:flex;align-items:center;justify-content:center"><div style="width:58px;height:58px;border-radius:50%;background:var(--srf);display:flex;align-items:center;justify-content:center"><span style="font-size:22px;font-weight:200;color:var(--a2);letter-spacing:-1px">7/10</span></div></div><div style="font-size:11px;color:var(--t2)">电量充足</div></div></div>
+<div class="card2" style="margin-bottom:18px;text-align:center;padding:24px"><div class="serif" style="font-size:16px;font-weight:600;margin-bottom:2px">一人时光</div><div style="font-size:11px;color:var(--t2);margin-bottom:18px">确保每个宝宝都有专属陪伴</div><div style="display:flex;gap:16px;margin-bottom:18px"><div style="flex:1"><div style="font-size:38px;font-weight:200;letter-spacing:-2px;color:var(--a1)">45</div><div style="font-size:11px;color:var(--t2)">分钟 · 今天</div><div style="font-size:13px;font-weight:500;margin-top:4px">大宝</div></div><div style="flex:1"><div style="font-size:38px;font-weight:200;letter-spacing:-2px;color:var(--a2)">32</div><div style="font-size:11px;color:var(--t2)">分钟 · 今天</div><div style="font-size:13px;font-weight:500;margin-top:4px">二宝</div></div></div><div class="btn">开始陪伴计时</div></div><div style="height:12px"></div></div></div>
+<div class="tabbot"><div class="tab"><svg viewBox="0 0 22 22"><path d="M3 10l8-7 8 7v10H3V10z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>首页</span></div><div class="tab"><svg viewBox="0 0 22 22"><polyline points="3 20 9 12 14 16 20 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>生长</span></div><div class="tab"><svg viewBox="0 0 22 22"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M11 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>记录</span></div><div class="tab on"><svg viewBox="0 0 22 22"><path d="M11 3l7 4v6c0 5-3 9-7 11-4-2-7-6-7-11V7l7-4z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>守护</span></div></div></div></div></div>
+
+</div></body></html>

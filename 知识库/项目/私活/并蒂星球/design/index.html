@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>并蒂星球 · 设计原型 v2</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif;
+    background: #E8E6E1; color: #1A1A2E; -webkit-font-smoothing: antialiased;
+    padding: 48px 32px; display: flex; justify-content: center; min-height: 100vh;
+  }
+  .gallery {
+    display: flex; gap: 36px; flex-wrap: wrap; justify-content: center; align-items: flex-start;
+    max-width: 1950px;
+  }
+  .phone-wrap { text-align: center; }
+  .phone-label {
+    font-size: 13px; font-weight: 600; color: #8E8E93; letter-spacing: 0.5px;
+    margin-bottom: 16px; text-transform: uppercase;
+  }
+  .iphone {
+    width: 393px; height: 852px; background: #0A0A0A; border-radius: 55px;
+    padding: 12px; position: relative;
+    box-shadow: 0 0 0 2px #1A1A1A, 0 24px 80px rgba(0,0,0,0.18);
+  }
+  .iphone-inner {
+    width: 100%; height: 100%; background: #F8F6F2; border-radius: 43px;
+    overflow: hidden; position: relative;
+  }
+  .island {
+    position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+    width: 126px; height: 34px; background: #0A0A0A; border-radius: 20px; z-index: 100;
+  }
+  .status-row {
+    position: absolute; top: 0; left: 0; right: 0; height: 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 28px; z-index: 99; pointer-events: none;
+    font-size: 16px; font-weight: 600; color: #1A1A2E;
+  }
+  .screen {
+    height: 100%; overflow-y: auto; padding: 54px 0 0 0;
+    scrollbar-width: none; -ms-overflow-style: none;
+  }
+  .screen::-webkit-scrollbar { display: none; }
+  /* Typography scale: 26px title, 17px heading, 15px body, 13px caption */
+  .t-title { font-size: 26px; font-weight: 700; letter-spacing: 2px; }
+  .t-heading { font-size: 17px; font-weight: 600; }
+  .t-body { font-size: 15px; font-weight: 400; }
+  .t-caption { font-size: 13px; font-weight: 400; color: #8E8E93; }
+  .t-small { font-size: 11px; color: #8E8E93; }
+</style>
+</head>
+<body>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<div class="gallery" id="gallery"></div>
+
+<script type="text/babel">
+const { useState } = React;
+const BLUE = '#4299E1';
+const PINK = '#F56565';
+const BG = '#F8F6F2';
+const SURFACE = '#FFFFFF';
+const TEXT = '#1A1A2E';
+const T2 = '#8E8E93';
+const MINT = '#48BB78';
+const ORANGE = '#ED8936';
+
+function NavBar({title}) {
+  return React.createElement('div', {style:{display:'flex',alignItems:'center',justifyContent:'center',padding:'0 0 10px 0'}},
+    React.createElement('span', {style:{fontSize:15,fontWeight:600,color:TEXT}}, title)
+  );
+}
+
+function TabBar({active}) {
+  const tabs = [
+    {icon: 'H', label: '首页', svg: '<svg width="22" height="22" viewBox="0 0 22 22"><path d="M3 9l8-7 8 7v10H3V9z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'},
+    {icon: 'C', label: '曲线', svg: '<svg width="22" height="22" viewBox="0 0 22 22"><polyline points="2,18 7,12 11,15 15,8 20,10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>'},
+    {icon: 'R', label: '记录', svg: '<svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M11 7v4l3 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>'},
+    {icon: 'M', label: '我的', svg: '<svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3 20c0-4.4 3.6-8 8-8s8 3.6 8 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>'}
+  ];
+  return React.createElement('div', {style:{display:'flex',background:SURFACE,borderTop:'1px solid #F0EDE8',padding:'6px 0 20px 0'}},
+    ...tabs.map((t,i) => React.createElement('div', {key:i,style:{flex:1,display:'flex',flexDirection:'column',alignItems:'center',gap:3,fontSize:10,color:i===active?BLUE:T2,opacity:i===active?1:0.55,transition:'all 0.2s'}},
+      React.createElement('span', {dangerouslySetInnerHTML:{__html:t.svg},style:{width:22,height:22,display:'block'}}),
+      React.createElement('span', null, t.label)
+    ))
+  );
+}
+
+// ====== BabyDot — 简洁圆形头像 ======
+function BabyDot({name, color, size}) {
+  const s = size||44;
+  return React.createElement('div', {
+    style:{width:s,height:s,borderRadius:s/2,background:color,color:'#FFF',display:'flex',alignItems:'center',justifyContent:'center',fontSize:Math.round(s*0.42),fontWeight:600,letterSpacing:'1px'}
+  }, name[0]);
+}
+
+// ====== Splash ======
+function Splash() {
+  return React.createElement('div', {style:{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',minHeight:'100%',padding:'120px 40px',textAlign:'center',background:'linear-gradient(180deg, #F8F6F2 0%, #F3F1EC 100%)'}},
+    React.createElement('div', {style:{position:'relative',width:130,height:130,marginBottom:40}},
+      React.createElement('svg', {width:130,height:130,viewBox:'0 0 130 130'},
+        React.createElement('circle', {cx:43,cy:65,r:38,fill:BLUE,opacity:'0.92'}),
+        React.createElement('circle', {cx:87,cy:65,r:38,fill:PINK,opacity:'0.92'}),
+        React.createElement('circle', {cx:41,cy:52,r:10,fill:'rgba(255,255,255,0.2)'}),
+        React.createElement('circle', {cx:89,cy:52,r:10,fill:'rgba(255,255,255,0.2)'})
+      )
+    ),
+    React.createElement('div', {className:'t-title',style:{fontSize:34}},'并蒂星球'),
+    React.createElement('div', {style:{fontSize:16,color:T2,letterSpacing:'8px',marginTop:8}},'并蒂而生，同步成长'),
+    React.createElement('div', {style:{marginTop:60,fontSize:14,color:T2,lineHeight:1.6,textAlign:'center'}},React.createElement('span',null,'中国首款双胞胎育儿伴侣'))
+  );
+}
+
+// ====== Home ======
+function Home() {
+  return React.createElement('div', {style:{padding:'0 22px'}},
+    React.createElement('div', {style:{textAlign:'center',padding:'22px 0 18px'}},
+      React.createElement('div', {className:'t-title'},'并蒂星球'),
+      React.createElement('div', {style:{fontSize:12,color:T2,marginTop:4,letterSpacing:'1px'}},'颜色按出生顺序 · 不按性别')
+    ),
+    // 双宝卡片 — 大号对比
+    React.createElement('div', {style:{display:'flex',gap:12,marginBottom:24}},
+      [{nm:'大宝',wt:'16.8',ht:'102',last:'🍼 32分钟前',st:'清醒中',c:BLUE},
+       {nm:'二宝',wt:'14.2',ht:'99',last:'🧷 1小时前',st:'午睡中',c:PINK}].map(function(b,i){
+        return React.createElement('div', {key:i,style:{flex:1,background:SURFACE,borderRadius:22,padding:20,boxShadow:'0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.03)'}},
+          React.createElement('div', {style:{display:'flex',alignItems:'center',gap:12,marginBottom:16}},
+            React.createElement(BabyDot, {name:b.nm,color:b.c,size:48}),
+            React.createElement('div',null,
+              React.createElement('div', {className:'t-heading'},b.nm),
+              React.createElement('div', {className:'t-caption',style:{fontSize:13,marginTop:2}},b.wt,'kg · ',b.ht,'cm')
+            )
+          ),
+          React.createElement('div', {style:{display:'flex',gap:8}},
+            React.createElement('div', {style:{flex:1,background:BG,borderRadius:12,padding:'10px 12px'}},
+              React.createElement('div', {className:'t-small'},'上次喂养'),
+              React.createElement('div', {className:'t-caption',style:{color:TEXT,fontWeight:500}},'🍼 ',b.last.split('🍼 ')[1]||b.last)
+            ),
+            React.createElement('div', {style:{flex:1,background:BG,borderRadius:12,padding:'10px 12px'}},
+              React.createElement('div', {className:'t-small'},'状态'),
+              React.createElement('div', {className:'t-caption',style:{color:b.st==='午睡中'?ORANGE:TEXT,fontWeight:500}},b.st)
+            )
+          )
+        );
+      })
+    ),
+    // 功能网格
+    React.createElement('div', {style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:10}},
+      [
+        {icon:'↑→',label:'生长曲线',desc:'WHO 标准 · 双宝对比',c:BLUE},
+        {icon:'◎',label:'双轨记录',desc:'一键记录两个宝宝',c:PINK},
+        {icon:'🌱',label:'萌芽日记',desc:'双胞胎互动瞬间',c:MINT},
+        {icon:'♡',label:'守护中心',desc:'电量表 · 一人时光',c:ORANGE},
+        {icon:'⌂',label:'入园助手',desc:'分班决策 · 耦合度',c:BLUE},
+        {icon:'☆',label:'今天我做了',desc:'看见每份付出',c:MINT}
+      ].map(function(f,i){
+        return React.createElement('div', {key:i,style:{background:SURFACE,borderRadius:20,padding:'22px 18px',boxShadow:'0 1px 3px rgba(0,0,0,0.04)',cursor:'pointer'}},
+          React.createElement('div', {style:{width:28,height:28,borderRadius:10,background:f.c+'18',display:'flex',alignItems:'center',justifyContent:'center',fontSize:16,fontWeight:700,color:f.c,marginBottom:12}}, f.icon),
+          React.createElement('div', {className:'t-heading',style:{fontSize:15,marginBottom:3}},f.label),
+          React.createElement('div', {className:'t-caption',style:{fontSize:12,lineHeight:1.4}},f.desc)
+        );
+      })
+    ),
+    React.createElement('div', {style:{height:12}})
+  );
+}
+
+// ====== Growth ======
+function Growth() {
+  const [tab,setTab] = useState('weight');
+  return React.createElement('div', {style:{padding:'0 22px'}},
+    React.createElement('div', {style:{textAlign:'center',padding:'18px 0 0'}},
+      React.createElement('div', {className:'t-title',style:{fontSize:22}},'生长曲线'),
+      React.createElement('div', {className:'t-caption',style:{marginTop:4}},'WHO 国际标准 · 并蒂对比')
+    ),
+    React.createElement('div', {style:{display:'flex',gap:6,background:'#F0EDE8',borderRadius:14,padding:3,margin:'22px 0'}},
+      [{k:'weight',l:'体重 kg'},{k:'height',l:'身高 cm'}].map(function(t){
+        var sel = tab===t.k;
+        return React.createElement('div', {key:t.k,onClick:function(){setTab(t.k)},style:{flex:1,textAlign:'center',padding:'10px 0',borderRadius:12,fontSize:14,fontWeight:sel?600:400,background:sel?SURFACE:'transparent',color:sel?TEXT:T2,cursor:'pointer',boxShadow:sel?'0 1px 3px rgba(0,0,0,0.06)':'none',transition:'all 0.2s'}},t.l);
+      })
+    ),
+    React.createElement('div', {style:{background:SURFACE,borderRadius:22,padding:22,boxShadow:'0 1px 3px rgba(0,0,0,0.04)'}},
+      React.createElement('div', {style:{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:14}},
+        React.createElement('div', {style:{display:'flex',gap:18}},
+          React.createElement('div', {style:{display:'flex',alignItems:'center',gap:6}},
+            React.createElement('div', {style:{width:12,height:12,borderRadius:6,background:BLUE}}),
+            React.createElement('span', {style:{fontSize:14,fontWeight:600}},'大宝')
+          ),
+          React.createElement('div', {style:{display:'flex',alignItems:'center',gap:6}},
+            React.createElement('div', {style:{width:12,height:12,borderRadius:6,background:PINK}}),
+            React.createElement('span', {style:{fontSize:14,fontWeight:600}},'二宝')
+          )
+        ),
+        React.createElement('div', {style:{padding:'5px 14px',borderRadius:20,background:'#F0FDF4',fontSize:13,fontWeight:600,color:'#166534'}},'差异 2.3%')
+      ),
+      React.createElement('svg', {width:'342',height:'180',viewBox:'0 0 342 180'},
+        React.createElement('rect', {x:0,y:0,width:342,height:180,fill:'#FCFBF9',rx:14}),
+        React.createElement('line', {x1:36,y1:150,x2:330,y2:150,stroke:'#EDE8E0',strokeWidth:1}),
+        React.createElement('line', {x1:36,y1:110,x2:330,y2:110,stroke:'#F5F2ED',strokeWidth:1,strokeDasharray:'4,6'}),
+        React.createElement('line', {x1:36,y1:70,x2:330,y2:70,stroke:'#F5F2ED',strokeWidth:1,strokeDasharray:'4,6'}),
+        React.createElement('line', {x1:36,y1:30,x2:330,y2:30,stroke:'#F5F2ED',strokeWidth:1,strokeDasharray:'4,6'}),
+        React.createElement('polyline', {points:'44,146 106,132 166,120 226,108 286,96 330,86',fill:'none',stroke:BLUE,strokeWidth:2.5,strokeLinecap:'round',strokeLinejoin:'round'}),
+        React.createElement('polyline', {points:'44,149 106,138 166,126 226,113 286,99 330,89',fill:'none',stroke:PINK,strokeWidth:2.5,strokeLinecap:'round',strokeLinejoin:'round'}),
+        React.createElement('circle', {cx:330,cy:86,r:5,fill:BLUE,opacity:'0.8'}),
+        React.createElement('circle', {cx:330,cy:89,r:5,fill:PINK,opacity:'0.8'}),
+        React.createElement('text', {x:310,y:155,fontSize:9,fill:'#CCC',textAnchor:'end'},'月龄 →'),
+        React.createElement('text', {x:8,y:90,fontSize:9,fill:'#CCC',textAnchor:'start',transform:'rotate(-90,8,90)'},'kg')
+      ),
+      React.createElement('div', {style:{borderTop:'1px solid #F0EDE8',paddingTop:12,marginTop:12,display:'flex',alignItems:'flex-start',gap:6}},
+        React.createElement('span', {style:{fontSize:12,flexShrink:0}},'ⓘ'),
+        React.createElement('span', {style:{fontSize:10,color:T2,lineHeight:1.5}},'颜色仅为统计标记。每个宝宝有自己的生长节奏，在正常范围内都是健康的。曲线基于 WHO 儿童生长标准（2006），仅供参考。')
+      )
+    ),
+    React.createElement('div', {style:{display:'flex',gap:10,marginTop:16}},
+      [{nm:'大宝',val:'16.8',unit:'kg',pct:'68%',c:BLUE},{nm:'二宝',val:'14.2',unit:'kg',pct:'45%',c:PINK}].map(function(b,i){
+        return React.createElement('div', {key:i,style:{flex:1,background:SURFACE,borderRadius:20,padding:18,boxShadow:'0 1px 3px rgba(0,0,0,0.04)'}},
+          React.createElement('div', {style:{display:'flex',alignItems:'center',gap:10,marginBottom:12}},
+            React.createElement(BabyDot, {name:b.nm,color:b.c,size:40}),
+            React.createElement('div', {className:'t-heading',style:{fontSize:15}},b.nm)
+          ),
+          React.createElement('div', {style:{display:'flex',alignItems:'baseline',gap:4}},
+            React.createElement('span', {style:{fontSize:34,fontWeight:700,color:TEXT}},b.val),
+            React.createElement('span', {style:{fontSize:14,color:T2}},b.unit)
+          ),
+          React.createElement('div', {style:{fontSize:14,fontWeight:600,color:MINT,marginTop:4}},b.pct),
+          React.createElement('div', {className:'t-small',style:{marginTop:4}},'正常范围 · 有自己的节奏')
+        );
+      })
+    ),
+    React.createElement('div', {style:{height:12}})
+  );
+}
+
+// ====== Record — 大手按钮版 ======
+function Record() {
+  return React.createElement('div', {style:{padding:'0 22px'}},
+    React.createElement('div', {style:{padding:'18px 0 12px',textAlign:'center'}},
+      React.createElement('div', {className:'t-title',style:{fontSize:22}},'双轨记录'),
+      React.createElement('div', {className:'t-caption',style:{marginTop:3}},'最多两次点击 · 单手完成')
+    ),
+    // 双宝状态条
+    React.createElement('div', {style:{display:'flex',gap:10,marginBottom:24}},
+      [{nm:'大宝',st:'🍼 32分钟前',c:BLUE},{nm:'二宝',st:'暂无记录',c:PINK}].map(function(b,i){
+        return React.createElement('div', {key:i,style:{flex:1,background:SURFACE,borderRadius:18,padding:14,boxShadow:'0 1px 3px rgba(0,0,0,0.04)'}},
+          React.createElement('div', {style:{display:'flex',alignItems:'center',justifyContent:'space-between'}},
+            React.createElement('div', {style:{display:'flex',alignItems:'center',gap:10}},
+              React.createElement(BabyDot, {name:b.nm,color:b.c,size:36}),
+              React.createElement('div', {className:'t-heading',style:{fontSize:15}},b.nm)
+            )
+          ),
+          React.createElement('div', {className:'t-caption',style:{marginTop:8,paddingLeft:46,fontSize:12}},b.st)
+        );
+      })
+    ),
+    // 两大按钮 — 凌晨单手友好
+    React.createElement('div', {style:{display:'flex',gap:14,marginBottom:24}},
+      [{nm:'大宝',emoji:'🍼',c:BLUE},{nm:'二宝',emoji:'🍼',c:PINK}].map(function(b,i){
+        return React.createElement('div', {key:i,style:{flex:1,background:b.c,borderRadius:24,padding:'44px 16px',textAlign:'center',color:'#FFF',cursor:'pointer',boxShadow:'0 4px 16px '+b.c+'30'}},
+          React.createElement('div', {style:{fontSize:36,marginBottom:8}},b.emoji),
+          React.createElement('div', {style:{fontSize:18,fontWeight:600}},'记录'),
+          React.createElement('div', {style:{fontSize:14,opacity:0.85,marginTop:4}},b.nm,' · 喂养')
+        );
+      })
+    ),
+    // 次级操作
+    React.createElement('div', {style:{display:'flex',gap:10,marginBottom:28}},
+      [{nm:'大宝',emoji:'😴',c:BLUE},{nm:'二宝',emoji:'😴',c:PINK},
+       {nm:'大宝',emoji:'🧷',c:BLUE},{nm:'二宝',emoji:'🧷',c:PINK}].map(function(b,i){
+        return React.createElement('div', {key:i,style:{flex:1,background:SURFACE,borderRadius:18,padding:'18px 8px',textAlign:'center',cursor:'pointer',boxShadow:'0 1px 2px rgba(0,0,0,0.03)'}},
+          React.createElement('div', {style:{fontSize:26,marginBottom:4}},b.emoji),
+          React.createElement('div', {style:{fontSize:11,color:T2}},b.nm)
+        );
+      })
+    ),
+    // 最近记录
+    React.createElement('div', {className:'t-heading',style:{fontSize:14,marginBottom:10}},'最近记录'),
+    [{emoji:'🍼',baby:'大宝',detail:'20分钟',time:'32分钟前',c:BLUE},
+     {emoji:'🧷',baby:'二宝',detail:'湿尿布',time:'1小时前',c:PINK},
+     {emoji:'😴',baby:'大宝',detail:'45分钟',time:'2小时前',c:BLUE}].map(function(l,i){
+      return React.createElement('div', {key:i,style:{display:'flex',alignItems:'center',gap:12,padding:'14px 16px',background:SURFACE,borderRadius:14,marginBottom:6,boxShadow:'0 1px 2px rgba(0,0,0,0.02)'}},
+        React.createElement('div', {style:{width:40,height:40,borderRadius:14,background:l.c+'10',display:'flex',alignItems:'center',justifyContent:'center',fontSize:20}},l.emoji),
+        React.createElement('div', {style:{flex:1}},
+          React.createElement('div', {className:'t-body',style:{fontSize:14,fontWeight:500}},l.baby,' · ',l.emoji,' ',l.detail),
+          React.createElement('div', {className:'t-caption',style:{fontSize:12,marginTop:1}},l.time)
+        ),
+        React.createElement('div', {style:{width:3,height:30,borderRadius:2,background:l.c,opacity:0.4}})
+      );
+    }),
+    React.createElement('div', {style:{height:12}})
+  );
+}
+
+// ====== Render ======
+function Phone({title,children,activeTab,hideTabBar}) {
+  return React.createElement('div', {className:'phone-wrap'},
+    React.createElement('div', {className:'phone-label'}, title),
+    React.createElement('div', {className:'iphone'},
+      React.createElement('div', {className:'iphone-inner'},
+        React.createElement('div', {className:'island'}),
+        React.createElement('div', {className:'status-row'},
+          React.createElement('span',null,'9:41'),
+          React.createElement('span',null,'●●●●○')
+        ),
+        React.createElement('div', {className:'screen'},
+          children,
+          !hideTabBar && React.createElement(TabBar, {active:activeTab||0})
+        )
+      )
+    )
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('gallery')).render(
+  React.createElement(React.Fragment, null,
+    React.createElement(Phone, {title:'启动页',hideTabBar:true}, React.createElement(Splash)),
+    React.createElement(Phone, {title:'首页',activeTab:0}, React.createElement(Home)),
+    React.createElement(Phone, {title:'生长曲线',activeTab:1}, React.createElement(Growth)),
+    React.createElement(Phone, {title:'双轨记录',activeTab:2}, React.createElement(Record))
+  )
+);
+</script>
+</body>
+</html>
