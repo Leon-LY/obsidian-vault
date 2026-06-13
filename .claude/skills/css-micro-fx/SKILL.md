@@ -27,6 +27,7 @@ triggers:
 license: MIT
 attribution: "Pattern library derived from cssfx by jolaleye (MIT) — modernized and extended"
 upstream: "https://github.com/jolaleye/cssfx"
+graph_visible: false
 ---
 
 # CSS Micro-FX

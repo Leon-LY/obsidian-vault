@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Context Adaptation
 
 ## Platform Scaling

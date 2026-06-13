@@ -3,6 +3,7 @@ title: QoderWork
 type: concept
 tags: [技能/AI工具, 技能/全栈开发]
 status: draft
+graph_visible: true
 created: 2026-06-10
 related:
   - 全栈开发学习路线

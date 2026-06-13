@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # 关于我
 
 我是 Leon，山东善思明科技发展有限公司的项目经理。
@@ -60,6 +64,7 @@ type: concept | entity | comparison | question | project | meeting
 tags: [标签1, 标签2]
 status: draft | reviewed | final
 source: 来源（raw/ 中的原始素材路径，可选）
+graph_visible: true | false    # 知识图谱可见性。管理/导航/日志/模板/数据表 → false
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 ---

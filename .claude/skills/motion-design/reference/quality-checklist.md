@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Quality Checklist
 
 ## Visual Quality

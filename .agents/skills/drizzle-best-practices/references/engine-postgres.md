@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Engine: PostgreSQL
 
 Postgres-specific features, types, and patterns in Drizzle ORM. This file covers things

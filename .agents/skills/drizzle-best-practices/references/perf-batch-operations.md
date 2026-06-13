@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Performance: Batch Operations
 
 ## Why It Matters

@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Disney's 12 Principles — UI Adapted
 
 ## 1. Squash and Stretch

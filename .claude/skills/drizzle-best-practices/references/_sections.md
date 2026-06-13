@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Reference Sections
 
 This file lists all reference files organized by category and priority.

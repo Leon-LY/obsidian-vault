@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Core Philosophy
 
 ## Three Pillars

@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Timing & Easing Tables
 
 ## Duration by Element Type

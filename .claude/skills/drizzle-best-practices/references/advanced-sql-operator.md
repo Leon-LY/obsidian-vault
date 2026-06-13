@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Advanced: The SQL Operator
 
 ## Why It Matters

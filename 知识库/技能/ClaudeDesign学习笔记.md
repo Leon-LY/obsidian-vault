@@ -4,6 +4,7 @@ type: concept
 tags: [技能/AI工具]
 status: draft
 source: 笔记同步助手/2026-06-10/全面掌握 Claude Design：可交互可编辑PPT学习笔记.md
+graph_visible: true
 created: 2026-06-10
 updated: 2026-06-10
 ---

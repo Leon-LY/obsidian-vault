@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Narrative Structure
 
 ## Four-Act Structure

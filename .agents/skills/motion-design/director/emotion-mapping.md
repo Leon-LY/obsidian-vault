@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Emotion-to-Motion Mapping
 
 ## Core Table

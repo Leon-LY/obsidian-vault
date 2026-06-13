@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Drivers: Serverless and Edge Runtimes (PostgreSQL)
 
 ## Why It Matters

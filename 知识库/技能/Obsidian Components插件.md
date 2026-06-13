@@ -3,6 +3,7 @@ title: Obsidian Components 插件实操指南
 type: concept
 tags: [技能/技术方案]
 status: draft
+graph_visible: true
 created: 2026-06-11
 updated: 2026-06-11
 related:

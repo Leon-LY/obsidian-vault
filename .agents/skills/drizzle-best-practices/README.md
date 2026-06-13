@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Drizzle ORM Best Practices
 
 AI-agent-ready best practices for [Drizzle ORM](https://orm.drizzle.team/) with PostgreSQL. Designed to be consumed by LLM-based coding agents (Claude, Cursor, Codex, etc.) as a skill or context file so they write correct, idiomatic Drizzle code out of the box.

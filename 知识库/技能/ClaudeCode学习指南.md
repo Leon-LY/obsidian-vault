@@ -3,6 +3,7 @@ title: Claude Code 学习指南
 type: concept
 tags: [技能/AI工具, 技能/项目管理]
 status: draft
+graph_visible: true
 created: 2026-06-09
 related:
   - Obsidian第二大脑

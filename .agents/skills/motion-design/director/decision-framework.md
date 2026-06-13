@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Decision Framework
 
 ## The First Questions

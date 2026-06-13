@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Types: Schema Validators (Zod / Valibot / Typebox / Arktype)
 
 ## Why It Matters

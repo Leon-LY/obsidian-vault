@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # 多视角并行实验 · Case Study
 
 > huashu-md-html v2.0 launch film 项目 · 2026-05-11

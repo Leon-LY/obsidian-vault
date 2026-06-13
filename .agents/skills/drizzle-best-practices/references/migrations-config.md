@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Migrations: Configuration
 
 ## Why It Matters

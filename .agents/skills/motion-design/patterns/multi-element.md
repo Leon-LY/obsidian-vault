@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Multi-Element Patterns
 
 ## Stagger Recipes

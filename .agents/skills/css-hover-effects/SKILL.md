@@ -26,6 +26,7 @@ triggers:
 license: MIT
 attribution: "Pattern library derived from Hover.css by Ian Lunn (MIT) — modernized with CSS custom properties"
 upstream: "https://github.com/IanLunn/Hover"
+graph_visible: false
 ---
 
 # CSS Hover Effects

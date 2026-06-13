@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Types: Custom Types and Branded Types
 
 ## Why It Matters

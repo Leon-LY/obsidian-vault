@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 <sub>🌐 <b>中文</b> · <a href="README.en.md">English</a></sub>
 
 <div align="center">

@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Schema: Indexes and Constraints
 
 ## Why It Matters

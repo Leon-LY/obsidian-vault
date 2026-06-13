@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Animations：时间轴动画引擎
 
 做动画/motion design HTML时读这个。原理、用法、典型模式。

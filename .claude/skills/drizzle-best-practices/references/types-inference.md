@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Types: Type Inference
 
 ## Why It Matters

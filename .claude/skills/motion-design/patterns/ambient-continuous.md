@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Ambient & Continuous Patterns
 
 Ambient amplitude: 10-20% of primary motion. Never compete for attention.

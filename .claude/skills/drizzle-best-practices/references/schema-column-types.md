@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Schema: Column Types
 
 ## Why It Matters

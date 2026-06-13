@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Choreography
 
 ## Coordinated Entry Rules

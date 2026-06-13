@@ -3,6 +3,7 @@ title: Obsidian 首页设计
 type: concept
 tags: [技能/需求分析, 技能/技术方案]
 status: reviewed
+graph_visible: true
 created: 2026-06-10
 updated: 2026-06-10
 related:

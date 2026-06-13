@@ -10,6 +10,7 @@ license: MIT
 metadata:
   author: LottieFiles
   version: "1.0.0"
+graph_visible: false
 ---
 
 # Motion Design Skill

@@ -6,6 +6,7 @@ saved: 2026-06-10 10:05:31
 tags:
   - 笔记同步助手
 id: a0e971d8-982e-4799-a02b-2e220179470b
+graph_visible: false
 ---
 
 # Obsidian首页改造成个人知识工作台

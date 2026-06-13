@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Cinematic Patterns · Workflow Demo 的 Best Practice
 
 > 从「PPT 动画」升级到「发布会级 cinematic」的 5 个关键 pattern。

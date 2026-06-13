@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Schema: Table Definitions
 
 ## Why It Matters

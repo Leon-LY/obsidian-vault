@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Query: Select Patterns
 
 ## Why It Matters

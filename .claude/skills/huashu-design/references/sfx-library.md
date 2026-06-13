@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # SFX Library · huashu-design
 
 > 全部由 ElevenLabs Sound Generation API 生成，苹果发布会级音质。

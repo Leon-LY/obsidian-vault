@@ -3,6 +3,7 @@ title: Obsidian 第二大脑
 type: concept
 tags: [技能/知识管理, 技能/项目管理]
 status: draft
+graph_visible: true
 created: 2026-06-09
 related:
   - ClaudeCode学习指南

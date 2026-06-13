@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # 音频设计规则 · huashu-design
 
 > 所有动画 demo 的音频应用配方。和 `sfx-library.md`（资产清单）配套使用。

@@ -1,6 +1,7 @@
 ---
 title: 什么是 token
 gap: 0.4
+graph_visible: false
 ---
 
 ## intro

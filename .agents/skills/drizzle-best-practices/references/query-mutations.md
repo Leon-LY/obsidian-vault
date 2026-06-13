@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Query: Mutations (Insert, Update, Delete)
 
 ## Why It Matters

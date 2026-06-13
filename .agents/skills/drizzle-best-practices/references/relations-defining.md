@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Relations: Defining Relations
 
 ## Why It Matters

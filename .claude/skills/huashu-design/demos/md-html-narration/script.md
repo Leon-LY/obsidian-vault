@@ -1,6 +1,7 @@
 ---
 title: md还是html，这是个蠢问题
 gap: 0.5
+graph_visible: false
 ---
 
 ## opening

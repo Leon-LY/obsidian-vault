@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Relations: Querying Related Data
 
 ## Why It Matters

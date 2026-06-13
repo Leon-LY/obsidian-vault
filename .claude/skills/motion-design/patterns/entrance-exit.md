@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Entrance & Exit Patterns
 
 ## Entrance Strategies

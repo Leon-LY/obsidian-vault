@@ -24,6 +24,7 @@ metadata:
     correct vs incorrect code examples, and rationale for why the pattern matters.
     Engine-specific Postgres patterns (identity columns, JSONB, arrays, enums, etc.) are
     documented in a dedicated reference file to keep the skill modular.
+graph_visible: false
 ---
 
 # Drizzle ORM Best Practices (PostgreSQL)

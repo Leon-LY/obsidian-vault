@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # State & Feedback Patterns
 
 ## Button Press

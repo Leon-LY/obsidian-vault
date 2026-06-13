@@ -5,6 +5,7 @@ metadata:
   author: vercel
   version: "1.0.0"
   argument-hint: <file-or-pattern>
+graph_visible: false
 ---
 
 # Web Interface Guidelines

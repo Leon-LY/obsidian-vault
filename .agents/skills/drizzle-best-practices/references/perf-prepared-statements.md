@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Performance: Prepared Statements
 
 ## Why It Matters

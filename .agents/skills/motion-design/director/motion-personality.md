@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Motion Personality
 
 ## Four Archetypes

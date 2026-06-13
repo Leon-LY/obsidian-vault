@@ -1,2 +1,48 @@
 2026-06-13 08:13:55.397 [info] BackLinkHook: loaded — 129 backlink targets   
 2026-06-13 08:14:03.243 [error] check new version failed  Error: net::ERR_PROXY_CONNECTION_FAILED 
+2026-06-13 08:26:36.172 [info] BackLinkHook: loaded — 35 backlink targets   
+2026-06-13 08:26:36.486 [debug] BackLinkHook: resolved 知识库/人脉/善思明科技.md — 6 outbound links   
+2026-06-13 08:26:36.906 [debug] BackLinkHook: resolved 知识库/人脉/荣成大数据中心.md — 4 outbound links   
+2026-06-13 08:26:37.140 [debug] BackLinkHook: resolved 知识库/变更记录.md — 40 outbound links   
+2026-06-13 08:26:37.512 [debug] BackLinkHook: resolved 知识库/技能/ClaudeCode学习指南.md — 3 outbound links   
+2026-06-13 08:26:37.815 [debug] BackLinkHook: resolved 知识库/技能/ClaudeDesign学习笔记.md — 3 outbound links   
+2026-06-13 08:26:38.870 [debug] BackLinkHook: resolved 知识库/技能/Obsidian Components插件.md — 4 outbound links   
+2026-06-13 08:26:38.929 [debug] BackLinkHook: resolved 知识库/技能/Obsidian主题美化.md — 3 outbound links   
+2026-06-13 08:26:38.957 [debug] BackLinkHook: resolved 知识库/技能/Obsidian插件推荐.md — 2 outbound links   
+2026-06-13 08:26:38.981 [debug] BackLinkHook: resolved 知识库/技能/Obsidian第二大脑.md — 3 outbound links   
+2026-06-13 08:26:39.011 [debug] BackLinkHook: resolved 知识库/技能/Obsidian首页设计.md — 5 outbound links   
+2026-06-13 08:26:39.018 [debug] BackLinkHook: resolved 知识库/技能/QoderWork.md — 2 outbound links   
+2026-06-13 08:26:39.046 [debug] BackLinkHook: resolved 知识库/技能/全栈开发学习路线.md — 3 outbound links   
+2026-06-13 08:26:39.055 [debug] BackLinkHook: resolved 知识库/项目/公司/企业一体化平台.md — 3 outbound links   
+2026-06-13 08:26:39.070 [debug] BackLinkHook: resolved 知识库/项目/公司/企业政策推送管理平台.md — 3 outbound links   
+2026-06-13 08:26:39.170 [debug] BackLinkHook: resolved 知识库/项目/公司/城市大脑.md — 10 outbound links   
+2026-06-13 08:26:39.179 [debug] BackLinkHook: resolved 知识库/项目/公司/数字融合提升.md — 3 outbound links   
+2026-06-13 08:26:39.206 [debug] BackLinkHook: resolved 知识库/项目/公司/智慧荣成数据可视化.md — 3 outbound links   
+2026-06-13 08:26:39.227 [debug] BackLinkHook: resolved 知识库/项目/公司/爱山东APP.md — 5 outbound links   
+2026-06-13 08:26:39.267 [debug] BackLinkHook: resolved 知识库/项目/公司/经济运行平台.md — 2 outbound links   
+2026-06-13 08:26:39.309 [debug] BackLinkHook: resolved 知识库/项目/公司/荣成应急管理系统.md — 2 outbound links   
+2026-06-13 08:26:39.329 [debug] BackLinkHook: resolved 知识库/项目/公司/装卸通.md — 3 outbound links   
+2026-06-13 08:26:39.337 [debug] BackLinkHook: resolved 知识库/项目/私活/Studio后台管理系统.md — 2 outbound links   
+2026-06-13 08:26:39.370 [debug] BackLinkHook: resolved 知识库/项目/私活/个人作品集网站.md — 3 outbound links   
+2026-06-13 08:26:39.446 [debug] BackLinkHook: resolved 知识库/项目/私活/并蒂星球/并蒂星球-六角色特色功能论证.md — 3 outbound links   
+2026-06-13 08:26:39.464 [debug] BackLinkHook: resolved 知识库/项目/私活/并蒂星球/并蒂星球-十角色终局论证.md — 2 outbound links   
+2026-06-13 08:26:39.513 [debug] BackLinkHook: resolved 知识库/项目/私活/并蒂星球/并蒂星球-特色功能论证报告.md — 2 outbound links   
+2026-06-13 08:26:39.539 [debug] BackLinkHook: resolved 知识库/项目/私活/并蒂星球/并蒂星球-项目启动报告.md — 2 outbound links   
+2026-06-13 08:26:39.572 [debug] BackLinkHook: resolved 知识库/项目/私活/并蒂星球/并蒂星球-项目建设方案.md — 1 outbound links   
+2026-06-13 08:26:39.580 [debug] BackLinkHook: resolved 知识库/项目/私活/并蒂星球/并蒂星球.md — 7 outbound links   
+2026-06-13 08:26:39.593 [debug] BackLinkHook: resolved 知识库/项目/私活/远见FarSight.md — 3 outbound links   
+2026-06-13 08:26:39.626 [debug] BackLinkHook: resolved 知识库/领域/世界杯2026/世界杯2026.md — 8 outbound links   
+2026-06-13 08:26:39.677 [debug] BackLinkHook: resolved 知识库/领域/世界杯2026/分析模板.md — 2 outbound links   
+2026-06-13 08:26:39.720 [debug] BackLinkHook: resolved 知识库/领域/世界杯2026/赛程与结果.md — 2 outbound links   
+2026-06-13 08:26:39.732 [debug] BackLinkHook: resolved 知识库/领域/信创.md — 4 outbound links   
+2026-06-13 08:26:39.755 [debug] BackLinkHook: resolved 知识库/领域/招投标流程要点.md — 2 outbound links   
+2026-06-13 08:26:39.762 [debug] BackLinkHook: resolved 知识库/领域/数字政府.md — 4 outbound links   
+2026-06-13 08:26:39.779 [debug] BackLinkHook: resolved 知识库/领域/智慧城市.md — 4 outbound links   
+2026-06-13 08:26:39.791 [debug] BackLinkHook: resolved 笔记同步助手/2026-06-10/_已处理_Obsidian 主页改造指南：利用 Components 插件实现 Notion 风格.md — 4 outbound links   
+2026-06-13 08:26:39.802 [debug] BackLinkHook: resolved 笔记同步助手/2026-06-10/_已处理_Obsidian首页改造成个人知识工作台.md — 19 outbound links   
+2026-06-13 08:26:39.809 [debug] BackLinkHook: resolved 笔记同步助手/2026-06-10/_已处理_QoderWork Design 上线，设计即代码，不输 Claude Design.md — 18 outbound links   
+2026-06-13 08:26:39.818 [debug] BackLinkHook: resolved 笔记同步助手/2026-06-10/_已处理_全面掌握 Claude Design：可交互可编辑PPT学习笔记.md — 6 outbound links   
+2026-06-13 08:26:39.829 [debug] BackLinkHook: resolved 笔记同步助手/2026-06-10/_已处理_让 Claude Code 趁你睡觉就把活干完的命令 - 学习笔记.md — 5 outbound links   
+2026-06-13 08:26:39.841 [debug] BackLinkHook: resolved 笔记同步助手/2026-06-11/_已处理_Obsidian Components 插件：私人学习笔记.md — 4 outbound links   
+2026-06-13 08:26:39.875 [debug] BackLinkHook: resolved 笔记同步助手/2026-06-11/_已处理_Obsidian 主题界面美化全攻略.md — 18 outbound links   
+2026-06-13 08:26:39.884 [debug] BackLinkHook: resolved 首页.md — 1 outbound links   

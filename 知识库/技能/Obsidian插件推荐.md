@@ -3,6 +3,7 @@ title: Obsidian 插件推荐
 type: concept
 tags: [技能/知识管理, 技能/AI工具]
 status: draft
+graph_visible: true
 created: 2026-06-09
 related:
   - Obsidian第二大脑

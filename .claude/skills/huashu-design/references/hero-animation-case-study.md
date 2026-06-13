@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Gallery Ripple + Multi-Focus · 场景编排哲学
 
 > 从 huashu-design hero 动画 v9（25 秒，8 场景）里提炼出的**一种可复用的视觉编排结构**。

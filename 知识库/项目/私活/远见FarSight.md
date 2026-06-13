@@ -3,6 +3,7 @@ title: 远见 FarSight
 type: project
 tags: [技能/全栈开发, 项目/已验收]
 status: reviewed
+graph_visible: true
 created: 2026-06-10
 updated: 2026-06-10
 related:

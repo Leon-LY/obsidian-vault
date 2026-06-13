@@ -1,6 +1,7 @@
 ---
 name: text-to-lottie
 description: Author a Lottie (Bodymovin) JSON animation that renders in a local skia player. Use whenever the user asks to create, generate, edit, or fix a Lottie animation, or asks for "an animation" to load.
+graph_visible: false
 ---
 
 # Authoring Renderable Lottie Files

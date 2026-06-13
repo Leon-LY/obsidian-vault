@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Design Philosophy Showcases — 样例资产索引
 
 > 8 种场景 × 3 种风格 = 24 个预制设计样例

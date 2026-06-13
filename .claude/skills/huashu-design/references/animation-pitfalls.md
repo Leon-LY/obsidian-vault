@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Animation Pitfalls：HTML 动画踩过的坑与规则
 
 做动画时最常踩的 bug 和如何避免。每条规则都来自真实失败案例。

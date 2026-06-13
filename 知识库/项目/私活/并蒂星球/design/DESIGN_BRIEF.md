@@ -1,3 +1,7 @@
+---
+graph_visible: true
+---
+
 # 并蒂星球 · 设计需求文档
 
 > **用途**：将本文档喂给 Google Stitch / Canva / Claude Design / 人类设计师，产出高保真原型。

@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Animation Best Practices · 正向动画设计语法
 
 > 基于 Anthropic 官方三支产品动画（Claude Design / Claude Code Desktop / Claude for Word）

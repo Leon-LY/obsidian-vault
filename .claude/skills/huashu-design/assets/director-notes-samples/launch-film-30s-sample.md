@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # v5 · "Markdown is the new typewriter."
 
 > Director's Notes for the **huashu-md-html v2.0** launch film

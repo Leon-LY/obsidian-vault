@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Drivers: PostgreSQL Setup
 
 ## Why It Matters

@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Troubleshooting
 
 ## Looks Robotic

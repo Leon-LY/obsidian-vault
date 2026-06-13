@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # 场景模板库：按输出类型组织
 
 > 与 design-styles.md 的「提示词DNA」组合使用。

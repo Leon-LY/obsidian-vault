@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Query: Filters and Operators
 
 ## Why It Matters

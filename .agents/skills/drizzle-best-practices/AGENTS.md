@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Drizzle ORM Best Practices (PostgreSQL)
 
 ## Structure

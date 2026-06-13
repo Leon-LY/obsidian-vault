@@ -1,3 +1,7 @@
+---
+graph_visible: false
+---
+
 # Query: Error Handling
 
 ## Why It Matters

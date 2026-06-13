@@ -3,6 +3,7 @@ title: "爱山东APP"
 type: project
 tags: [领域/数字政府, 项目/已验收, 对象/甲方]
 status: reviewed
+graph_visible: true
 created: 2026-06-09
 updated: 2026-06-10
 budget: 353.8万（多期合计）

@@ -10,6 +10,7 @@ description: >-
   "Neon Auth", "@neondatabase/serverless", "@neondatabase/neon-js",
   "scale to zero", "Neon autoscaling", "Neon read replica", or
   "Neon connection pooling".
+graph_visible: false
 ---
 
 # Neon Serverless Postgres
