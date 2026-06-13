@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 488.5
+    "width": 351.5
   },
   "right": {
     "id": "f7737cbc6b41015a",
@@ -217,7 +217,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 876.5
+    "width": 560.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -246,6 +246,7 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "components/logs/2026-06-13.components.log",
     "知识库/项目/私活/并蒂星球/并蒂星球-项目建设方案.md",
     "知识库/项目/私活/并蒂星球/design/logo-v4c.svg",
     "知识库/项目/私活/并蒂星球/并蒂星球-项目建设方案.md.tmp.50228.f2db0bac0de7",

@@ -293,3 +293,4 @@
 2026-06-12 15:12:45.127 [debug] BackLinkHook: resolved 知识库/项目/私活/并蒂星球/并蒂星球-特色功能论证报告.md — 2 outbound links   
 2026-06-12 15:12:45.444 [debug] BackLinkHook: resolved 知识库/项目/私活/并蒂星球/并蒂星球.md — 7 outbound links   
 2026-06-12 22:14:20.951 [info] BackLinkHook: loaded — 129 backlink targets   
+2026-06-12 22:14:28.091 [error] check new version failed  Error: net::ERR_PROXY_CONNECTION_FAILED 

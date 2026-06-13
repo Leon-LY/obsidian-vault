@@ -1,0 +1,2 @@
+2026-06-13 08:13:55.397 [info] BackLinkHook: loaded — 129 backlink targets   
+2026-06-13 08:14:03.243 [error] check new version failed  Error: net::ERR_PROXY_CONNECTION_FAILED 
