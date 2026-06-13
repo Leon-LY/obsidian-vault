@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "96bf1a818c8686ea",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "e72a63ab02a5e011",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -213,7 +213,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 434.5
+    "width": 638.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -240,11 +240,13 @@
       "colorful-folders:Toggle stealth mode": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "4b74b69dd2213ad3",
   "lastOpenFiles": [
+    "首页.md",
+    "知识库/技能/DeepSeek余额.md",
+    "DeepSeekWidget.md",
     "知识库/项目/私活/并蒂星球/并蒂星球-项目建设方案.md",
     "知识库/项目/私活/Studio后台管理系统.md",
-    "首页.md",
     "产出/_batch_graph_visible.py",
     "产出/_batch_graph_visible.py.tmp.25012.0e95a97fda12",
     "知识库/变更记录.md",
@@ -285,8 +287,6 @@
     "知识库/项目/私活/并蒂星球/双生星球/双生星球-十角色终局论证.md",
     "知识库/项目/私活/并蒂星球/双生星球/双生星球-Phase0-执行手册.md",
     "知识库/项目/私活/并蒂星球/design/DESIGN_BRIEF.md",
-    "知识库/领域/世界杯2026/小组积分.md",
-    "知识库/领域/世界杯2026/世界杯2026.md",
-    "知识库/领域/世界杯2026/赛程与结果.md"
+    "知识库/领域/世界杯2026/小组积分.md"
   ]
 }
