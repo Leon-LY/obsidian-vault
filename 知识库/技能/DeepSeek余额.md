@@ -22,15 +22,15 @@ updated: 2026-06-14
     <tr>
       <td style="text-align:center; padding:6px 10px; border:none; background:none;">
         <span style="font-size:0.65em; color:rgba(255,255,255,0.35);">余额</span><br>
-        <strong style="font-size:1.3em; color:#e2e8f0;">¥503.33</strong>
+        <strong style="font-size:1.3em; color:#e2e8f0;">¥502.87</strong>
       </td>
       <td style="text-align:center; padding:6px 10px; border:none; background:none;">
         <span style="font-size:0.65em; color:rgba(255,255,255,0.35);">今日消耗</span><br>
-        <strong style="font-size:1.1em; color:#f59e0b;">¥17.11</strong>
+        <strong style="font-size:1.1em; color:#f59e0b;">¥17.57</strong>
       </td>
       <td style="text-align:center; padding:6px 10px; border:none; background:none;">
         <span style="font-size:0.65em; color:rgba(255,255,255,0.35);">≈ Tokens</span><br>
-        <strong style="font-size:1.1em; color:#e2e8f0;">8.6M</strong>
+        <strong style="font-size:1.1em; color:#e2e8f0;">8.8M</strong>
       </td>
     </tr>
   </table>
@@ -51,7 +51,7 @@ updated: 2026-06-14
     "></div>
   </div>
   <p style="font-size:0.6em; color:rgba(255,255,255,0.22); text-align:right; margin:0;">
-    可用 · 总用量 0.0% · 2026-06-14 10:18:54
+    可用 · 总用量 0.0% · 2026-06-14 10:28:54
   </p>
 </div>
 
@@ -63,7 +63,7 @@ updated: 2026-06-14
 | 2026-06-11 | ¥83.85 | -¥22.75 | 11.4M |
 | 2026-06-12 | ¥44.34 | -¥39.51 | 19.8M |
 | 2026-06-13 | ¥521.76 | — | -238860000 |
-| 2026-06-14 | ¥503.33 | -¥17.11 | 8.6M |
+| 2026-06-14 | ¥502.87 | -¥17.57 | 8.8M |
 
 
 ## 查看方式
