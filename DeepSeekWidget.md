@@ -3,4 +3,4 @@ cssclasses:
   - ds-widget
 ---
 
-> 🤖 **DeepSeek**　¥502.26　今日 ¥18.18 (≈9.1M tokens)　[[知识库/技能/DeepSeek余额|查看详情 →]]
+> 🤖 **DeepSeek**　¥500.74　今日 ¥19.70 (≈9.8M tokens)　[[知识库/技能/DeepSeek余额|查看详情 →]]
